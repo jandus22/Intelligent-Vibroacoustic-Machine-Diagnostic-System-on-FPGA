@@ -1,0 +1,22 @@
+Komendy przy pobieraniu aktualiacji z maina:
+    git stash                                                                           ->                                  kładzie aktualne zmiany z twojego brancha na stos
+    git pull --rebase                                                                   ->                                  pobiera aktualne dane z maina
+    git stash pop                                                                       ->                                  zabiera ostanie zapisane rzeczy ze stosu
+
+Komendy do działania na branch'ach:
+    git checkout -b <nawza_brancha np. jandus22/chuj_dupa_cyce> --track origin/master   ->                                  tworzenie nowych branchy, na których można wprowadzać zmiany związane ze swoją robotą
+    git branch                                                                          ->                                  sprawdza na jakim branchu jesteś
+    git checkout <nawza_brancha>                                                        ->                                  zmiana brancha na którym się znajdujesz
+
+Komendy do sprawdzania commitów:
+    gitk                                                                                ->                                  pokazuje zmiany w formie programu graficznego
+    git log                                                                             ->                                  pokauje zmiany w formie tekstu, w terminalu (aby wyłączyć kliknij "q")  
+
+Komendy przy wrzucaniu zmian:
+    git add <ścieżka nowego folderu lub pliku>                                          ->                                  dodanie zmian w postaci nowych plików do commita 
+    git add -A                                                                          ->                                  dodanie wszystkich zmian
+    git add -u                                                                          ->                                  dodanie zmian w postaci aktualizacji już istniejących plików
+    git commit                                                                          ->                                  wystawienie commita, do którego trzeba dodatkowo wpisać wiadomość w vim'ie 
+    -||-                                                                                                                    (klikasz "i", wpisujesz wiadomość, klikasz "esc", wpisujesz ":x", klikasz "enter")
+    git commit -m "<wiadomość>"                                                         ->                                  wystawienie commita gotowego do wrzucenia
+    git push                                                                            ->                                  przesłanie zmian do maina 
