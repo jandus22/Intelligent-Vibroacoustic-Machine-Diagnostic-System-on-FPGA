@@ -1,3 +1,5 @@
+Link do nauki: https://learngitbranching.js.org
+
 Komendy przy pobieraniu aktualiacji z maina:
     git stash                                                                           ->                                  kładzie aktualne zmiany z twojego brancha na stos
     git pull --rebase                                                                   ->                                  pobiera aktualne dane z maina
