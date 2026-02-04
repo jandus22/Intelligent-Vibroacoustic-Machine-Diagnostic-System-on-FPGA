@@ -75,7 +75,7 @@
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynquplus", "resolve_type": "generated", "usage": "all" } ],
         "BASE_BOARD_PART": [ { "value": "xilinx.com:kr260_som:part0:1.1", "resolve_type": "generated", "usage": "all" } ],
-        "BOARD_CONNECTIONS": [ { "value": "som240_1_connector xilinx.com:kr260_carrier:som240_1_connector:1.1", "resolve_type": "generated", "usage": "all" } ],
+        "BOARD_CONNECTIONS": [ { "value": "som240_2_connector xilinx.com:kr260_carrier:som240_2_connector:1.1 som240_1_connector xilinx.com:kr260_carrier:som240_1_connector:1.1", "resolve_type": "generated", "usage": "all" } ],
         "DEVICE": [ { "value": "xck26", "resolve_type": "generated", "usage": "all" } ],
         "PACKAGE": [ { "value": "sfvc784", "resolve_type": "generated", "usage": "all" } ],
         "PREFHDL": [ { "value": "VERILOG", "resolve_type": "generated", "usage": "all" } ],
@@ -867,5 +867,5 @@
       }
     }
   },
-  "checksum": "95ed2a93"
+  "checksum": "2bcf8bc9"
 }
