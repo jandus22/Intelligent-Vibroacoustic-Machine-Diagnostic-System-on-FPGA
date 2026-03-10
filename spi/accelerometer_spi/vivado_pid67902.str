@@ -1,0 +1,168 @@
+/*
+
+AMD Vivado v2025.2 (64-bit) [Major: 2025, Minor: 2]
+SW Build: 6299465 on Fri Nov 14 12:34:56 MST 2025
+IP Build: 6300035 on Fri Nov 14 10:48:45 MST 2025
+IP Build: 6300035 on Fri Nov 14 10:48:45 MST 2025
+
+Process ID (PID): 67902
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Feb 07 16:34:24 CET 2026
+Time zone: 	Central European Standard Time (Europe/Warsaw)
+
+OS: Ubuntu
+OS Version: 6.6.87.2-microsoft-standard-WSL2
+OS Architecture: amd64
+Available processors (cores): 12
+LSB Release Description: Ubuntu 24.04.3 LTS
+
+Display: 0
+Screen size: 2560x1440
+Local screen bounds: x = 1360, y = 0, width = 2560, height = 1440
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: true
+
+Java version: 	21.0.5 64-bit
+
+Java home: 	/home/janek/2025.2/tps/lnx64/jre21.0.5_11
+Java executable: 	/home/janek/2025.2/tps/lnx64/jre21.0.5_11/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms812m, -Xmx6144m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	812 MB
+Java maximum memory (-Xmx):	 6 GB
+
+User name: 	janek
+User home directory: /home/janek
+User working directory: /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/janek/2025.2
+HDI_APPROOT: /home/janek/2025.2/Vivado
+RDI_DATADIR: /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/:/home/janek/2025.2/data
+RDI_BINDIR: /home/janek/2025.2/Vivado/bin
+
+Vivado preferences file: /home/janek/.Xilinx/Vivado/2025.2/vivado.xml
+Vivado preferences directory: /home/janek/.Xilinx/Vivado/2025.2/
+Vivado layouts directory: /home/janek/.Xilinx/Vivado/2025.2/data/layouts
+PlanAhead jar file: 	/home/janek/2025.2/Vivado/lib/classes/planAhead.jar
+Vivado log file: 	/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/vivado.log
+Vivado journal file: 	/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-67902-qtaz
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /home/janek/2025.2/Vivado
+RDI_BASEROOT: /home/janek/2025.2
+RDI_BINROOT: /home/janek/2025.2/Vivado/bin
+RDI_BUILD: yes
+RDI_DATADIR: :/home/janek/2025.2/data
+RDI_INSTALLROOT: /home/janek
+RDI_INSTALLVER: Vivado
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.5_11
+RDI_LIBDIR: /home/janek/2025.2/Vivado/lib/lnx64.o/Ubuntu/24:/home/janek/2025.2/Vivado/lib/lnx64.o/Ubuntu:/home/janek/2025.2/Vivado/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/janek/2025.2/Vitis/bin:/home/janek/2025.2/Vivado/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/janek/2025.2/Vivado/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi:qtaz_1770478451_67812
+RDI_SHARED_DATA: 
+RDI_TPS_ROOT: /home/janek/2025.2/Vivado/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /home/janek/2025.2/Vivado/ids_lite/ISE
+XILINX_DSP: /home/janek/2025.2/Vivado/ids_lite/ISE
+XILINX_HLS: /home/janek/2025.2/Vitis
+XILINX_PLANAHEAD: /home/janek/2025.2/Vivado
+XILINX_SDK: /home/janek/2025.2/Vitis
+XILINX_VITIS: /home/janek/2025.2/Vitis
+XILINX_VIVADO: /home/janek/2025.2/Vivado
+
+
+GUI allocated memory:	812 MB
+GUI max memory:		6,144 MB
+Engine allocated memory: 2,057 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 111 MB (+114378kb) [00:00:05]
+// [Engine Memory]: 1,900 MB (+1840916kb) [00:00:05]
+// Opening Vivado Project: accelerometer_spi.xpr. Version: Vivado v2025.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 144 MB (+28021kb) [00:00:07]
+// [Engine Memory]: 2,022 MB (+27928kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  1108 ms.
+// Tcl Message: open_project accelerometer_spi.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/janek/2025.2/data/ip'. 
+// Project name: accelerometer_spi; location: /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi; part: xck26-sfvc784-2LV-c
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,095 MB. GUI used memory: 90 MB. Current time: 2/7/26, 4:34:25 PM CET
+// Tcl Message: update_compile_order -fileset sources_1 
+// [Engine Memory]: 2,265 MB (+148988kb) [00:00:11]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, spi_module (spi_module.bd)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, spi_module (spi_module.bd)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// TclEventType: LOAD_FEATURE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.srcs/sources_1/bd/spi_module/spi_module.bd} 
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// [Engine Memory]: 2,379 MB (+381kb) [00:00:15]
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+dismissDialog("Open Block Design"); // bk (Open Block Design Progress)
+// [GUI Memory]: 155 MB (+4037kb) [00:00:17]
+// [GUI Memory]: 165 MB (+2094kb) [00:00:20]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,358 MB. GUI used memory: 95 MB. Current time: 2/7/26, 4:34:57 PM CET

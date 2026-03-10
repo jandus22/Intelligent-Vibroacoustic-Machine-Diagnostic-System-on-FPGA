@@ -1,0 +1,1037 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sun Feb  8 14:49:12 2026
+# Process ID         : 60678
+# Current directory  : /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_quad_spi_0_1_synth_1
+# Command line       : vivado -log spi_module_axi_quad_spi_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source spi_module_axi_quad_spi_0_1.tcl
+# Log file           : /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_quad_spi_0_1_synth_1/spi_module_axi_quad_spi_0_1.vds
+# Journal file       : /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_quad_spi_0_1_synth_1/vivado.jou
+# Running On         : qtaz
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : AMD Ryzen 5 7500F 6-Core Processor
+# CPU Frequency      : 3693.007 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 27314 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 44494 MB
+# Available Virtual  : 40589 MB
+#-----------------------------------------------------------
+source spi_module_axi_quad_spi_0_1.tcl -notrace
+Command: synth_design -top spi_module_axi_quad_spi_0_1 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 61219
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2760.043 ; gain = 150.688 ; free physical = 10006 ; free virtual = 28123
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'spi_module_axi_quad_spi_0_1' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/synth/spi_module_axi_quad_spi_0_1.vhd:97]
+	Parameter Async_Clk bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_SUB_FAMILY bound to: zynquplus - type: string 
+	Parameter C_INSTANCE bound to: axi_quad_spi_inst - type: string 
+	Parameter C_SPI_MEM_ADDR_BITS bound to: 24 - type: integer 
+	Parameter C_TYPE_OF_AXI4_INTERFACE bound to: 0 - type: integer 
+	Parameter C_XIP_MODE bound to: 0 - type: integer 
+	Parameter C_XIP_PERF_MODE bound to: 1 - type: integer 
+	Parameter C_BYTE_LEVEL_INTERRUPT_EN bound to: 0 - type: integer 
+	Parameter C_UC_FAMILY bound to: 1 - type: integer 
+	Parameter C_FIFO_DEPTH bound to: 16 - type: integer 
+	Parameter C_SCK_RATIO bound to: 16 - type: integer 
+	Parameter C_DUAL_QUAD_MODE bound to: 0 - type: integer 
+	Parameter C_NUM_SS_BITS bound to: 1 - type: integer 
+	Parameter C_NUM_TRANSFER_BITS bound to: 8 - type: integer 
+	Parameter C_NEW_SEQ_EN bound to: 1 - type: integer 
+	Parameter C_SPI_MODE bound to: 0 - type: integer 
+	Parameter C_USE_STARTUP bound to: 0 - type: integer 
+	Parameter C_USE_STARTUP_EXT bound to: 0 - type: integer 
+	Parameter C_SPI_MEMORY bound to: 1 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI4_ADDR_WIDTH bound to: 24 - type: integer 
+	Parameter C_S_AXI4_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI4_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_SHARED_STARTUP bound to: 0 - type: integer 
+	Parameter C_S_AXI4_BASEADDR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_S_AXI4_HIGHADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_LSB_STUP bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_quad_spi' declared at '/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35743' bound to instance 'U0' of component 'axi_quad_spi' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/synth/spi_module_axi_quad_spi_0_1.vhd:297]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35983]
+INFO: [Synth 8-638] synthesizing module 'axi_quad_spi_top' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34245]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO0_I_REG' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34714]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO1_I_REG' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34725]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO2_I_REG' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'IO3_I_REG' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34748]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized0' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized1' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized2' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized3' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized4' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized5' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized6' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized7' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized8' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized9' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized10' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized11' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized12' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized13' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized14' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized15' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized16' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized17' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized18' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized19' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized20' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized21' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized22' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized23' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized24' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif_v3_0_4_pselect_f__parameterized25' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'qspi_core_interface' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:18622]
+INFO: [Synth 8-638] synthesizing module 'reset_sync_module' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:2268]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_1' to cell 'FDR' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:2297]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RESET_SYNC_AX2S_2' to cell 'FDR' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:2305]
+INFO: [Synth 8-256] done synthesizing module 'reset_sync_module' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:2268]
+INFO: [Synth 8-638] synthesizing module 'cross_clk_sync_fifo_1' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:14709]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'CMD_ERR_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15699]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPISEL_D1_REG_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15715]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_1_CDC' to cell 'FDR' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15744]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_2' to cell 'FDR' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15752]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_3' to cell 'FDR' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15760]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_PULSE_S2AX_4' to cell 'FDR' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15768]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'MST_N_SLV_MODE_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15781]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SLV_MODF_STRB_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15809]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'MODF_STROBE_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15849]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'RX_FIFO_EMPTY_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15876]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized2' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized2' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'TX_FIFO_EMPTY_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15892]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'TX_EMPT_4_SPISR_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15907]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'TX_FIFO_FULL_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15923]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPIXFER_DONE_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15939]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'RX_FIFO_FULL_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15953]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SYNC_SPIXFER_DONE_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:15982]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'DTR_UNDERRUN_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16009]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_0_LOOP_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16024]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_1_SPE_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16039]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_2_MST_N_SLV_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16055]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_3_CPOL_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16070]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_4_CPHA_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16085]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_5_TXFIFO_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16100]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_6_RXFIFO_RST_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16115]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_7_SS_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16130]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_8_TR_INHIBIT_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16145]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_9_LSB_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16160]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SR_3_MODF_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16175]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPISSR_AX2S_1_CDC' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16195]
+	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'DRR_OVERRUN_S2AX_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16227]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'RX_FIFO_RST_AX2S_1' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16268]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single__parameterized4' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single__parameterized4' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_1_CDC_1' to cell 'FDR' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16283]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RX_FIFO_RST_AX2S_2' to cell 'FDR' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16291]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_BITS_7_8_AX2S_1_CDC' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16312]
+	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'SPICR_BITS_7_8_AX2S_1_CDC' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:16312]
+INFO: [Synth 8-256] done synthesizing module 'cross_clk_sync_fifo_1' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:14709]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1f1f - type: string 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173' bound to instance 'RX_FIFO_II' of component 'xpm_fifo_async' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:20389]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/janek/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/home/janek/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:522]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'RX_FIFO_EMPTY_SYNC_AXI_2_SPI_CDC' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:20441]
+	Parameter DEST_SYNC_FF bound to: 2 - type: integer 
+	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
+	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
+	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_cdc_single' declared at '/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152' bound to instance 'RX_FIFO_FULL_SYNCED_SPI_2_AXI_CDC' of component 'xpm_cdc_single' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:20505]
+INFO: [Synth 8-638] synthesizing module 'counter_f' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:642]
+INFO: [Synth 8-256] done synthesizing module 'counter_f' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:642]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at '/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173' bound to instance 'TX_FIFO_II' of component 'xpm_fifo_async' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:20704]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized1' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-226] default block is never used [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized1' (0#1) [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-638] synthesizing module 'qspi_fifo_ifmodule' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:13256]
+INFO: [Synth 8-256] done synthesizing module 'qspi_fifo_ifmodule' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:13256]
+INFO: [Synth 8-638] synthesizing module 'qspi_occupancy_reg' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:3461]
+INFO: [Synth 8-256] done synthesizing module 'qspi_occupancy_reg' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:3461]
+INFO: [Synth 8-638] synthesizing module 'qspi_mode_0_module' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:8592]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'MST_TRANS_INHIBIT_D1_I' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9161]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_II' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9189]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_III' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9201]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_IV' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9213]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_V' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9237]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'SPISEL_REG' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9316]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SCK_I_REG' to cell 'FD' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9399]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'SCK_O_NE_4_FDRE_INST' to cell 'FDRE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:10496]
+INFO: [Synth 8-256] done synthesizing module 'qspi_mode_0_module' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:8592]
+INFO: [Synth 8-638] synthesizing module 'qspi_cntrl_reg' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:13602]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:13810]
+INFO: [Synth 8-113] binding component instance 'SPI_TRISTATE_CONTROL_I' to cell 'FDRE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:13810]
+INFO: [Synth 8-256] done synthesizing module 'qspi_cntrl_reg' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:13602]
+INFO: [Synth 8-638] synthesizing module 'qspi_status_slave_sel_reg' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:2494]
+INFO: [Synth 8-256] done synthesizing module 'qspi_status_slave_sel_reg' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:2494]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:838]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:969]
+INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:992]
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:838]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/d8cc/hdl/interrupt_control_v3_1_vh_rfs.vhd:257]
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/d8cc/hdl/interrupt_control_v3_1_vh_rfs.vhd:257]
+INFO: [Synth 8-256] done synthesizing module 'qspi_core_interface' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:18622]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi_top' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34245]
+INFO: [Synth 8-256] done synthesizing module 'axi_quad_spi' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35983]
+INFO: [Synth 8-256] done synthesizing module 'spi_module_axi_quad_spi_0_1' (0#1) [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/synth/spi_module_axi_quad_spi_0_1.vhd:97]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:771]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:771]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/janek/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+INFO: [Synth 8-6014] Unused sequential element transfer_start_d2_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9524]
+INFO: [Synth 8-6014] Unused sequential element transfer_start_d3_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9525]
+INFO: [Synth 8-6014] Unused sequential element SPIXfer_done_int_pulse_d3_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:9582]
+INFO: [Synth 8-6014] Unused sequential element SS_Asserted_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:10760]
+INFO: [Synth 8-6014] Unused sequential element SS_Asserted_1dly_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:10761]
+INFO: [Synth 8-6014] Unused sequential element MODF_strobe_int_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:10790]
+INFO: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d1_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:19227]
+INFO: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d2_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:19228]
+INFO: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.Bus2IP_WrCE_d3_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:19229]
+INFO: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_d1_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:19328]
+INFO: [Synth 8-6014] Unused sequential element LEGACY_MD_WR_RD_ACK_GEN.ip2Bus_RdAck_core_reg_1_reg was removed.  [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:19330]
+INFO: [Synth 8-3848] Net cfgclk in module/entity qspi_core_interface does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:18599]
+INFO: [Synth 8-3848] Net cfgmclk in module/entity qspi_core_interface does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:18600]
+INFO: [Synth 8-3848] Net eos in module/entity qspi_core_interface does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:18601]
+INFO: [Synth 8-3848] Net preq in module/entity qspi_core_interface does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:18602]
+INFO: [Synth 8-3848] Net di in module/entity qspi_core_interface does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:18603]
+INFO: [Synth 8-3848] Net s_axi4_awready in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34136]
+INFO: [Synth 8-3848] Net s_axi4_wready in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34144]
+INFO: [Synth 8-3848] Net s_axi4_bid in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34148]
+INFO: [Synth 8-3848] Net s_axi4_bresp in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34149]
+INFO: [Synth 8-3848] Net s_axi4_bvalid in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34150]
+INFO: [Synth 8-3848] Net s_axi4_arready in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34164]
+INFO: [Synth 8-3848] Net s_axi4_rid in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34168]
+INFO: [Synth 8-3848] Net s_axi4_rdata in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34169]
+INFO: [Synth 8-3848] Net s_axi4_rresp in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34170]
+INFO: [Synth 8-3848] Net s_axi4_rlast in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34171]
+INFO: [Synth 8-3848] Net s_axi4_rvalid in module/entity axi_quad_spi_top does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:34172]
+INFO: [Synth 8-3848] Net io0_1_o in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35926]
+INFO: [Synth 8-3848] Net io0_1_t in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35927]
+INFO: [Synth 8-3848] Net io1_1_o in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35930]
+INFO: [Synth 8-3848] Net io1_1_t in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35931]
+INFO: [Synth 8-3848] Net io2_1_o in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35936]
+INFO: [Synth 8-3848] Net io2_1_t in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35937]
+INFO: [Synth 8-3848] Net io3_1_o in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35940]
+INFO: [Synth 8-3848] Net io3_1_t in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35941]
+INFO: [Synth 8-3848] Net ss_1_o in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35956]
+INFO: [Synth 8-3848] Net ss_1_t in module/entity axi_quad_spi does not have driver. [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ipshared/9bdf/hdl/axi_quad_spi_v3_2_rfs.vhd:35957]
+INFO: [Synth 8-7129] Port bus2ip_data[1] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[2] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[3] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[4] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[5] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[6] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[7] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[8] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[9] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[10] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[11] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[12] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[13] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[14] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[15] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[16] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_data[17] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_be[1] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_be[2] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port bus2ip_be[3] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[0] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[1] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[2] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[3] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[4] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[5] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[6] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[9] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[11] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[12] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[13] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[14] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_rdce[15] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[0] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[1] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[2] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[3] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[4] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[5] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[6] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[9] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[11] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[12] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[13] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[14] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port interrupt_wrce[15] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port ipif_reg_interrupts[0] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port ipif_reg_interrupts[1] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port ipif_lvl_interrupts[0] in module interrupt_control is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[0] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[1] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[2] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[3] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[4] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[5] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[6] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[7] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[8] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[9] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[10] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[11] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[12] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[13] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[14] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[15] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[16] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[17] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[18] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[19] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[20] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[21] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[22] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[23] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[24] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[25] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[26] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_Data[27] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_BE[0] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_BE[1] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_BE[2] in module soft_reset is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[0] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[1] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[2] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[3] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[4] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[5] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[6] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[7] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[8] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[9] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[10] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[11] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[12] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[13] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[14] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[15] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[16] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[17] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[18] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Synth 8-7129] Port Bus2IP_SPISSR_Data[19] in module qspi_status_slave_sel_reg is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2879.980 ; gain = 270.625 ; free physical = 9283 ; free virtual = 27421
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2879.980 ; gain = 270.625 ; free physical = 9278 ; free virtual = 27417
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2879.980 ; gain = 270.625 ; free physical = 9278 ; free virtual = 27417
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2879.980 ; gain = 0.000 ; free physical = 9264 ; free virtual = 27402
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1_board.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1_board.xdc] for cell 'U0'
+Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/spi_module_axi_quad_spi_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/spi_module_axi_quad_spi_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_quad_spi_0_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_quad_spi_0_1_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.gen/sources_1/bd/spi_module/ip/spi_module_axi_quad_spi_0_1/spi_module_axi_quad_spi_0_1_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/spi_module_axi_quad_spi_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/spi_module_axi_quad_spi_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.CMD_ERR_S2AX_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.CMD_ERR_S2AX_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.DTR_UNDERRUN_S2AX_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.DTR_UNDERRUN_S2AX_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPISEL_D1_REG_S2AX_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPISEL_D1_REG_S2AX_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPIXFER_DONE_S2AX_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPIXFER_DONE_S2AX_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_EMPT_4_SPISR_S2AX_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_EMPTY_S2AX_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_EMPTY_S2AX_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_EMPTY_AX2S_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.RX_FIFO_EMPTY_AX2S_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPICR_0_LOOP_AX2S_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPICR_0_LOOP_AX2S_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPICR_1_SPE_AX2S_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.SPICR_1_SPE_AX2S_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_FULL_AX2S_1' of design 'preSynthElab_1' [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+WARNING: [XPM_CDC_SINGLE: TCL-1000] The source and destination clocks are the same. 
+     Instance: U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.CLK_CROSS_I/LOGIC_GENERATION_CDC.TX_FIFO_FULL_AX2S_1 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: AMD recommends that you remove these modules. 
+ 2) AMD IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl:5]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/janek/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/spi_module_axi_quad_spi_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/spi_module_axi_quad_spi_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/janek/2025.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/spi_module_axi_quad_spi_0_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/spi_module_axi_quad_spi_0_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 45 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2972.219 ; gain = 0.000 ; free physical = 9032 ; free virtual = 27177
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 36 instances were transformed.
+  FD => FDRE: 11 instances
+  FDR => FDRE: 8 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2972.254 ; gain = 0.000 ; free physical = 9032 ; free virtual = 27177
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2972.254 ; gain = 362.898 ; free physical = 8980 ; free virtual = 27129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2980.223 ; gain = 370.867 ; free physical = 8980 ; free virtual = 27129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2980.223 ; gain = 370.867 ; free physical = 8979 ; free virtual = 27130
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg' in module 'qspi_mode_0_module'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+INFO: [Synth 8-6904] The RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+           transfer_okay |                               01 |                               01
+      temp_transfer_okay |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'LOCAL_TX_EMPTY_FIFO_12_GEN.spi_cntrl_ps_reg' using encoding 'sequential' in module 'qspi_mode_0_module'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2980.223 ; gain = 370.867 ; free physical = 8712 ; free virtual = 26894
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    6 Bit       Adders := 1     
+	   4 Input    5 Bit       Adders := 6     
+	   2 Input    5 Bit       Adders := 5     
+	   3 Input    5 Bit       Adders := 4     
+	   4 Input    4 Bit       Adders := 10    
+	   3 Input    4 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 1     
+	   4 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      5 Bit         XORs := 4     
+	   2 Input      4 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 58    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               14 Bit    Registers := 1     
+	                8 Bit    Registers := 9     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 33    
+	                4 Bit    Registers := 42    
+	                3 Bit    Registers := 17    
+	                2 Bit    Registers := 14    
+	                1 Bit    Registers := 193   
++---RAMs : 
+	              128 Bit	(16 X 8 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 9     
+	   2 Input    7 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 19    
+	   3 Input    5 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 7     
+	   2 Input    2 Bit        Muxes := 69    
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 15    
+	   5 Input    2 Bit        Muxes := 2     
+	  11 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 107   
+	   4 Input    1 Bit        Muxes := 8     
+	   6 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6904] The RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-6904] The RAM "xpm_memory_base:/gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=8) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/MST_TRANS_INHIBIT_D1_I) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO2_I_REG) is unused and will be removed from module axi_quad_spi.
+INFO: [Synth 8-3332] Sequential element (NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO3_I_REG) is unused and will be removed from module axi_quad_spi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2980.223 ; gain = 370.867 ; free physical = 7525 ; free virtual = 25730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------+----------------------------------+-----------+----------------------+---------------+
+|Module Name      | RTL Object                       | Inference | Size (Depth x Width) | Primitives    | 
++-----------------+----------------------------------+-----------+----------------------+---------------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 8               | RAM32M16 x 1  | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 8               | RAM32M16 x 1  | 
++-----------------+----------------------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3580.090 ; gain = 970.734 ; free physical = 4858 ; free virtual = 23070
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3616.145 ; gain = 1006.789 ; free physical = 4747 ; free virtual = 22959
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-----------------+----------------------------------+-----------+----------------------+---------------+
+|Module Name      | RTL Object                       | Inference | Size (Depth x Width) | Primitives    | 
++-----------------+----------------------------------+-----------+----------------------+---------------+
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 8               | RAM32M16 x 1  | 
+|xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 8               | RAM32M16 x 1  | 
++-----------------+----------------------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 3617.152 ; gain = 1007.797 ; free physical = 4723 ; free virtual = 22938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3779.965 ; gain = 1170.609 ; free physical = 12411 ; free virtual = 30626
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3779.965 ; gain = 1170.609 ; free physical = 12410 ; free virtual = 30625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3779.965 ; gain = 1170.609 ; free physical = 12405 ; free virtual = 30619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3779.965 ; gain = 1170.609 ; free physical = 12405 ; free virtual = 30619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3779.965 ; gain = 1170.609 ; free physical = 12401 ; free virtual = 30616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3779.965 ; gain = 1170.609 ; free physical = 12401 ; free virtual = 30616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    16|
+|2     |LUT2     |   111|
+|3     |LUT3     |    76|
+|4     |LUT4     |    81|
+|5     |LUT5     |   133|
+|6     |LUT6     |   125|
+|7     |RAM32M16 |     2|
+|8     |FD       |     8|
+|9     |FDR      |     8|
+|10    |FDRE     |   677|
+|11    |FDSE     |    36|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 3779.965 ; gain = 1170.609 ; free physical = 12401 ; free virtual = 30615
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 3779.965 ; gain = 1078.336 ; free physical = 12332 ; free virtual = 30548
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 3779.965 ; gain = 1170.609 ; free physical = 12330 ; free virtual = 30547
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3779.965 ; gain = 0.000 ; free physical = 12323 ; free virtual = 30540
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3779.965 ; gain = 0.000 ; free physical = 11572 ; free virtual = 29789
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 18 instances were transformed.
+  FD => FDRE: 8 instances
+  FDR => FDRE: 8 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 2 instances
+
+Synth Design complete | Checksum: ed25c2eb
+INFO: [Common 17-83] Releasing license: Synthesis
+403 Infos, 20 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 3779.965 ; gain = 2158.023 ; free physical = 11500 ; free virtual = 29718
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2869.762; main = 2645.899; forked = 223.862
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4708.715; main = 3762.305; forked = 986.562
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3786.316 ; gain = 0.000 ; free physical = 11469 ; free virtual = 29713
+INFO: [Common 17-1381] The checkpoint '/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_quad_spi_0_1_synth_1/spi_module_axi_quad_spi_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP spi_module_axi_quad_spi_0_1, cache-ID = cc147304ac04b610
+INFO: [Coretcl 2-1174] Renamed 109 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3786.316 ; gain = 0.000 ; free physical = 11340 ; free virtual = 29639
+INFO: [Common 17-1381] The checkpoint '/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_quad_spi_0_1_synth_1/spi_module_axi_quad_spi_0_1.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file spi_module_axi_quad_spi_0_1_utilization_synth.rpt -pb spi_module_axi_quad_spi_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Feb  8 14:50:00 2026...

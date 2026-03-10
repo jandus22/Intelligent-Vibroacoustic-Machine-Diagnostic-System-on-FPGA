@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="spi_module_axi_quad_spi_0_1_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_quad_spi_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_axi_smc_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_rst_ps8_0_99M_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_rst_ps8_0_99M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_clk_wiz_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_axi_gpio_0_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_axi_dma_0_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_xfft_0_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_xfft_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_axi_smc_1_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_smc_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="spi_module_axi_smc_2_0_synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/spi_module_axi_smc_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="spi_module_axi_quad_spi_0_1_synth_1"/>
+		<Parent Id="spi_module_axi_smc_0_synth_1"/>
+		<Parent Id="spi_module_rst_ps8_0_99M_0_synth_1"/>
+		<Parent Id="spi_module_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="spi_module_clk_wiz_0_synth_1"/>
+		<Parent Id="spi_module_axi_gpio_0_0_synth_1"/>
+		<Parent Id="spi_module_axi_dma_0_0_synth_1"/>
+		<Parent Id="spi_module_xfft_0_0_synth_1"/>
+		<Parent Id="spi_module_axi_smc_1_0_synth_1"/>
+		<Parent Id="spi_module_axi_smc_2_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/accelerometer_spi/accelerometer_spi.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="spi_module_axi_quad_spi_0_1_synth_1"/>
+		<Parent Id="spi_module_axi_smc_0_synth_1"/>
+		<Parent Id="spi_module_rst_ps8_0_99M_0_synth_1"/>
+		<Parent Id="spi_module_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="spi_module_clk_wiz_0_synth_1"/>
+		<Parent Id="spi_module_axi_gpio_0_0_synth_1"/>
+		<Parent Id="spi_module_axi_dma_0_0_synth_1"/>
+		<Parent Id="spi_module_xfft_0_0_synth_1"/>
+		<Parent Id="spi_module_axi_smc_1_0_synth_1"/>
+		<Parent Id="spi_module_axi_smc_2_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+		<Parameter Name="general.usePosixSpawnForFork" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+
