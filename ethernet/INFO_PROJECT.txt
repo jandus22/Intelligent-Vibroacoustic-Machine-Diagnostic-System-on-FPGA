@@ -1,0 +1,58 @@
+aktywacja srodowiska
+source /home/janecki/vitis/2025.2/Vitis/settings64.sh
+source /home/janecki/vitis/2025.2/Vivado/settings64.sh
+cd /home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1 && source /home/janecki/vitis/2025.2/Vivado/settings64.sh && vivado project_1.xpr &
+--------------------
+Folder: cpu
+--------------------
+bearing_cnn_1024.onnx
+Model uczenia maszynowego w formacie ONNX (Open Neural Network Exchange).
+Docelowy format wdrożeniowy uruchamiany na CPU ARM (PS).
+
+bearing_cnn_1024.onnx.data
+Dodatkowe dane modelu ONNX wygenerowane przy eksporcie.
+
+lobo_case_1_test_4_val_7_best_model.pt
+Oryginalny checkpoint modelu PyTorch (.pt) zawierający wagi sieci.
+
+ONNX.py
+Skrypt konwertujący model PyTorch (.pt) do ONNX.
+
+test_onnx.py
+Skrypt testujący inferencję modelu ONNX lokalnie na CPU.
+
+
+--------------------
+Folder: ethernet
+--------------------
+project_1/
+Główny projekt Vivado odpowiedzialny za sprzętową część Ethernet.
+
+project_1/project_1.xpr
+Plik projektu Vivado.
+
+project_1/ethernet_wrapper.xsa
+Eksport platformy sprzętowej do Vitis.
+
+udp_fft_receiver.py
+Pythonowy odbiornik UDP danych z płytki / test receiver.
+
+vitis/
+Folder zawierający projekty Vitis.
+
+vitis/eth_platform/
+Platforma Vitis utworzona z pliku XSA.
+
+vitis/udp_app/
+Aplikacja embedded odpowiedzialna za transmisję UDP.
+
+vitis/dma_test_app/
+Aplikacja testowa DMA / transferów pamięci.
+
+
+------------------------------------------------------------
+FOLDER: pc_gui/
+------------------------------------------------------------
+eth_gui_bearing.py
+Główna aplikacja GUI w Pythonie.
+Interfejs użytkownika odbierający dane z płytki i prezentujący wyniki.

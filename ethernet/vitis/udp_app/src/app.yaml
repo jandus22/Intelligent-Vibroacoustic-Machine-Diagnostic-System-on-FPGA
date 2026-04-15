@@ -1,0 +1,4 @@
+domain_path: /home/janecki/workspace_vitis/eth_platform/export/eth_platform/sw/lwip_domain
+app_src_dir: /home/janecki/vitis/2025.2/Vitis/data/embeddedsw/lib/sw_apps/empty_application
+template: empty_application
+lang: c

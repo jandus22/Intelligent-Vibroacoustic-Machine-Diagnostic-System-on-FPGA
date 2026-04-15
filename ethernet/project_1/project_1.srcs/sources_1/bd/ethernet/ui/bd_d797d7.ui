@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.702825",
+   "Default View_TopLeft":"201,-361",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 930 -y -110 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 1 -x 290 -y -100 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 4 -x 1820 -y -120 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 3 -x 1500 -y -20 -defaultsOSRD
+preplace inst axis_test_gen_0 -pg 1 -lvl 1 -x 290 -y 210 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 70 60 570 0 1300 -120 N
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 1 1290 -100n
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 4 60 80 NJ 80 NJ 80 1680
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM1_FPD 1 2 2 NJ -140 N
+preplace netloc axi_smc_M00_AXI 1 0 5 50 -270 NJ -270 NJ -270 NJ -270 1960
+preplace netloc axi_dma_0_M_AXI_S2MM 1 1 1 520 -150n
+preplace netloc axis_test_gen_0_m_axis 1 0 2 70 -260 510
+levelinfo -pg 1 -10 290 930 1500 1820 1980
+pagesize -pg 1 -db -bbox -sgen -50 -520 2000 870
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

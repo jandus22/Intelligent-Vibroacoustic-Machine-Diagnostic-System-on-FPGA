@@ -1,0 +1,354 @@
+/*
+
+AMD Vivado v2025.2 (64-bit) [Major: 2025, Minor: 2]
+SW Build: 6299465 on Fri Nov 14 12:34:56 MST 2025
+IP Build: 6300035 on Fri Nov 14 10:48:45 MST 2025
+IP Build: 6300035 on Fri Nov 14 10:48:45 MST 2025
+
+Process ID (PID): 1643
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Apr 01 18:28:44 CEST 2026
+Time zone: 	Central European Standard Time (Europe/Warsaw)
+
+OS: Ubuntu
+OS Version: 6.6.87.2-microsoft-standard-WSL2
+OS Architecture: amd64
+Available processors (cores): 12
+LSB Release Description: DISTRIB_ID=Ubuntu
+
+Display: 0
+Screen size: 1920x1080
+Local screen bounds: x = 1920, y = 0, width = 1920, height = 1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+Anti-Alias Enabled: true
+
+Java version: 	21.0.5 64-bit
+
+Java home: 	/home/janecki/vitis/2025.2/tps/lnx64/jre21.0.5_11
+Java executable: 	/home/janecki/vitis/2025.2/tps/lnx64/jre21.0.5_11/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms812m, -Xmx6144m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	812 MB
+Java maximum memory (-Xmx):	 6 GB
+
+User name: 	janecki
+User home directory: /home/janecki
+User working directory: /home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/pc_gui_app/gui_eth
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/janecki/vitis/2025.2
+HDI_APPROOT: /home/janecki/vitis/2025.2/Vivado
+RDI_DATADIR: /home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/pc_gui_app/gui_eth/:/home/janecki/vitis/2025.2/data
+RDI_BINDIR: /home/janecki/vitis/2025.2/Vivado/bin
+
+Vivado preferences file: /home/janecki/.Xilinx/Vivado/2025.2/vivado.xml
+Vivado preferences directory: /home/janecki/.Xilinx/Vivado/2025.2/
+Vivado layouts directory: /home/janecki/.Xilinx/Vivado/2025.2/data/layouts
+PlanAhead jar file: 	/home/janecki/vitis/2025.2/Vivado/lib/classes/planAhead.jar
+Vivado log file: 	/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/pc_gui_app/gui_eth/vivado.log
+Vivado journal file: 	/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/pc_gui_app/gui_eth/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1643-DESKTOP-1D7OT4F
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+RDI_APPROOT: /home/janecki/vitis/2025.2/Vivado
+RDI_BASEROOT: /home/janecki/vitis/2025.2
+RDI_BINROOT: /home/janecki/vitis/2025.2/Vivado/bin
+RDI_BUILD: yes
+RDI_DATADIR: :/home/janecki/vitis/2025.2/data
+RDI_INSTALLROOT: /home/janecki/vitis
+RDI_INSTALLVER: Vivado
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.5_11
+RDI_LIBDIR: /home/janecki/vitis/2025.2/Vivado/lib/lnx64.o/Ubuntu/22:/home/janecki/vitis/2025.2/Vivado/lib/lnx64.o/Ubuntu:/home/janecki/vitis/2025.2/Vivado/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/janecki/vitis/2025.2/Vitis/bin:/home/janecki/vitis/2025.2/Vivado/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/janecki/vitis/2025.2/Vivado/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/pc_gui_app/gui_eth:DESKTOP-1D7OT4F_1775060911_1595
+RDI_SHARED_DATA: 
+RDI_TPS_ROOT: /home/janecki/vitis/2025.2/Vivado/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /home/janecki/vitis/2025.2/Vivado/ids_lite/ISE
+XILINX_DSP: /home/janecki/vitis/2025.2/Vivado/ids_lite/ISE
+XILINX_HLS: /home/janecki/vitis/2025.2/Vitis
+XILINX_PLANAHEAD: /home/janecki/vitis/2025.2/Vivado
+XILINX_SDK: /home/janecki/vitis/2025.2/Vitis
+XILINX_VITIS: /home/janecki/vitis/2025.2/Vitis
+XILINX_VIVADO: /home/janecki/vitis/2025.2/Vivado
+
+
+GUI allocated memory:	812 MB
+GUI max memory:		6,144 MB
+Engine allocated memory: 1,923 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,923 MB. GUI used memory: 66 MB. Current time: 4/1/26, 6:28:46 PM CEST
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.xpr", 0); // b.c (PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS)
+// [GUI Memory]: 121 MB (+124071kb) [00:00:15]
+// [Engine Memory]: 1,919 MB (+1860758kb) [00:00:15]
+// Opening Vivado Project: /home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.xpr. Version: Vivado v2025.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  3233 ms.
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 136 MB (+9816kb) [00:00:20]
+// [Engine Memory]: 2,095 MB (+84095kb) [00:00:20]
+// [GUI Memory]: 161 MB (+19289kb) [00:00:20]
+// WARNING: HEventQueue.dispatchEvent() is taking  1131 ms.
+// Tcl Message: open_project /home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/janecki/vitis/2025.2/data/ip'. 
+// Project name: project_1; location: /home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1; part: xck26-sfvc784-2LV-c
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// [Engine Memory]: 2,236 MB (+37462kb) [00:00:23]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// TclEventType: LOAD_FEATURE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.srcs/sources_1/bd/ethernet/ethernet.bd} 
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+dismissDialog("Open Block Design"); // bk (Open Block Design Progress)
+// [Engine Memory]: 2,386 MB (+40556kb) [00:00:26]
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,334 MB. GUI used memory: 90 MB. Current time: 4/1/26, 6:29:03 PM CEST
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Command: 'set_property location {2 1115 185} [get_bd_cells rst_ps8_0_99M]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 1115 185} [get_bd_cells rst_ps8_0_99M] 
+// Elapsed time: 15 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1102, 195, 1180, 526, false, false, false, true, false); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_smc]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Tcl Command: 'set_property location {2.5 1543 95} [get_bd_cells axi_smc]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2.5 1543 95} [get_bd_cells axi_smc] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 90 MB. Current time: 4/1/26, 6:29:20 PM CEST
+// Tcl Command: 'set_property location {2 1050 -235} [get_bd_cells zynq_ultra_ps_e_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 1050 -235} [get_bd_cells zynq_ultra_ps_e_0] 
+// Tcl Command: 'set_property location {1 300 -204} [get_bd_cells axi_dma_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 300 -204} [get_bd_cells axi_dma_0] 
+// WARNING: HEventQueue.dispatchEvent() is taking  2945 ms.
+// Tcl Command: 'set_property location {1 279 -103} [get_bd_cells axi_dma_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 279 -103} [get_bd_cells axi_dma_0] 
+// Tcl Command: 'set_property location {2 867 -156} [get_bd_cells zynq_ultra_ps_e_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 867 -156} [get_bd_cells zynq_ultra_ps_e_0] 
+// Tcl Command: 'set_property location {3 1547 -48} [get_bd_cells axi_smc]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 1547 -48} [get_bd_cells axi_smc] 
+// Elapsed time: 16 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_nets /rst_ps8_0_99M_peripheral_aresetn]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// WARNING: HEventQueue.dispatchEvent() is taking  3104 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:30:06 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3128 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:30:49 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3055 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:31:32 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3330 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:32:15 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3129 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:32:58 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2948 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3266 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:33:44 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3263 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:34:27 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3114 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:35:10 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3116 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:35:53 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3099 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3377 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:36:39 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3176 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:37:21 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3293 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:38:04 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3130 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:38:47 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3305 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3203 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:39:33 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3104 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:40:16 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3142 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:40:59 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:41:42 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3228 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2946 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:42:28 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3328 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:43:11 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:43:54 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3247 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:44:37 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2938 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3155 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:45:23 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:46:03 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  4762 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2990 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,303 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:46:50 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3203 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:47:33 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:48:16 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3431 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:48:59 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2964 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3303 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:49:45 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2939 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:50:27 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3427 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:51:10 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2950 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:51:53 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3144 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3248 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:52:39 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3177 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:53:22 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3356 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:54:05 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3382 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:54:48 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3382 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:55:31 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3160 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3374 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:56:17 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2978 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:57:00 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3075 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:57:43 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  4336 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:58:27 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3132 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:59:10 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3293 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 6:59:53 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3117 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3406 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:00:39 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3248 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:01:22 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2987 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:02:05 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3101 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:02:48 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3402 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3031 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:03:33 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3130 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:04:16 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3279 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:04:59 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3254 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:05:42 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3327 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3321 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:06:28 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3380 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:07:11 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3260 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:07:54 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3346 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:08:37 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3258 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3367 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:09:23 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2954 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:10:06 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3154 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:10:49 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2999 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:11:32 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3002 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3353 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:12:18 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  2954 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:13:00 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3346 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:13:43 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3345 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:14:26 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3345 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:15:09 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3020 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3073 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:15:55 PM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:16:38 PM CEST
+// WARNING: HEventQueue.dispatchEvent() is taking  3311 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,304 MB. GUI used memory: 91 MB. Current time: 4/1/26, 7:17:21 PM CEST

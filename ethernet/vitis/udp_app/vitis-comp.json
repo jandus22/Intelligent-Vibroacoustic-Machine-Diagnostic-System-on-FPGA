@@ -1,0 +1,17 @@
+{
+  "name": "udp_app",
+  "type": "HOST",
+  "platform": "eth_platform",
+  "domain": "lwip_domain",
+  "cpuInstance": "psu_cortexa53_0",
+  "cpuType": "cortex-a53",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "lwip_domain",
+  "useSysrootToolchain": false,
+  "applicationFlow": "EMBEDDED",
+  "templateFlow": "VITIS"
+}
