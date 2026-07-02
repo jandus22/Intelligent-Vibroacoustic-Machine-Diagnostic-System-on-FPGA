@@ -1,3 +1,0 @@
-Time resolution is 1 ps
-$finish called at time : 17100 ns : File "/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.srcs/sources_1/new/tb_axis_test_gen.v" Line 43
-INFO: xsimkernel Simulation Memory Usage: 281128 KB (Peak: 338400 KB), Simulation CPU Usage: 660 ms

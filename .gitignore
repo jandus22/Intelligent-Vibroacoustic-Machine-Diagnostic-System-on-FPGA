@@ -1,0 +1,107 @@
+# ============================
+# VIVADO / FPGA PROJECTS
+# ============================
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+*.Xil/
+*.wdb
+*.pb
+*.dcp
+*.rpt
+*.jou
+*.log
+*.str
+*.backup.jou
+*.backup.log
+*.xpr
+
+# Vivado project folders
+project_1.cache/
+project_1.gen/
+project_1.hw/
+project_1.srcs/
+project_1.runs/
+project_1.sim/
+
+Hilbert_and_fft_test.cache/
+Hilbert_and_fft_test.gen/
+Hilbert_and_fft_test.hw/
+Hilbert_and_fft_test.ip_user_files/
+Hilbert_and_fft_test.sim/
+Hilbert_and_fft_test.srcs/
+
+accelerometer_spi.cache/
+accelerometer_spi.gen/
+accelerometer_spi.hw/
+accelerometer_spi.runs/
+accelerometer_spi.sim/
+accelerometer_spi.srcs/
+
+# ============================
+# VITIS / KRIA
+# ============================
+vitis/
+vitis/*/
+vitis/**/
+eth_platform/
+dma_test_app/
+udp_app/
+
+# ============================
+# MATLAB / SIMULINK
+# ============================
+slprj/
+sccprj/
+work/
+codegen/
+*.asv
+*.mex*
+*.slxc
+*.slx.autosave
+
+# ============================
+# PYTHON
+# ============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env/
+
+# ============================
+# EDITOR / OS JUNK
+# ============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# ============================
+# BINARIES / GENERATED FILES
+# ============================
+*.bit
+*.xsa
+*.elf
+*.bin
+*.img
+*.pb
+*.html
+*.tcl
+*.lpr
+xvlog.pb
+
+# ============================
+# LOGS / TEMP
+# ============================
+*.log
+*.tmp
+*.bak
+trash/

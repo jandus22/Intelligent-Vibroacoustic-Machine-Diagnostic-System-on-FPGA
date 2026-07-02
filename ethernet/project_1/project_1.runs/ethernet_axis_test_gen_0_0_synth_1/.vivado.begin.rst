@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="janecki" Host="DESKTOP-1D7OT4F" Pid="10556" HostCore="12" HostMemory="15934672">
-    </Process>
-</ProcessHandle>
