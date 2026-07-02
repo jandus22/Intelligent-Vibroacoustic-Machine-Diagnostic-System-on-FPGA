@@ -23,14 +23,14 @@
         "Compensation_Scaling": [ { "value": "No_Scale_Compensation", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "cartesian_has_tuser": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "cartesian_tuser_width": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "cartesian_has_tlast": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
+        "cartesian_has_tlast": [ { "value": "true", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "phase_has_tuser": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "phase_tuser_width": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "phase_has_tlast": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "flow_control": [ { "value": "NonBlocking", "resolve_type": "user", "usage": "all" } ],
         "optimize_goal": [ { "value": "Performance", "resolve_type": "user", "usage": "all" } ],
         "out_tready": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "out_tlast_behv": [ { "value": "Null", "resolve_type": "user", "usage": "all" } ],
+        "out_tlast_behv": [ { "value": "Pass_Cartesian_TLAST", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "ACLKEN": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "ARESETN": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ]
       },
@@ -54,13 +54,13 @@
         "C_ROUND_MODE": [ { "value": "3", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_SCALE_COMP": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_THROTTLE_SCHEME": [ { "value": "3", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_TLAST_RESOLUTION": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_TLAST_RESOLUTION": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HAS_S_AXIS_PHASE_TUSER": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HAS_S_AXIS_PHASE_TLAST": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S_AXIS_PHASE_TDATA_WIDTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S_AXIS_PHASE_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_HAS_S_AXIS_CARTESIAN_TUSER": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_HAS_S_AXIS_CARTESIAN_TLAST": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_HAS_S_AXIS_CARTESIAN_TLAST": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S_AXIS_CARTESIAN_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_S_AXIS_CARTESIAN_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_M_AXIS_DOUT_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -94,8 +94,10 @@
       "ports": {
         "aclk": [ { "direction": "in", "driver_value": "0x1" } ],
         "s_axis_cartesian_tvalid": [ { "direction": "in", "driver_value": "0x0" } ],
+        "s_axis_cartesian_tlast": [ { "direction": "in", "driver_value": "0x0" } ],
         "s_axis_cartesian_tdata": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
         "m_axis_dout_tvalid": [ { "direction": "out", "driver_value": "0x0" } ],
+        "m_axis_dout_tlast": [ { "direction": "out", "driver_value": "0x0" } ],
         "m_axis_dout_tdata": [ { "direction": "out", "size_left": "31", "size_right": "0", "driver_value": "0" } ]
       },
       "interfaces": {
@@ -111,7 +113,7 @@
             "HAS_TREADY": [ { "value": "0", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "HAS_TSTRB": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "HAS_TKEEP": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "HAS_TLAST": [ { "value": "0", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TLAST": [ { "value": "1", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "FREQ_HZ": [ { "value": "99999001", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
             "CLK_DOMAIN": [ { "value": "spi_module_zynq_ultra_ps_e_0_0_pl_clk0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
@@ -127,6 +129,7 @@
           },
           "port_maps": {
             "TDATA": [ { "physical_name": "s_axis_cartesian_tdata" } ],
+            "TLAST": [ { "physical_name": "s_axis_cartesian_tlast" } ],
             "TVALID": [ { "physical_name": "s_axis_cartesian_tvalid" } ]
           }
         },
@@ -178,7 +181,7 @@
             "HAS_TREADY": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "HAS_TSTRB": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "HAS_TKEEP": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "HAS_TLAST": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_TLAST": [ { "value": "1", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "FREQ_HZ": [ { "value": "99999001", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
             "CLK_DOMAIN": [ { "value": "spi_module_zynq_ultra_ps_e_0_0_pl_clk0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
@@ -187,16 +190,17 @@
                 "width format long minimum {} maximum {}} value 14} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} field_phase {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_phase_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type generated dependency polar_phase_offset format long minimum {} maximum {}} value 16} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_phase_fractwidth format long minimum {} maximum {}} value 13} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {a",
                 "ttribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cartesian_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cartesian_tuser} enabled {attribs {resolve_type generated dependency cart_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cart_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_phase_tuser ",
                 "{name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_tuser} enabled {attribs {resolve_type generated dependency phase_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency phase_offset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 0}"
-                ], "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+                ], "value_src": "user", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
             "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
           },
           "port_maps": {
             "TDATA": [ { "physical_name": "m_axis_dout_tdata" } ],
+            "TLAST": [ { "physical_name": "m_axis_dout_tlast" } ],
             "TVALID": [ { "physical_name": "m_axis_dout_tvalid" } ]
           }
         }
       }
     }
   },
-  "checksum": "26ea7e67"
+  "checksum": "b052a258"
 }

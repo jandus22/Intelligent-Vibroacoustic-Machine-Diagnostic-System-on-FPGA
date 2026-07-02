@@ -1,0 +1,19 @@
+Time resolution is 1 ps
+START SYMULACJI - Generowanie danych TDM dla 3 kanalow
+Note:   - SCALING_SCH: in_ptr = 3, out_ptr = 3
+Time: 0 ps  Iteration: 0  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
+Note:     - C_CHANNELS  = 3
+Time: 0 ps  Iteration: 0  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
+Note:     - field_width = 60
+Time: 0 ps  Iteration: 0  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
+Note:   - Copying SCALE_SCH from 62 downto 3 to 62 downto 3
+Time: 0 ps  Iteration: 0  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
+Note:   - SCALING_SCH: in_ptr = 3, out_ptr = 3
+Time: 0 ps  Iteration: 1  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
+Note:     - C_CHANNELS  = 3
+Time: 0 ps  Iteration: 1  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
+Note:     - field_width = 60
+Time: 0 ps  Iteration: 1  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
+Note:   - Copying SCALE_SCH from 62 downto 3 to 62 downto 3
+Time: 0 ps  Iteration: 1  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
+INFO: xsimkernel Simulation Memory Usage: 318584 KB (Peak: 368948 KB), Simulation CPU Usage: 824510 ms

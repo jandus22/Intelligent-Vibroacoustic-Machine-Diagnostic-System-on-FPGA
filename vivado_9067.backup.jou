@@ -1,0 +1,969 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Apr  2 13:50:37 2026
+# Process ID         : 9067
+# Current directory  : /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA
+# Command line       : vivado
+# Log file           : /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/vivado.log
+# Journal file       : /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/vivado.jou
+# Running On         : qtaz
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 5 7500F 6-Core Processor
+# CPU Frequency      : 3693.000 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 27314 MB
+# Swap memory        : 17179 MB
+# Total Virtual      : 44494 MB
+# Available Virtual  : 43175 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.xpr
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+update_compile_order -fileset sources_1
+set_property location {3 1211 365} [get_bd_cells axis_subset_converter_0]
+set_property location {3 1210 368} [get_bd_cells axis_subset_converter_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property location {1 261 -694} [get_bd_cells axi_dma_0]
+delete_bd_objs [get_bd_cells axi_dma_0]
+create_bd_port -dir O -type data out_fft
+set_property location {1459 64} [get_bd_ports out_fft]
+connect_bd_net [get_bd_ports out_fft] [get_bd_pins xfft_0/m_axis_data_tdata]
+create_bd_port -dir O -from 95 -to 0 -type data out_fft_data
+delete_bd_objs [get_bd_nets xfft_0_m_axis_data_tdata] [get_bd_ports out_fft]
+connect_bd_net [get_bd_ports out_fft_data] [get_bd_pins xfft_0/m_axis_data_tdata]
+create_bd_cell -type module -reference TDM_to_Parallel_Converter TDM_to_Parallel_Conv_0
+set_property location {3 1211 -104} [get_bd_cells TDM_to_Parallel_Conv_0]
+set_property location {3.5 1679 391} [get_bd_cells TDM_to_Parallel_Conv_0]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins TDM_to_Parallel_Conv_0/clk]
+delete_bd_objs [get_bd_intf_nets axis_subset_converter_0_M_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axis_subset_converter_0/M_AXIS] [get_bd_intf_pins TDM_to_Parallel_Conv_0/s_axis]
+connect_bd_intf_net [get_bd_intf_pins TDM_to_Parallel_Conv_0/m_axis] [get_bd_intf_pins xfft_0/S_AXIS_DATA]
+regenerate_bd_layout -routing
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property -dict [list \
+  CONFIG.CONST_VAL {0x000AAAAB0AAAAB0AAAAB} \
+  CONFIG.CONST_WIDTH {72} \
+] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins xfft_0/s_axis_config_tdata]
+startgroup
+set_property CONFIG.CONST_VAL {196765375672691108523} [get_bd_cells xlconstant_0]
+endgroup
+set_property location {1 186 95} [get_bd_cells xlconstant_0]
+regenerate_bd_layout -routing
+startgroup
+create_bd_port -dir I -type rst reset
+endgroup
+connect_bd_net [get_bd_ports reset] [get_bd_pins TDM_to_Parallel_Conv_0/rst_n]
+connect_bd_net [get_bd_ports reset] [get_bd_pins axis_subset_converter_0/aresetn]
+set_property location {-19 468} [get_bd_ports reset]
+set_property location {-15 494} [get_bd_ports reset]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins xfft_0/s_axis_config_tvalid]
+regenerate_bd_layout -routing
+set_property location {1 135 -71} [get_bd_cells xlconstant_0]
+set_property location {1 164 166} [get_bd_cells xlconstant_1]
+set_property location {1 172 77} [get_bd_cells xlconstant_0]
+file mkdir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sim_1/new/top.v w ]
+add_files -fileset sim_1 /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sim_1/new/top.v
+update_compile_order -fileset sim_1
+remove_files  -fileset sim_1 /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sim_1/new/top.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sim_1/new/top.sv w ]
+add_files -fileset sim_1 /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sim_1/new/top.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+set_property NAME aresetn [get_bd_ports /reset]
+create_bd_port -dir I s_axis_data_tvalid
+set_property location {-168 352} [get_bd_ports s_axis_data_tvalid]
+create_bd_port -dir I s_axis_data_tready
+create_bd_port -dir I s_axis_data_tlast
+set_property location {-40 79} [get_bd_ports s_axis_data_tlast]
+set_property location {-44 396} [get_bd_ports s_axis_data_tready]
+set_property location {-31 433} [get_bd_ports s_axis_data_tlast]
+create_bd_port -dir I -from 15 -to 0 -type data s_axis_data_tdata
+connect_bd_net [get_bd_ports s_axis_data_tdata] [get_bd_pins fir_compiler_0/s_axis_data_tdata]
+connect_bd_net [get_bd_ports s_axis_data_tvalid] [get_bd_pins fir_compiler_0/s_axis_data_tvalid]
+connect_bd_net [get_bd_ports s_axis_data_tlast] [get_bd_pins fir_compiler_0/s_axis_data_tlast]
+set_property location {-23 398} [get_bd_ports s_axis_data_tready]
+connect_bd_net [get_bd_ports s_axis_data_tready] [get_bd_pins xfft_0/m_axis_data_tready]
+startgroup
+set_property CONFIG.M_DATA_Has_TREADY {true} [get_bd_cells fir_compiler_0]
+endgroup
+startgroup
+set_property CONFIG.M_DATA_Has_TREADY {true} [get_bd_cells fir_compiler_1]
+endgroup
+startgroup
+set_property CONFIG.flow_control {Blocking} [get_bd_cells cordic_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.M_HAS_TREADY.VALUE_MODE MANUAL CONFIG.S_HAS_TREADY.VALUE_MODE MANUAL] [get_bd_cells axis_subset_converter_0]
+set_property -dict [list \
+  CONFIG.HAS_ACLKEN {0} \
+  CONFIG.M_HAS_TREADY {1} \
+  CONFIG.S_HAS_TREADY {1} \
+] [get_bd_cells axis_subset_converter_0]
+endgroup
+validate_bd_design
+delete_bd_objs [get_bd_nets s_axis_data_tready_1]
+connect_bd_net [get_bd_ports s_axis_data_tready] [get_bd_pins fir_compiler_0/m_axis_data_tready]
+delete_bd_objs [get_bd_nets s_axis_data_tready_1]
+connect_bd_net [get_bd_pins fir_compiler_1/s_axis_data_tready] [get_bd_pins fir_compiler_0/m_axis_data_tready]
+delete_bd_objs [get_bd_nets fir_compiler_1_s_axis_data_tready]
+startgroup
+make_bd_pins_external  [get_bd_pins fir_compiler_0/s_axis_data_tready]
+endgroup
+delete_bd_objs [get_bd_ports s_axis_data_tready]
+set_property NAME s_axis_data_tready [get_bd_ports /s_axis_data_tready_0]
+save_bd_design
+regenerate_bd_layout
+validate_bd_design
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+run all
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+current_wave_config {Untitled 1}
+add_wave {{/tb_top/Hilbert_fft/fir_compiler_0}} 
+run 150 us
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_top/Hilbert_fft/fir_compiler_1}} 
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_top/Hilbert_fft/xfft_0}} 
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+run all
+current_wave_config {Untitled 1}
+add_wave {{/tb_top/Hilbert_fft/TDM_to_Parallel_Conv_0}} 
+run all
+run all
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+run all
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+run all
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+close_sim
+launch_simulation
+source tb_top.tcl
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+set_property location {2581 365} [get_bd_ports out_fft_data]
+create_bd_port -dir O -from 31 -to 0 -type data fft_x_out
+create_bd_port -dir O -from 31 -to 0 -type data fft_y_out
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:cordic:6.0 cordic_1
+endgroup
+copy_bd_objs /  [get_bd_cells {cordic_1}]
+copy_bd_objs /  [get_bd_cells {cordic_1}]
+set_property location {7 2562 650} [get_bd_cells cordic_2]
+set_property location {7 2540 788} [get_bd_cells cordic_3]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_1
+endgroup
+delete_bd_objs [get_bd_cells axis_subset_converter_1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_subset_converter:1.1 axis_subset_converter_1
+endgroup
+delete_bd_objs [get_bd_nets xfft_0_m_axis_data_tdata]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/M_AXIS_DATA] [get_bd_intf_pins axis_subset_converter_1/S_AXIS]
+validate_bd_design
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins axis_subset_converter_1/aclk]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins axis_subset_converter_1/aresetn]
+validate_bd_design
+copy_bd_objs /  [get_bd_cells {axis_subset_converter_1}]
+set_property location {6 2246 841} [get_bd_cells axis_subset_converter_2]
+copy_bd_objs /  [get_bd_cells {axis_subset_converter_1}]
+set_property location {6 2218 1092} [get_bd_cells axis_subset_converter_3]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_0
+endgroup
+set_property location {6 2251 438} [get_bd_cells axis_broadcaster_0]
+delete_bd_objs [get_bd_intf_nets xfft_0_M_AXIS_DATA]
+delete_bd_objs [get_bd_cells axis_subset_converter_1]
+delete_bd_objs [get_bd_cells axis_subset_converter_2]
+delete_bd_objs [get_bd_cells axis_subset_converter_3]
+connect_bd_intf_net [get_bd_intf_pins xfft_0/M_AXIS_DATA] [get_bd_intf_pins axis_broadcaster_0/S_AXIS]
+startgroup
+set_property CONFIG.NUM_MI {3} [get_bd_cells axis_broadcaster_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_0/M00_AXIS] [get_bd_intf_pins cordic_1/S_AXIS_CARTESIAN]
+connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_0/M01_AXIS] [get_bd_intf_pins cordic_2/S_AXIS_CARTESIAN]
+connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_0/M02_AXIS] [get_bd_intf_pins cordic_3/S_AXIS_CARTESIAN]
+connect_bd_net [get_bd_ports fft_x_out] [get_bd_pins cordic_1/m_axis_dout_tdata]
+connect_bd_net [get_bd_ports fft_y_out] [get_bd_pins cordic_2/m_axis_dout_tdata]
+create_bd_port -dir O -from 31 -to 0 -type data fft_z_out
+startgroup
+connect_bd_net [get_bd_ports fft_z_out] [get_bd_pins cordic_3/m_axis_dout_tdata]
+endgroup
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins axis_broadcaster_0/aclk]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins axis_broadcaster_0/aresetn]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins cordic_1/aclk]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins cordic_2/aclk]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins cordic_3/aclk]
+set_property location {3016 355} [get_bd_ports out_fft_data]
+connect_bd_net [get_bd_ports out_fft_data] [get_bd_pins xfft_0/m_axis_data_tdata]
+regenerate_bd_layout -routing
+startgroup
+set_property -dict [list \
+  CONFIG.Compensation_Scaling {No_Scale_Compensation} \
+  CONFIG.Data_Format {SignedFraction} \
+  CONFIG.Functional_Selection {Translate} \
+  CONFIG.Round_Mode {Nearest_Even} \
+  CONFIG.flow_control {Blocking} \
+] [get_bd_cells cordic_1]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.Compensation_Scaling {No_Scale_Compensation} \
+  CONFIG.Data_Format {SignedFraction} \
+  CONFIG.Functional_Selection {Translate} \
+  CONFIG.Pipelining_Mode {Optimal} \
+  CONFIG.Round_Mode {Nearest_Even} \
+  CONFIG.flow_control {NonBlocking} \
+] [get_bd_cells cordic_2]
+endgroup
+startgroup
+set_property CONFIG.flow_control {NonBlocking} [get_bd_cells cordic_1]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.Compensation_Scaling {No_Scale_Compensation} \
+  CONFIG.Data_Format {SignedFraction} \
+  CONFIG.Functional_Selection {Translate} \
+  CONFIG.Pipelining_Mode {Optimal} \
+  CONFIG.Round_Mode {Nearest_Even} \
+] [get_bd_cells cordic_3]
+endgroup
+validate_bd_design
+startgroup
+set_property -dict [list CONFIG.M_TDATA_NUM_BYTES.VALUE_MODE MANUAL] [get_bd_cells axis_broadcaster_0]
+set_property -dict [list \
+  CONFIG.M01_TDATA_REMAP {tdata[63:32]} \
+  CONFIG.M02_TDATA_REMAP {tdata[95:64]} \
+  CONFIG.M_TDATA_NUM_BYTES {4} \
+] [get_bd_cells axis_broadcaster_0]
+endgroup
+startgroup
+endgroup
+validate_bd_design
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+run 40 ms
+current_wave_config {Untitled 3}
+add_wave {{/tb_top/Hilbert_fft/fft_x_out}} {{/tb_top/Hilbert_fft/fft_y_out}} {{/tb_top/Hilbert_fft/fft_z_out}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_top/Hilbert_fft/cordic_1}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_top/Hilbert_fft/cordic_2}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_top/Hilbert_fft/cordic_3}} 
+current_wave_config {Untitled 3}
+add_wave {{/tb_top/Hilbert_fft/axis_broadcaster_0}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+delete_bd_objs [get_bd_nets xfft_0_m_axis_data_tdata]
+delete_bd_objs [get_bd_ports out_fft_data]
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+save_bd_design
+startgroup
+set_property CONFIG.ARESETN {true} [get_bd_cells cordic_2]
+endgroup
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins cordic_2/aresetn]
+startgroup
+set_property CONFIG.ARESETN {true} [get_bd_cells cordic_3]
+endgroup
+startgroup
+set_property CONFIG.ARESETN {true} [get_bd_cells cordic_1]
+endgroup
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins cordic_1/aresetn]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins cordic_3/aresetn]
+save_bd_design
+close_sim
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+close_sim
+launch_simulation
+source tb_top.tcl
+run 40 ms
+run 40 ms
+close_sim
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 6}
+add_wave {{/tb_top/Hilbert_fft/axis_broadcaster_0/m_axis_tdata}} 
+current_wave_config {Untitled 6}
+add_wave {{/tb_top/Hilbert_fft/cordic_1/s_axis_cartesian_tdata}} 
+run 40 ms
+run 40 ms
+current_wave_config {Untitled 6}
+add_wave {{/tb_top/Hilbert_fft/xfft_0/m_axis_data_tdata}} 
+run 40 ms
+current_wave_config {Untitled 6}
+add_wave {{/tb_top/Hilbert_fft/axis_broadcaster_0/s_axis_tdata}} 
+current_wave_config {Untitled 6}
+add_wave {{/tb_top/Hilbert_fft/axis_broadcaster_0/m_axis_tdata}} 
+run 40 ms
+current_wave_config {Untitled 6}
+add_wave {{/tb_top/Hilbert_fft/axis_broadcaster_0/s_axis_tlast}} 
+current_wave_config {Untitled 6}
+add_wave {{/tb_top/Hilbert_fft/xfft_0/m_axis_data_tlast}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+delete_bd_objs [get_bd_intf_nets xfft_0_M_AXIS_DATA] [get_bd_intf_nets axis_broadcaster_0_M00_AXIS] [get_bd_intf_nets axis_broadcaster_0_M01_AXIS] [get_bd_intf_nets axis_broadcaster_0_M02_AXIS] [get_bd_cells axis_broadcaster_0]
+delete_bd_objs [get_bd_nets cordic_1_m_axis_dout_tdata] [get_bd_cells cordic_1]
+delete_bd_objs [get_bd_nets cordic_2_m_axis_dout_tdata] [get_bd_cells cordic_2]
+delete_bd_objs [get_bd_nets cordic_3_m_axis_dout_tdata] [get_bd_cells cordic_3]
+close [ open /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/new/brancher.v w ]
+add_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/new/brancher.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference brancher brancher_0
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins brancher_0/clk]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins brancher_0/rst_n]
+startgroup
+connect_bd_net [get_bd_pins xfft_0/m_axis_data_tdata] [get_bd_pins brancher_0/s_axis_tdata]
+endgroup
+set_property location {6 2143 759} [get_bd_cells brancher_0]
+set_property location {6 2155 936} [get_bd_cells brancher_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+set_property location {6 2190 719} [get_bd_cells xlslice_0]
+connect_bd_net [get_bd_pins brancher_0/x_out] [get_bd_pins xlslice_0/Din]
+startgroup
+set_property -dict [list \
+  CONFIG.DIN_FROM {31} \
+  CONFIG.DIN_TO {16} \
+] [get_bd_cells xlslice_0]
+endgroup
+copy_bd_objs /  [get_bd_cells {xlslice_0}]
+set_property location {6 2164 807} [get_bd_cells xlslice_1]
+connect_bd_net [get_bd_pins xlslice_1/Din] [get_bd_pins brancher_0/x_out]
+startgroup
+set_property -dict [list \
+  CONFIG.DIN_FROM {15} \
+  CONFIG.DIN_TO {0} \
+] [get_bd_cells xlslice_1]
+endgroup
+delete_bd_objs [get_bd_cells xlslice_0]
+delete_bd_objs [get_bd_nets brancher_0_x_out] [get_bd_cells xlslice_1]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:cordic:6.0 cordic_1
+endgroup
+set_property -dict [list \
+  CONFIG.ARESETN {false} \
+  CONFIG.Compensation_Scaling {No_Scale_Compensation} \
+  CONFIG.Data_Format {SignedFraction} \
+  CONFIG.Functional_Selection {Translate} \
+  CONFIG.Pipelining_Mode {Optimal} \
+  CONFIG.Round_Mode {Nearest_Even} \
+] [get_bd_cells cordic_1]
+copy_bd_objs /  [get_bd_cells {cordic_1}]
+copy_bd_objs /  [get_bd_cells {cordic_1}]
+set_property location {6.5 2566 954} [get_bd_cells cordic_1]
+set_property location {7 2582 831} [get_bd_cells cordic_2]
+set_property location {7 2567 716} [get_bd_cells cordic_3]
+set_property location {7 2531 616} [get_bd_cells cordic_1]
+set_property location {7 2569 999} [get_bd_cells cordic_3]
+connect_bd_net [get_bd_pins cordic_1/s_axis_cartesian_tdata] [get_bd_pins brancher_0/x_out]
+connect_bd_net [get_bd_pins brancher_0/y_out] [get_bd_pins cordic_2/s_axis_cartesian_tdata]
+connect_bd_net [get_bd_pins brancher_0/z_out] [get_bd_pins cordic_3/s_axis_cartesian_tdata]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2
+endgroup
+connect_bd_net [get_bd_pins xlconstant_2/dout] [get_bd_pins cordic_3/s_axis_cartesian_tvalid]
+connect_bd_net [get_bd_pins cordic_2/s_axis_cartesian_tvalid] [get_bd_pins xlconstant_2/dout]
+connect_bd_net [get_bd_pins cordic_1/s_axis_cartesian_tvalid] [get_bd_pins xlconstant_2/dout]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins cordic_2/aclk]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins cordic_3/aclk]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins cordic_1/aclk]
+connect_bd_net [get_bd_ports fft_x_out] [get_bd_pins cordic_1/m_axis_dout_tdata]
+connect_bd_net [get_bd_ports fft_y_out] [get_bd_pins cordic_2/m_axis_dout_tdata]
+connect_bd_net [get_bd_ports fft_z_out] [get_bd_pins cordic_3/m_axis_dout_tdata]
+save_bd_design
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+validate_bd_design
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+run 40 ms
+current_wave_config {Untitled 7}
+add_wave {{/tb_top/Hilbert_fft/xfft_0/s_axis_data_tdata}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+validate_bd_design -force
+update_module_reference Hilbert_fft_brancher_0_0
+delete_bd_objs [get_bd_nets xlconstant_2_dout]
+delete_bd_objs [get_bd_cells xlconstant_2]
+connect_bd_net [get_bd_pins brancher_0/m_axis_tvalid] [get_bd_pins cordic_2/s_axis_cartesian_tvalid]
+connect_bd_net [get_bd_pins cordic_1/s_axis_cartesian_tvalid] [get_bd_pins brancher_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins cordic_3/s_axis_cartesian_tvalid] [get_bd_pins brancher_0/m_axis_tvalid]
+connect_bd_net [get_bd_pins brancher_0/s_axis_tvalid] [get_bd_pins xfft_0/m_axis_data_tvalid]
+close [ open /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/new/fir0_spy.v w ]
+add_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/new/fir0_spy.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference fir0_spy fir0_spy_0
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins fir0_spy_0/aclk]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins fir0_spy_0/aresetn]
+connect_bd_net [get_bd_pins fir0_spy_0/s_axis_tready] [get_bd_pins fir_compiler_0/m_axis_data_tready]
+connect_bd_net [get_bd_pins fir0_spy_0/s_axis_tvalid] [get_bd_pins fir_compiler_0/m_axis_data_tvalid]
+connect_bd_net [get_bd_pins fir0_spy_0/s_axis_tlast] [get_bd_pins fir_compiler_0/m_axis_data_tlast]
+connect_bd_net [get_bd_pins fir0_spy_0/s_axis_tdata] [get_bd_pins fir_compiler_0/m_axis_data_tdata]
+save_bd_design
+validate_bd_design
+validate_bd_design -force
+delete_bd_objs [get_bd_nets Net]
+connect_bd_net [get_bd_pins fir0_spy_0/s_axis_tready] [get_bd_pins fir_compiler_0/s_axis_data_tready]
+save_bd_design
+validate_bd_design
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 8}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+run 40 ms
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+copy_bd_objs /  [get_bd_cells {fir0_spy_0}]
+set_property location {1 269 597} [get_bd_cells fir0_spy_1]
+set_property location {2 702 480} [get_bd_cells fir0_spy_0]
+connect_bd_net [get_bd_ports s_axis_data_tdata] [get_bd_pins fir0_spy_1/s_axis_tdata]
+delete_bd_objs [get_bd_cells fir0_spy_1]
+copy_bd_objs /  [get_bd_cells {fir0_spy_0}]
+set_property location {1 277 475} [get_bd_cells fir0_spy_1]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins fir0_spy_1/aclk]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins fir0_spy_1/aresetn]
+connect_bd_net [get_bd_pins fir0_spy_1/s_axis_tready] [get_bd_pins fir_compiler_0/s_axis_data_tready]
+connect_bd_net [get_bd_ports s_axis_data_tvalid] [get_bd_pins fir0_spy_1/s_axis_tvalid]
+connect_bd_net [get_bd_ports s_axis_data_tlast] [get_bd_pins fir0_spy_1/s_axis_tlast]
+connect_bd_net [get_bd_ports s_axis_data_tdata] [get_bd_pins fir0_spy_1/s_axis_tdata]
+save_bd_design
+close_sim
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 9}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+connect_bd_net [get_bd_pins fir_compiler_1/s_axis_data_tready] [get_bd_pins fir_compiler_0/m_axis_data_tready]
+save_bd_design
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Clock_Frequency {100.0} \
+  CONFIG.Coefficient_File {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/COE_File/filet_2.coe} \
+  CONFIG.Coefficient_Fractional_Bits {31} \
+  CONFIG.Coefficient_Sets {1} \
+  CONFIG.Coefficient_Sign {Signed} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.DATA_Has_TLAST {Packet_Framing} \
+  CONFIG.Decimation_Rate {1} \
+  CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} \
+  CONFIG.Filter_Type {Single_Rate} \
+  CONFIG.Interpolation_Rate {1} \
+  CONFIG.M_DATA_Has_TUSER {Not_Required} \
+  CONFIG.Number_Channels {1} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Quantize_Only} \
+  CONFIG.RateSpecification {Frequency_Specification} \
+  CONFIG.S_DATA_Has_TUSER {Not_Required} \
+  CONFIG.Sample_Frequency {0.02667} \
+  CONFIG.Select_Pattern {All} \
+  CONFIG.Zero_Pack_Factor {1} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+update_compile_order -fileset sources_1
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 10}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+current_wave_config {Untitled 10}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+delete_bd_objs [get_bd_nets fir_compiler_1_s_axis_data_tready]
+save_bd_design
+close_sim
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Sets {1} \
+  CONFIG.Coefficient_Sign {Signed} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Quantize_Only} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Output_Width {16} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+validate_bd_design
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 12}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 12}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.BestPrecision {true} \
+  CONFIG.Clock_Frequency {100.0} \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Sets {1} \
+  CONFIG.Coefficient_Sign {Signed} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.DATA_Has_TLAST {Packet_Framing} \
+  CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} \
+  CONFIG.M_DATA_Has_TUSER {Not_Required} \
+  CONFIG.Number_Channels {3} \
+  CONFIG.Output_Rounding_Mode {Convergent_Rounding_to_Even} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Maximize_Dynamic_Range} \
+  CONFIG.S_DATA_Has_TUSER {Not_Required} \
+  CONFIG.Sample_Frequency {0.02667} \
+  CONFIG.Select_Pattern {All} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 13}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.BestPrecision {false} \
+  CONFIG.Coefficient_Fractional_Bits {0} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Output_Width {16} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+save_bd_design
+close_sim
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 14}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 14}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {1} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Output_Width {16} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 15}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 15}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.BestPrecision {true} \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Quantize_Only} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 16}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 16}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Maximize_Dynamic_Range} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.BestPrecision {false} \
+  CONFIG.Channel_Sequence {Basic} \
+  CONFIG.Clock_Frequency {100.0} \
+  CONFIG.Coefficient_Fractional_Bits {0} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.DATA_Has_TLAST {Packet_Framing} \
+  CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} \
+  CONFIG.M_DATA_Has_TUSER {Not_Required} \
+  CONFIG.Number_Channels {3} \
+  CONFIG.Output_Width {16} \
+  CONFIG.S_DATA_Has_TUSER {Not_Required} \
+  CONFIG.Sample_Frequency {0.02667} \
+  CONFIG.Select_Pattern {All} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+relaunch_sim
+run 40 ms
+current_wave_config {Untitled 16}
+add_wave {{/tb_top/Hilbert_fft/fir_compiler_0/m_axis_data_tvalid}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Output_Width {16} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 17}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 17}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {15} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Output_Rounding_Mode {Convergent_Rounding_to_Even} \
+  CONFIG.Output_Width {16} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 18}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 18}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Output_Width {16} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 19}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 19}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+close_sim
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 20}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+current_wave_config {Untitled 20}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {18} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {18} \
+  CONFIG.Output_Rounding_Mode {Convergent_Rounding_to_Even} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Maximize_Dynamic_Range} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 21}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+current_wave_config {Untitled 21}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.BestPrecision {true} \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.Output_Rounding_Mode {Convergent_Rounding_to_Even} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Quantize_Only} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 22}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+current_wave_config {Untitled 22}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.BestPrecision {false} \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} \
+  CONFIG.Output_Rounding_Mode {Convergent_Rounding_to_Even} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Normalize_to_Centre_Coefficient} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 23}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+current_wave_config {Untitled 23}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.Coefficient_Fractional_Bits {14} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.Output_Width {16} \
+  CONFIG.Quantization {Normalize_to_Centre_Coefficient} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 24}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+current_wave_config {Untitled 24}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+startgroup
+set_property -dict [list \
+  CONFIG.BestPrecision {true} \
+  CONFIG.Coefficient_Fractional_Bits {16} \
+  CONFIG.Coefficient_Sets {1} \
+  CONFIG.Coefficient_Sign {Signed} \
+  CONFIG.Coefficient_Structure {Inferred} \
+  CONFIG.Coefficient_Width {16} \
+  CONFIG.Output_Rounding_Mode {Full_Precision} \
+  CONFIG.Output_Width {34} \
+  CONFIG.Quantization {Maximize_Dynamic_Range} \
+] [get_bd_cells fir_compiler_0]
+endgroup
+delete_bd_objs [get_bd_intf_nets fir_compiler_0_M_AXIS_DATA]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice:1.1 axis_register_slice_0
+endgroup
+connect_bd_net [get_bd_pins fir_compiler_0/m_axis_data_tready] [get_bd_pins axis_register_slice_0/s_axis_tready]
+connect_bd_net [get_bd_pins axis_register_slice_0/s_axis_tvalid] [get_bd_pins fir_compiler_0/m_axis_data_tvalid]
+connect_bd_net [get_bd_pins axis_register_slice_0/s_axis_tdata] [get_bd_pins fir_compiler_0/m_axis_data_tdata]
+connect_bd_net [get_bd_ports clk_100MHz] [get_bd_pins axis_register_slice_0/aclk]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins axis_register_slice_0/aresetn]
+delete_bd_objs [get_bd_nets fir_compiler_0_m_axis_data_tdata]
+delete_bd_objs [get_bd_nets fir_compiler_0_m_axis_data_tlast]
+delete_bd_objs [get_bd_nets fir_compiler_0_m_axis_data_tvalid]
+delete_bd_objs [get_bd_nets fir_compiler_0_s_axis_data_tready]
+delete_bd_objs [get_bd_nets axis_register_slice_0_s_axis_tready] [get_bd_cells axis_register_slice_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_register_slice:2.1 axi_register_slice_0
+endgroup
+delete_bd_objs [get_bd_cells axi_register_slice_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0
+endgroup
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+undo
+redo
+redo
+undo
+save_bd_design
+delete_bd_objs [get_bd_intf_nets fir_compiler_0_M_AXIS_DATA]
+validate_bd_design
+update_module_reference Hilbert_fft_fir0_spy_0_0
+update_module_reference Hilbert_fft_fir0_spy_0_2
+delete_bd_objs [get_bd_nets fir_compiler_0_m_axis_data_tlast]
+delete_bd_objs [get_bd_nets fir_compiler_0_m_axis_data_tvalid]
+delete_bd_objs [get_bd_nets fir_compiler_0_s_axis_data_tready]
+connect_bd_net [get_bd_ports s_axis_data_tlast] [get_bd_pins fir0_spy_0/s_axis_tlast]
+undo
+connect_bd_net [get_bd_pins fir_compiler_0/m_axis_data_tlast] [get_bd_pins fir0_spy_0/s_axis_tlast]
+connect_bd_net [get_bd_pins fir0_spy_0/s_axis_tvalid] [get_bd_pins fir_compiler_0/m_axis_data_tvalid]
+connect_bd_net [get_bd_pins fir0_spy_0/s_axis_tready] [get_bd_pins fir_compiler_0/s_axis_data_tready]
+connect_bd_net [get_bd_ports s_axis_data_tready] [get_bd_pins fir_compiler_0/s_axis_data_tready]
+save_bd_design
+validate_bd_design
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_top.tcl
+current_wave_config {Untitled 25}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0}} 
+current_wave_config {Untitled 25}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_0/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_0/debug_z}} 
+current_wave_config {Untitled 25}
+add_wave {{/tb_top/Hilbert_fft/fir0_spy_1/debug_x}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_y}} {{/tb_top/Hilbert_fft/fir0_spy_1/debug_z}} 
+run 40 ms
+open_bd_design {/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd}
+update_module_reference Hilbert_fft_fir0_spy_0_2 Hilbert_fft_fir0_spy_0_0
+validate_bd_design
+close_sim
+save_bd_design
+generate_target Simulation [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd]
+export_ip_user_files -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.srcs/sources_1/bd/Hilbert_fft/Hilbert_fft.bd] -directory /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/sim_scripts -ip_user_files_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files -ipstatic_source_dir /home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/modelsim} {questa=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/questa} {xcelium=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/xcelium} {vcs=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/vcs} {riviera=/home/janek/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/Hilbert_with_fft/Hilbert_and_fft_test/Hilbert_and_fft_test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
