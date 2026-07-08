@@ -23,12 +23,12 @@
       "cordic_2": "",
       "cordic_3": "",
       "fir0_spy_1": "",
-      "xlslice_0": "",
       "fir_compiler_1": "",
       "imag": "",
       "rel": "",
       "fir0_spy_2": "",
-      "fir0_spy_3": ""
+      "fir0_spy_3": "",
+      "axis_subset_converter_1": ""
     },
     "ports": {
       "clk_100MHz": {
@@ -917,25 +917,6 @@
           }
         }
       },
-      "xlslice_0": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "ip_revision": "5",
-        "xci_name": "Hilbert_fft_xlslice_0_0",
-        "xci_path": "ip/Hilbert_fft_xlslice_0_0/Hilbert_fft_xlslice_0_0.xci",
-        "inst_hier_path": "xlslice_0",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "31"
-          },
-          "DIN_TO": {
-            "value": "16"
-          },
-          "DIN_WIDTH": {
-            "value": "40"
-          }
-        }
-      },
       "fir_compiler_1": {
         "vlnv": "xilinx.com:ip:fir_compiler:7.2",
         "ip_revision": "26",
@@ -957,10 +938,10 @@
             "value": "6,0,-4,-3,5,6,-6,-13,7,44,64,44,7,-13,-6,6,5,-3,-4,0,6"
           },
           "Coefficient_File": {
-            "value": "../../../../../../../../COE_File/hilbert.coe"
+            "value": "../../../../../../../../../../hilbert_radix10.coe"
           },
           "Coefficient_Fractional_Bits": {
-            "value": "15"
+            "value": "0"
           },
           "Coefficient_Sets": {
             "value": "1"
@@ -1005,7 +986,7 @@
             "value": "16"
           },
           "Quantization": {
-            "value": "Maximize_Dynamic_Range"
+            "value": "Quantize_Only"
           },
           "RateSpecification": {
             "value": "Frequency_Specification"
@@ -1314,6 +1295,94 @@
             "right": "0"
           }
         }
+      },
+      "axis_subset_converter_1": {
+        "vlnv": "xilinx.com:ip:axis_subset_converter:1.1",
+        "ip_revision": "36",
+        "xci_name": "Hilbert_fft_axis_subset_converter_1_0",
+        "xci_path": "ip/Hilbert_fft_axis_subset_converter_1_0/Hilbert_fft_axis_subset_converter_1_0.xci",
+        "inst_hier_path": "axis_subset_converter_1",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "M_HAS_TKEEP": {
+            "value": "0"
+          },
+          "M_HAS_TLAST": {
+            "value": "1"
+          },
+          "M_HAS_TREADY": {
+            "value": "1"
+          },
+          "M_HAS_TSTRB": {
+            "value": "0"
+          },
+          "M_TDATA_NUM_BYTES": {
+            "value": "2"
+          },
+          "M_TDEST_WIDTH": {
+            "value": "0"
+          },
+          "M_TID_WIDTH": {
+            "value": "0"
+          },
+          "M_TUSER_WIDTH": {
+            "value": "0"
+          },
+          "S_HAS_TKEEP": {
+            "value": "0"
+          },
+          "S_HAS_TLAST": {
+            "value": "1"
+          },
+          "S_HAS_TREADY": {
+            "value": "1"
+          },
+          "S_HAS_TSTRB": {
+            "value": "0"
+          },
+          "S_TDATA_NUM_BYTES": {
+            "value": "5"
+          },
+          "S_TDEST_WIDTH": {
+            "value": "0"
+          },
+          "S_TID_WIDTH": {
+            "value": "0"
+          },
+          "S_TUSER_WIDTH": {
+            "value": "0"
+          },
+          "TDATA_REMAP": {
+            "value": "tdata[32:17]"
+          }
+        },
+        "interface_ports": {
+          "S_AXIS": {
+            "bd_attributes": {
+              "BRIDGES": {
+                "value": "M_AXIS",
+                "value_src": "auto"
+              },
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            },
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "mode": "Slave",
+            "bridges": [
+              "M_AXIS"
+            ]
+          },
+          "M_AXIS": {
+            "bd_attributes": {
+              "TYPE": {
+                "value": "interior",
+                "value_src": "default"
+              }
+            }
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1321,6 +1390,18 @@
         "interface_ports": [
           "TDM_to_Parallel_Conv_0/m_axis",
           "xfft_0/S_AXIS_DATA"
+        ]
+      },
+      "axis_subset_converter_1_M_AXIS": {
+        "interface_ports": [
+          "fir_compiler_1/S_AXIS_DATA",
+          "axis_subset_converter_1/M_AXIS"
+        ]
+      },
+      "fir_compiler_0_M_AXIS_DATA": {
+        "interface_ports": [
+          "axis_subset_converter_1/S_AXIS",
+          "fir_compiler_0/M_AXIS_DATA"
         ]
       }
     },
@@ -1366,7 +1447,8 @@
           "fir0_spy_1/aclk",
           "fir_compiler_1/aclk",
           "fir0_spy_3/aclk",
-          "fir0_spy_2/aclk"
+          "fir0_spy_2/aclk",
+          "axis_subset_converter_1/aclk"
         ]
       },
       "cordic_1_m_axis_dout_tdata": {
@@ -1385,12 +1467,6 @@
         "ports": [
           "cordic_3/m_axis_dout_tdata",
           "fft_z_out"
-        ]
-      },
-      "fir_compiler_0_m_axis_data_tdata": {
-        "ports": [
-          "fir_compiler_0/m_axis_data_tdata",
-          "xlslice_0/Din"
         ]
       },
       "fir_compiler_0_m_axis_data_tlast": {
@@ -1461,7 +1537,8 @@
           "brancher_0/rst_n",
           "fir0_spy_1/aresetn",
           "fir0_spy_3/aresetn",
-          "fir0_spy_2/aresetn"
+          "fir0_spy_2/aresetn",
+          "axis_subset_converter_1/aresetn"
         ]
       },
       "s_axis_data_tdata_1": {
@@ -1507,12 +1584,6 @@
         "ports": [
           "xlconstant_1/dout",
           "xfft_0/s_axis_config_tvalid"
-        ]
-      },
-      "xlslice_0_Dout": {
-        "ports": [
-          "xlslice_0/Dout",
-          "fir_compiler_1/s_axis_data_tdata"
         ]
       }
     }

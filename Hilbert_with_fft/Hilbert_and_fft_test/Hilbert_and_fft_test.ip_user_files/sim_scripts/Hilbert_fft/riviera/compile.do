@@ -136,21 +136,27 @@ vcom -work xil_defaultlib -93  -incr \
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" -l xbip_utils_v3_0_15 -l axi_utils_v2_0_11 -l xbip_pipe_v3_0_11 -l fir_compiler_v7_2_26 -l xil_defaultlib -l c_reg_fd_v12_0_11 -l xbip_dsp48_wrapper_v3_0_7 -l c_addsub_v12_0_21 -l mult_gen_v12_0_24 -l cordic_v6_0_25 -l axis_infrastructure_v1_1_1 -l axis_register_slice_v1_1_35 -l axis_subset_converter_v1_1_36 -l c_shift_ram_v12_0_20 -l floating_point_v7_1_21 -l cmpy_v6_0_27 -l xfft_v9_1_15 -l xlconstant_v1_1_10 -l xlslice_v1_0_5 \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_fir0_spy_0_2/sim/Hilbert_fft_fir0_spy_0_2.v" \
 
-vlog -work xlslice_v1_0_5  -incr -v2k5 "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" -l xbip_utils_v3_0_15 -l axi_utils_v2_0_11 -l xbip_pipe_v3_0_11 -l fir_compiler_v7_2_26 -l xil_defaultlib -l c_reg_fd_v12_0_11 -l xbip_dsp48_wrapper_v3_0_7 -l c_addsub_v12_0_21 -l mult_gen_v12_0_24 -l cordic_v6_0_25 -l axis_infrastructure_v1_1_1 -l axis_register_slice_v1_1_35 -l axis_subset_converter_v1_1_36 -l c_shift_ram_v12_0_20 -l floating_point_v7_1_21 -l cmpy_v6_0_27 -l xfft_v9_1_15 -l xlconstant_v1_1_10 -l xlslice_v1_0_5 \
-"../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v" \
-
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" -l xbip_utils_v3_0_15 -l axi_utils_v2_0_11 -l xbip_pipe_v3_0_11 -l fir_compiler_v7_2_26 -l xil_defaultlib -l c_reg_fd_v12_0_11 -l xbip_dsp48_wrapper_v3_0_7 -l c_addsub_v12_0_21 -l mult_gen_v12_0_24 -l cordic_v6_0_25 -l axis_infrastructure_v1_1_1 -l axis_register_slice_v1_1_35 -l axis_subset_converter_v1_1_36 -l c_shift_ram_v12_0_20 -l floating_point_v7_1_21 -l cmpy_v6_0_27 -l xfft_v9_1_15 -l xlconstant_v1_1_10 -l xlslice_v1_0_5 \
-"../../../bd/Hilbert_fft/ip/Hilbert_fft_xlslice_0_0/sim/Hilbert_fft_xlslice_0_0.v" \
-"../../../bd/Hilbert_fft/sim/Hilbert_fft.v" \
-
 vcom -work xil_defaultlib -93  -incr \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_fir_compiler_1_0/sim/Hilbert_fft_fir_compiler_1_0.vhd" \
+
+vlog -work xlslice_v1_0_5  -incr -v2k5 "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" -l xbip_utils_v3_0_15 -l axi_utils_v2_0_11 -l xbip_pipe_v3_0_11 -l fir_compiler_v7_2_26 -l xil_defaultlib -l c_reg_fd_v12_0_11 -l xbip_dsp48_wrapper_v3_0_7 -l c_addsub_v12_0_21 -l mult_gen_v12_0_24 -l cordic_v6_0_25 -l axis_infrastructure_v1_1_1 -l axis_register_slice_v1_1_35 -l axis_subset_converter_v1_1_36 -l c_shift_ram_v12_0_20 -l floating_point_v7_1_21 -l cmpy_v6_0_27 -l xfft_v9_1_15 -l xlconstant_v1_1_10 -l xlslice_v1_0_5 \
+"../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" -l xbip_utils_v3_0_15 -l axi_utils_v2_0_11 -l xbip_pipe_v3_0_11 -l fir_compiler_v7_2_26 -l xil_defaultlib -l c_reg_fd_v12_0_11 -l xbip_dsp48_wrapper_v3_0_7 -l c_addsub_v12_0_21 -l mult_gen_v12_0_24 -l cordic_v6_0_25 -l axis_infrastructure_v1_1_1 -l axis_register_slice_v1_1_35 -l axis_subset_converter_v1_1_36 -l c_shift_ram_v12_0_20 -l floating_point_v7_1_21 -l cmpy_v6_0_27 -l xfft_v9_1_15 -l xlconstant_v1_1_10 -l xlslice_v1_0_5 \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_xlslice_1_0/sim/Hilbert_fft_xlslice_1_0.v" \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_xlslice_1_1/sim/Hilbert_fft_xlslice_1_1.v" \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_fir0_spy_1_0/sim/Hilbert_fft_fir0_spy_1_0.v" \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_fir0_spy_1_1/sim/Hilbert_fft_fir0_spy_1_1.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tdata_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tuser_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tstrb_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tkeep_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tid_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tdest_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tlast_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/top_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/sim/Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/sim/Hilbert_fft.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

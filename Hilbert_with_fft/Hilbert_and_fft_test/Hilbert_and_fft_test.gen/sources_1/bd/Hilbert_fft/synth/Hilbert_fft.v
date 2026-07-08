@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Wed Apr  8 01:37:39 2026
+//Date        : Wed Jul  8 19:25:07 2026
 //Host        : qtaz running 64-bit Ubuntu 24.04.4 LTS
 //Command     : generate_target Hilbert_fft.bd
 //Design      : Hilbert_fft
@@ -36,6 +36,7 @@ module Hilbert_fft
   wire TDM_to_Parallel_Conv_0_m_axis_TREADY;
   wire TDM_to_Parallel_Conv_0_m_axis_TVALID;
   wire aresetn;
+  wire [15:0]axis_subset_converter_1_M_AXIS_TDATA;
   wire brancher_0_m_axis_tvalid;
   wire [31:0]brancher_0_x_out;
   wire [31:0]brancher_0_y_out;
@@ -44,7 +45,7 @@ module Hilbert_fft
   wire [31:0]fft_x_out;
   wire [31:0]fft_y_out;
   wire [31:0]fft_z_out;
-  wire [39:0]fir_compiler_0_m_axis_data_tdata;
+  wire [39:0]fir_compiler_0_M_AXIS_DATA_TDATA;
   wire fir_compiler_0_m_axis_data_tlast;
   wire fir_compiler_0_m_axis_data_tvalid;
   wire [31:0]fir_compiler_1_m_axis_data_tdata;
@@ -61,7 +62,6 @@ module Hilbert_fft
   wire xfft_0_m_axis_data_tvalid;
   wire [71:0]xlconstant_0_dout;
   wire [0:0]xlconstant_1_dout;
-  wire [15:0]xlslice_0_Dout;
 
   Hilbert_fft_TDM_to_Parallel_Conv_0_0 TDM_to_Parallel_Conv_0
        (.clk(clk_100MHz),
@@ -78,6 +78,14 @@ module Hilbert_fft
         .aresetn(aresetn),
         .m_axis_tready(1'b1),
         .s_axis_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .s_axis_tlast(1'b0),
+        .s_axis_tvalid(1'b0));
+  Hilbert_fft_axis_subset_converter_1_0 axis_subset_converter_1
+       (.aclk(clk_100MHz),
+        .aresetn(aresetn),
+        .m_axis_tdata(axis_subset_converter_1_M_AXIS_TDATA),
+        .m_axis_tready(1'b1),
+        .s_axis_tdata(fir_compiler_0_M_AXIS_DATA_TDATA),
         .s_axis_tlast(1'b0),
         .s_axis_tvalid(1'b0));
   Hilbert_fft_brancher_0_0 brancher_0
@@ -132,7 +140,7 @@ module Hilbert_fft
         .s_axis_tvalid(fir_compiler_1_m_axis_data_tvalid));
   Hilbert_fft_fir_compiler_0_0 fir_compiler_0
        (.aclk(clk_100MHz),
-        .m_axis_data_tdata(fir_compiler_0_m_axis_data_tdata),
+        .m_axis_data_tdata(fir_compiler_0_M_AXIS_DATA_TDATA),
         .m_axis_data_tlast(fir_compiler_0_m_axis_data_tlast),
         .m_axis_data_tready(fir_compiler_1_s_axis_data_tready),
         .m_axis_data_tvalid(fir_compiler_0_m_axis_data_tvalid),
@@ -146,7 +154,7 @@ module Hilbert_fft
         .m_axis_data_tlast(fir_compiler_1_m_axis_data_tlast),
         .m_axis_data_tready(1'b1),
         .m_axis_data_tvalid(fir_compiler_1_m_axis_data_tvalid),
-        .s_axis_data_tdata(xlslice_0_Dout),
+        .s_axis_data_tdata(axis_subset_converter_1_M_AXIS_TDATA),
         .s_axis_data_tlast(fir_compiler_0_m_axis_data_tlast),
         .s_axis_data_tready(fir_compiler_1_s_axis_data_tready),
         .s_axis_data_tvalid(fir_compiler_0_m_axis_data_tvalid));
@@ -171,7 +179,4 @@ module Hilbert_fft
        (.dout(xlconstant_0_dout));
   Hilbert_fft_xlconstant_1_0 xlconstant_1
        (.dout(xlconstant_1_dout));
-  Hilbert_fft_xlslice_0_0 xlslice_0
-       (.Din(fir_compiler_0_m_axis_data_tdata),
-        .Dout(xlslice_0_Dout));
 endmodule

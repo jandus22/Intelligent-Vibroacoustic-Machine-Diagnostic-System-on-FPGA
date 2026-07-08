@@ -133,21 +133,27 @@ vcom -work xil_defaultlib -64 -93  \
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_fir0_spy_0_2/sim/Hilbert_fft_fir0_spy_0_2.v" \
 
-vlog -work xlslice_v1_0_5 -64 -incr -mfcu  "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" \
-"../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v" \
-
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" \
-"../../../bd/Hilbert_fft/ip/Hilbert_fft_xlslice_0_0/sim/Hilbert_fft_xlslice_0_0.v" \
-"../../../bd/Hilbert_fft/sim/Hilbert_fft.v" \
-
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_fir_compiler_1_0/sim/Hilbert_fft_fir_compiler_1_0.vhd" \
+
+vlog -work xlslice_v1_0_5 -64 -incr -mfcu  "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" \
+"../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../Hilbert_and_fft_test.gen/sources_1/bd/Hilbert_fft/ipshared/434f/hdl" "+incdir+../../../../../../../../2025.2/data/rsb/busdef" \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_xlslice_1_0/sim/Hilbert_fft_xlslice_1_0.v" \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_xlslice_1_1/sim/Hilbert_fft_xlslice_1_1.v" \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_fir0_spy_1_0/sim/Hilbert_fft_fir0_spy_1_0.v" \
 "../../../bd/Hilbert_fft/ip/Hilbert_fft_fir0_spy_1_1/sim/Hilbert_fft_fir0_spy_1_1.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tdata_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tuser_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tstrb_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tkeep_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tid_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tdest_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/tlast_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/hdl/top_Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/ip/Hilbert_fft_axis_subset_converter_1_0/sim/Hilbert_fft_axis_subset_converter_1_0.v" \
+"../../../bd/Hilbert_fft/sim/Hilbert_fft.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

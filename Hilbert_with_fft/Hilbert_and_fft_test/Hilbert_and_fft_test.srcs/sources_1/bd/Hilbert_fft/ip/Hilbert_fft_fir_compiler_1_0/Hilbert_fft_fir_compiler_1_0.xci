@@ -13,7 +13,7 @@
         "CoefficientSource": [ { "value": "COE_File", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "DataCoefficientType": [ { "value": "Real", "resolve_type": "user", "usage": "all" } ],
         "CoefficientVector": [ { "value": "6,0,-4,-3,5,6,-6,-13,7,44,64,44,7,-13,-6,6,5,-3,-4,0,6", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
-        "Coefficient_File": [ { "value": "../../../../../../../../COE_File/hilbert.coe", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "Coefficient_File": [ { "value": "../../../../../../../../../../hilbert_radix10.coe", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "Coefficient_Sets": [ { "value": "1", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Coefficient_Reload": [ { "value": "false", "resolve_type": "user", "format": "bool", "usage": "all" } ],
         "Filter_Type": [ { "value": "Hilbert", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
@@ -32,10 +32,10 @@
         "Sample_Frequency": [ { "value": "0.02667", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "Clock_Frequency": [ { "value": "100", "value_src": "user", "resolve_type": "user", "format": "float", "usage": "all" } ],
         "Coefficient_Sign": [ { "value": "Signed", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
-        "Quantization": [ { "value": "Maximize_Dynamic_Range", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "Quantization": [ { "value": "Quantize_Only", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "Coefficient_Width": [ { "value": "16", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "BestPrecision": [ { "value": "false", "value_src": "user", "resolve_type": "user", "format": "bool", "usage": "all" } ],
-        "Coefficient_Fractional_Bits": [ { "value": "15", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Coefficient_Fractional_Bits": [ { "value": "0", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Coefficient_Structure": [ { "value": "Hilbert", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "Data_Sign": [ { "value": "Signed", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "usage": "all" } ],
         "Data_Width": [ { "value": "16", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -306,7 +306,7 @@
           "abstraction_type": "xilinx.com:interface:axis_rtl:1.0",
           "mode": "slave",
           "parameters": {
-            "TDATA_NUM_BYTES": [ { "value": "2", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "TDATA_NUM_BYTES": [ { "value": "2", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "TDEST_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "TID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "TUSER_WIDTH": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
@@ -363,5 +363,5 @@
       }
     }
   },
-  "checksum": "63cf3f97"
+  "checksum": "c3d49d53"
 }

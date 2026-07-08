@@ -16,4 +16,4 @@ Note:     - field_width = 60
 Time: 0 ps  Iteration: 1  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
 Note:   - Copying SCALE_SCH from 62 downto 3 to 62 downto 3
 Time: 0 ps  Iteration: 1  Process: /tb_top/Hilbert_fft/xfft_0/U0/i_synth/axi_wrapper/gen_config_fifo_in/line__94240  File: /home/janek/2025.2/Vivado/data/ip/xilinx/xfft_v9_1/hdl/xfft_v9_1_vh_rfs.vhd
-INFO: xsimkernel Simulation Memory Usage: 318584 KB (Peak: 368948 KB), Simulation CPU Usage: 824510 ms
+INFO: xsimkernel Simulation Memory Usage: 318228 KB (Peak: 368592 KB), Simulation CPU Usage: 540950 ms

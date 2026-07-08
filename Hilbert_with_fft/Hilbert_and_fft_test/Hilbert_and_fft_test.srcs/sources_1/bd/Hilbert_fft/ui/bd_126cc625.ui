@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.563816",
-   "Default View_TopLeft":"-222,-250",
+   "Default View_ScaleFactor":"0.604283",
+   "Default View_TopLeft":"1663,-304",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
@@ -9,59 +9,59 @@ preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
 preplace port port-id_aresetn -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
 preplace port port-id_s_axis_data_tvalid -pg 1 -lvl 0 -x 0 -y 150 -defaultsOSRD
 preplace port port-id_s_axis_data_tlast -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
-preplace port port-id_s_axis_data_tready -pg 1 -lvl 10 -x 4520 -y 120 -defaultsOSRD
+preplace port port-id_s_axis_data_tready -pg 1 -lvl 11 -x 5240 -y 120 -defaultsOSRD
 preplace portBus s_axis_data_tdata -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
-preplace portBus fft_x_out -pg 1 -lvl 10 -x 4520 -y 350 -defaultsOSRD
-preplace portBus fft_y_out -pg 1 -lvl 10 -x 4520 -y 490 -defaultsOSRD
-preplace portBus fft_z_out -pg 1 -lvl 10 -x 4520 -y 630 -defaultsOSRD
-preplace inst fir_compiler_0 -pg 1 -lvl 1 -x 440 -y 140 -defaultsOSRD
-preplace inst cordic_0 -pg 1 -lvl 5 -x 2450 -y 180 -defaultsOSRD
-preplace inst axis_subset_converter_0 -pg 1 -lvl 6 -x 2920 -y 200 -defaultsOSRD
-preplace inst xfft_0 -pg 1 -lvl 8 -x 3760 -y 300 -defaultsOSRD
-preplace inst TDM_to_Parallel_Conv_0 -pg 1 -lvl 7 -x 3320 -y 200 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 7 -x 3320 -y 480 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 7 -x 3320 -y 580 -defaultsOSRD
-preplace inst brancher_0 -pg 1 -lvl 8 -x 3760 -y 960 -defaultsOSRD
-preplace inst cordic_1 -pg 1 -lvl 9 -x 4250 -y 650 -defaultsOSRD
-preplace inst cordic_2 -pg 1 -lvl 9 -x 4250 -y 950 -defaultsOSRD
-preplace inst cordic_3 -pg 1 -lvl 9 -x 4250 -y 1150 -defaultsOSRD
-preplace inst fir0_spy_1 -pg 1 -lvl 1 -x 440 -y 570 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 2 -x 1110 -y 180 -defaultsOSRD
-preplace inst fir_compiler_1 -pg 1 -lvl 3 -x 1690 -y 220 -defaultsOSRD
-preplace inst imag -pg 1 -lvl 4 -x 2090 -y 370 -defaultsOSRD
-preplace inst rel -pg 1 -lvl 4 -x 2090 -y 470 -defaultsOSRD
-preplace inst fir0_spy_2 -pg 1 -lvl 5 -x 2450 -y 470 -defaultsOSRD
-preplace inst fir0_spy_3 -pg 1 -lvl 5 -x 2450 -y 690 -defaultsOSRD
-preplace netloc brancher_0_m_axis_tvalid 1 8 1 4020 660n
-preplace netloc brancher_0_x_out 1 8 1 3990 640n
-preplace netloc brancher_0_y_out 1 8 1 4010 940n
-preplace netloc brancher_0_z_out 1 8 1 4010 990n
-preplace netloc clk_100MHz_1 1 0 9 180 270 N 270 1470 330 1910 290 2250 250 2750 280 3190 340 3500J 680 4000
-preplace netloc cordic_1_m_axis_dout_tdata 1 9 1 4480 350n
-preplace netloc cordic_2_m_axis_dout_tdata 1 9 1 4490 490n
-preplace netloc cordic_3_m_axis_dout_tdata 1 9 1 4500 630n
-preplace netloc fir_compiler_0_m_axis_data_tdata 1 1 1 680 120n
-preplace netloc fir_compiler_0_m_axis_data_tlast 1 1 2 660J 100 1470
-preplace netloc fir_compiler_0_m_axis_data_tvalid 1 1 2 670 110 1460J
-preplace netloc fir_compiler_0_s_axis_data_tready 1 0 10 220 30 NJ 30 N 30 N 30 N 30 N 30 N 30 N 30 N 30 4480
-preplace netloc fir_compiler_1_m_axis_data_tdata 1 3 1 1960 210n
-preplace netloc fir_compiler_1_m_axis_data_tlast 1 3 2 1920J 530 2240
-preplace netloc fir_compiler_1_m_axis_data_tvalid 1 3 2 NJ 250 2230
-preplace netloc fir_compiler_1_s_axis_data_tready 1 1 4 690J 120 1440 340 1980 310 2210
-preplace netloc imag_Dout 1 4 1 2270 370n
-preplace netloc rel_Dout 1 4 1 2220 470n
-preplace netloc reset_1 1 0 8 170J 350 NJ 350 N 350 1970 300 2260 290 2760 290 3200 420 3440
-preplace netloc s_axis_data_tdata_1 1 0 1 210 90n
-preplace netloc s_axis_data_tlast_1 1 0 1 200J 110n
-preplace netloc s_axis_data_tvalid_1 1 0 1 190J 150n
-preplace netloc xfft_0_m_axis_data_tdata 1 7 2 3530 450 4020
-preplace netloc xfft_0_m_axis_data_tvalid 1 7 2 3520 440 3990
-preplace netloc xlconstant_0_dout 1 7 1 3450J 300n
-preplace netloc xlconstant_1_dout 1 7 1 3510J 320n
-preplace netloc xlslice_0_Dout 1 2 1 1450 180n
-preplace netloc TDM_to_Parallel_Conv_0_m_axis 1 7 1 3440 200n
-levelinfo -pg 1 0 440 1110 1690 2090 2450 2920 3320 3760 4250 4520
-pagesize -pg 1 -db -bbox -sgen -220 -170 4710 1240
+preplace portBus fft_x_out -pg 1 -lvl 11 -x 5240 -y 350 -defaultsOSRD
+preplace portBus fft_y_out -pg 1 -lvl 11 -x 5240 -y 490 -defaultsOSRD
+preplace portBus fft_z_out -pg 1 -lvl 11 -x 5240 -y 630 -defaultsOSRD
+preplace inst fir_compiler_0 -pg 1 -lvl 1 -x 480 -y 140 -defaultsOSRD
+preplace inst cordic_0 -pg 1 -lvl 6 -x 3170 -y 180 -defaultsOSRD
+preplace inst axis_subset_converter_0 -pg 1 -lvl 7 -x 3640 -y 200 -defaultsOSRD
+preplace inst xfft_0 -pg 1 -lvl 9 -x 4480 -y 300 -defaultsOSRD
+preplace inst TDM_to_Parallel_Conv_0 -pg 1 -lvl 8 -x 4040 -y 200 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 8 -x 4040 -y 480 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 8 -x 4040 -y 580 -defaultsOSRD
+preplace inst brancher_0 -pg 1 -lvl 9 -x 4480 -y 960 -defaultsOSRD
+preplace inst cordic_1 -pg 1 -lvl 10 -x 4970 -y 650 -defaultsOSRD
+preplace inst cordic_2 -pg 1 -lvl 10 -x 4970 -y 950 -defaultsOSRD
+preplace inst cordic_3 -pg 1 -lvl 10 -x 4970 -y 1150 -defaultsOSRD
+preplace inst fir0_spy_1 -pg 1 -lvl 1 -x 480 -y 570 -defaultsOSRD
+preplace inst fir_compiler_1 -pg 1 -lvl 4 -x 2340 -y 250 -defaultsOSRD
+preplace inst imag -pg 1 -lvl 5 -x 2810 -y 370 -defaultsOSRD
+preplace inst rel -pg 1 -lvl 5 -x 2810 -y 470 -defaultsOSRD
+preplace inst fir0_spy_2 -pg 1 -lvl 6 -x 3170 -y 470 -defaultsOSRD
+preplace inst fir0_spy_3 -pg 1 -lvl 6 -x 3170 -y 690 -defaultsOSRD
+preplace inst axis_subset_converter_1 -pg 1 -lvl 2 -x 1390 -y 620 -defaultsOSRD
+preplace netloc brancher_0_m_axis_tvalid 1 9 1 4740 660n
+preplace netloc brancher_0_x_out 1 9 1 4710 640n
+preplace netloc brancher_0_y_out 1 9 1 4730 940n
+preplace netloc brancher_0_z_out 1 9 1 4730 990n
+preplace netloc clk_100MHz_1 1 0 10 240 700 1230 700 N 700 2120 700 N 700 2960 250 3470 280 3910 340 4220J 680 4720
+preplace netloc cordic_1_m_axis_dout_tdata 1 10 1 5200 350n
+preplace netloc cordic_2_m_axis_dout_tdata 1 10 1 5210 490n
+preplace netloc cordic_3_m_axis_dout_tdata 1 10 1 5220 630n
+preplace netloc fir_compiler_0_m_axis_data_tlast 1 1 3 NJ 130 N 130 2120
+preplace netloc fir_compiler_0_m_axis_data_tvalid 1 1 3 N 170 NJ 170 1870
+preplace netloc fir_compiler_0_s_axis_data_tready 1 0 11 280 30 NJ 30 N 30 N 30 N 30 N 30 N 30 N 30 N 30 N 30 5200
+preplace netloc fir_compiler_1_m_axis_data_tdata 1 4 1 2700 240n
+preplace netloc fir_compiler_1_m_axis_data_tlast 1 4 2 NJ 260 2990
+preplace netloc fir_compiler_1_m_axis_data_tvalid 1 4 2 NJ 280 2950
+preplace netloc fir_compiler_1_s_axis_data_tready 1 1 5 NJ 150 N 150 2110 530 N 530 2940
+preplace netloc imag_Dout 1 5 1 2980 370n
+preplace netloc rel_Dout 1 5 1 2920 470n
+preplace netloc reset_1 1 0 9 230J 690 1220J 540 N 540 N 540 N 540 2970 290 3480 290 3920 420 4160
+preplace netloc s_axis_data_tdata_1 1 0 1 270 90n
+preplace netloc s_axis_data_tlast_1 1 0 1 260J 110n
+preplace netloc s_axis_data_tvalid_1 1 0 1 250J 150n
+preplace netloc xfft_0_m_axis_data_tdata 1 8 2 4250 450 4740
+preplace netloc xfft_0_m_axis_data_tvalid 1 8 2 4240 440 4710
+preplace netloc xlconstant_0_dout 1 8 1 4170J 300n
+preplace netloc xlconstant_1_dout 1 8 1 4230J 320n
+preplace netloc TDM_to_Parallel_Conv_0_m_axis 1 8 1 4160 200n
+preplace netloc axis_subset_converter_1_M_AXIS 1 2 2 1550 200 N
+preplace netloc fir_compiler_0_M_AXIS_DATA 1 1 1 1230 110n
+levelinfo -pg 1 0 480 1390 1850 2340 2810 3170 3640 4040 4480 4970 5240
+pagesize -pg 1 -db -bbox -sgen -220 -170 5430 1240
 "
 }
 0
