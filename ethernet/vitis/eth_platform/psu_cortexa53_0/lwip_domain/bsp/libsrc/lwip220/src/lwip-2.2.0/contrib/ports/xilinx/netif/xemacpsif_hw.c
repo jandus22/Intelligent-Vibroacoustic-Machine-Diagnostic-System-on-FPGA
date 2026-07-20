@@ -113,21 +113,65 @@ void init_emacps(xemacpsif_s *xemacps, struct netif *netif)
  *  phy_setup_emacps is then called for each PHY present on the MDIO bus.
  */
 #ifndef SGMII_FIXED_LINK
+
 	detect_phy(xemacpsp);
-	for (i = 31; i > 0; i--) {
-		if (xemacpsp->Config.BaseAddress == XPAR_XEMACPS_0_BASEADDR) {
+
+	/*
+	 * PHY może być widoczny pod kilkoma adresami na wspólnej
+	 * magistrali MDIO. Kończymy wyszukiwanie po znalezieniu
+	 * pierwszego PHY, który poprawnie zestawił połączenie.
+	 */
+	link_speed = XST_FAILURE;
+
+	for (i = 31U; i > 0U; i--) {
+
+		if (xemacpsp->Config.BaseAddress ==
+		    XPAR_XEMACPS_0_BASEADDR) {
+
 			if (phymapemac0[i] == TRUE) {
-				MacConfig_SgmiiPcs(xemacpsp,i);
-				link_speed = phy_setup_emacps(xemacpsp, i);
-				phyfoundforemac0 = TRUE;
-				phyaddrforemac = i;
+
+				MacConfig_SgmiiPcs(xemacpsp, i);
+
+				link_speed =
+					phy_setup_emacps(xemacpsp, i);
+
+				if (link_speed != XST_FAILURE) {
+
+					phyfoundforemac0 = TRUE;
+					phyaddrforemac = i;
+
+					xil_printf(
+						"Selected working PHY address %lu, speed %lu\r\n",
+						(unsigned long)i,
+						(unsigned long)link_speed
+					);
+
+					break;
+				}
 			}
+
 		} else {
+
 			if (phymapemac1[i] == TRUE) {
-				MacConfig_SgmiiPcs(xemacpsp,i);
-				link_speed = phy_setup_emacps(xemacpsp, i);
-				phyfoundforemac1 = TRUE;
-				phyaddrforemac = i;
+
+				MacConfig_SgmiiPcs(xemacpsp, i);
+
+				link_speed =
+					phy_setup_emacps(xemacpsp, i);
+
+				if (link_speed != XST_FAILURE) {
+
+					phyfoundforemac1 = TRUE;
+					phyaddrforemac = i;
+
+					xil_printf(
+						"Selected working PHY address %lu, speed %lu\r\n",
+						(unsigned long)i,
+						(unsigned long)link_speed
+					);
+
+					break;
+				}
 			}
 		}
 	}
