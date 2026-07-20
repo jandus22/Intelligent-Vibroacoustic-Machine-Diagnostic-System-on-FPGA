@@ -52,7 +52,10 @@
  */
 #define ARP_WAIT_TIME_MS       250U
 #define BETWEEN_PACKETS_MS     2U
-#define AFTER_SEND_WAIT_MS     100U
+#define AFTER_SEND_WAIT_MS     2U
+
+#define STATUS_PRINT_PERIOD    100U
+#define VERBOSE_FRAME_COUNT    3U
 
 typedef struct {
     uint32_t frame_id;
@@ -63,7 +66,6 @@ typedef struct {
 /* -------------------- Global objects -------------------- */
 
 static uint32_t frame_counter = 0U;
-
 static struct netif server_netif;
 struct netif *echo_netif;
 
@@ -197,7 +199,8 @@ static int receive_dma_frame(void)
 /* -------------------- UDP transmission -------------------- */
 
 static int send_fft_frame_udp(
-    struct udp_pcb *pcb
+    struct udp_pcb *pcb,
+    uint32_t frame_id
 )
 {
     uint32_t offset = 0U;
@@ -241,7 +244,7 @@ static int send_fft_frame_udp(
             return XST_FAILURE;
         }
 
-        header.frame_id = frame_counter;
+        header.frame_id = frame_id;
         header.packet_id = packet_id;
         header.packet_count = total_packets;
 
@@ -276,23 +279,26 @@ static int send_fft_frame_udp(
             return XST_FAILURE;
         }
 
-        xil_printf(
-            "UDP packet %u/%u sent, samples %lu-%lu\r\n",
-            (unsigned int)(packet_id + 1U),
-            (unsigned int)total_packets,
-            (unsigned long)offset,
-            (unsigned long)(offset + chunk - 1U)
-        );
+        if (frame_id < VERBOSE_FRAME_COUNT) {
+            xil_printf(
+                "Frame %lu: UDP packet %u/%u, samples %lu-%lu\r\n",
+                (unsigned long)frame_id,
+                (unsigned int)(packet_id + 1U),
+                (unsigned int)total_packets,
+                (unsigned long)offset,
+                (unsigned long)(offset + chunk - 1U)
+            );
+        }
 
         /*
          * Pierwsze udp_send() może jedynie wysłać zapytanie ARP.
          * Dajemy stosowi czas na odebranie odpowiedzi ARP od PC.
          */
-        if (packet_id == 0U) {
+        if ((frame_id == 0U) && (packet_id == 0U)) {
             xil_printf(
-                "Waiting for ARP response and servicing Ethernet...\r\n"
+                "Waiting for initial ARP response...\r\n"
             );
-
+        
             service_ethernet_ms(
                 ARP_WAIT_TIME_MS,
                 1
@@ -308,7 +314,7 @@ static int send_fft_frame_udp(
         packet_id++;
     }
 
-    frame_counter++;
+    
 
     /*
      * Przetwarzamy jeszcze ewentualną odpowiedź ARP
@@ -318,6 +324,33 @@ static int send_fft_frame_udp(
         AFTER_SEND_WAIT_MS,
         1
     );
+
+    return XST_SUCCESS;
+}
+
+static int validate_test_frame(
+    uint32_t *invalid_sample,
+    uint32_t *received_value
+)
+{
+    uint32_t i;
+
+    for (i = 0U; i < FFT_SIZE; i++) {
+        uint32_t value =
+            fft_buffer[FRAME_HEADER_WORDS + i];
+
+        if (value != i) {
+            if (invalid_sample != NULL) {
+                *invalid_sample = i;
+            }
+
+            if (received_value != NULL) {
+                *received_value = value;
+            }
+
+            return XST_FAILURE;
+        }
+    }
 
     return XST_SUCCESS;
 }
@@ -488,53 +521,138 @@ int main(void)
      * Drugi transfer powinien rozpocząć się od granicy
      * kolejnej pełnej ramki.
      */
-    xil_printf("Receiving synchronized DMA frame...\r\n");
+    /* -------------------- Continuous DMA to UDP loop -------------------- */
 
-    if (receive_dma_frame() != XST_SUCCESS) {
-        xil_printf(
-            "ERROR: synchronized DMA frame reception failed\r\n"
-        );
-
-        service_ethernet_forever();
+    {
+        uint32_t next_frame_id = 0U;
+    
+        uint32_t dma_frames_received = 0U;
+        uint32_t udp_frames_sent = 0U;
+    
+        uint32_t invalid_frames = 0U;
+        uint32_t dma_errors = 0U;
+        uint32_t udp_errors = 0U;
+    
+        xil_printf("Starting continuous DMA to UDP transmission\r\n");
+    
+        while (1) {
+            uint32_t frame_id;
+            uint32_t invalid_sample = 0U;
+            uint32_t received_value = 0U;
+    
+            /* Odbiór dokładnie jednej ramki z AXI DMA. */
+            status = receive_dma_frame();
+    
+            if (status != XST_SUCCESS) {
+                dma_errors++;
+    
+                xil_printf(
+                    "ERROR: DMA reception stopped, "
+                    "received=%lu dma_errors=%lu\r\n",
+                    (unsigned long)dma_frames_received,
+                    (unsigned long)dma_errors
+                );
+    
+                /*
+                 * Bez resetu i ponownej synchronizacji nie próbujemy
+                 * kontynuować pracy z potencjalnie zablokowanym DMA.
+                 */
+                break;
+            }
+    
+            dma_frames_received++;
+    
+            /*
+             * Kontrola wzorca generowanego obecnie przez axis_test_gen.
+             */
+            status = validate_test_frame(
+                &invalid_sample,
+                &received_value
+            );
+    
+            if (status != XST_SUCCESS) {
+                invalid_frames++;
+    
+                xil_printf(
+                    "ERROR: Invalid frame %lu, "
+                    "sample=%lu expected=0x%08lx received=0x%08lx, "
+                    "header=%08lx %08lx %08lx\r\n",
+                    (unsigned long)dma_frames_received,
+                    (unsigned long)invalid_sample,
+                    (unsigned long)invalid_sample,
+                    (unsigned long)received_value,
+                    (unsigned long)fft_buffer[0],
+                    (unsigned long)fft_buffer[1],
+                    (unsigned long)fft_buffer[2]
+                );
+    
+                /*
+                 * DMA odebrało całą ramkę zakończoną TLAST,
+                 * więc próbujemy odebrać następną.
+                 */
+                continue;
+            }
+    
+            /*
+             * Numer jest pobierany przed wywołaniem udp_send().
+             * Jeżeli wysłanie części ramki się nie powiedzie,
+             * następna ramka otrzyma kolejny numer. Python wykryje lukę.
+             */
+            frame_id = next_frame_id;
+            next_frame_id++;
+    
+            status = send_fft_frame_udp(
+                pcb,
+                frame_id
+            );
+    
+            if (status != XST_SUCCESS) {
+                udp_errors++;
+    
+                xil_printf(
+                    "ERROR: UDP frame %lu failed, "
+                    "udp_errors=%lu\r\n",
+                    (unsigned long)frame_id,
+                    (unsigned long)udp_errors
+                );
+            } else {
+                udp_frames_sent++;
+    
+                if (frame_id < VERBOSE_FRAME_COUNT) {
+                    xil_printf(
+                        "Frame %lu sent successfully\r\n",
+                        (unsigned long)frame_id
+                    );
+                }
+            }
+    
+            if ((dma_frames_received % STATUS_PRINT_PERIOD) == 0U) {
+                xil_printf(
+                    "STATS: dma_received=%lu "
+                    "udp_sent=%lu "
+                    "invalid=%lu "
+                    "dma_errors=%lu "
+                    "udp_errors=%lu "
+                    "next_frame_id=%lu\r\n",
+                    (unsigned long)dma_frames_received,
+                    (unsigned long)udp_frames_sent,
+                    (unsigned long)invalid_frames,
+                    (unsigned long)dma_errors,
+                    (unsigned long)udp_errors,
+                    (unsigned long)next_frame_id
+                );
+            }
+        }
     }
-
-    xil_printf("DMA frame received\r\n");
-
+    
     xil_printf(
-        "Frame header: 0x%08lx 0x%08lx 0x%08lx\r\n",
-        (unsigned long)fft_buffer[0],
-        (unsigned long)fft_buffer[1],
-        (unsigned long)fft_buffer[2]
+        "Continuous transmission stopped; "
+        "entering Ethernet service loop\r\n"
     );
-
-    xil_printf(
-        "First sample: 0x%08lx\r\n",
-        (unsigned long)fft_buffer[FRAME_HEADER_WORDS]
-    );
-
-    xil_printf(
-        "Last sample: 0x%08lx\r\n",
-        (unsigned long)fft_buffer[DMA_FRAME_WORDS - 1U]
-    );
-
-    /* -------------------- UDP transmission -------------------- */
-
-    if (send_fft_frame_udp(pcb) != XST_SUCCESS) {
-        xil_printf("ERROR: UDP FFT transmission failed\r\n");
-    } else {
-        xil_printf("UDP FFT send done\r\n");
-    }
-
-    /*
-     * Nie usuwamy PCB od razu. Aplikacja pozostaje aktywna
-     * i przez cały czas obsługuje ARP, ICMP oraz pozostałe
-     * ramki przychodzące.
-     */
+    
     service_ethernet_forever();
+    
 
-    /*
-     * Program nigdy nie powinien dojść do tego miejsca.
-     */
     udp_disconnect(pcb);
     udp_remove(pcb);
 
