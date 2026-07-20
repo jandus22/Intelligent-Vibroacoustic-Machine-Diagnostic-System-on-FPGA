@@ -1,4 +1,4 @@
-# Install script for directory: /home/janecki/workspace_vitis/eth_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/gpiops/src
+# Install script for directory: /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/gpiops/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-objdump")
 endif()
 

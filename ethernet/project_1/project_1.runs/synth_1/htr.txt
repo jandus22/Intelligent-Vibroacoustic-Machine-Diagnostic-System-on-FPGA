@@ -7,4 +7,4 @@
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log tb_axis_test_gen.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tb_axis_test_gen.tcl
+vivado -log ethernet_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ethernet_wrapper.tcl

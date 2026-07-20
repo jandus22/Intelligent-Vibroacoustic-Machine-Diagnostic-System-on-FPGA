@@ -1,6 +1,6 @@
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/janecki/workspace_vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/libsrc/build_configs/gen_bsp
+-- Build files have been written to: /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/libsrc/build_configs/gen_bsp
 -- Cache values
 // BOARD
 BOARD:STRING=kr260_som_som240_1_connector_kr260_carrier_som240_1_connector_som240_2_connector_kr260_carrier_som240_2_connector
@@ -18,7 +18,7 @@ CMAKE_MACHINE:STRING=ZynqMP
 CMAKE_SIZE:FILEPATH=aarch64-none-elf-size
 
 // Specs file path for using CMAKE toolchain files
-CMAKE_SPECS_FILE:STRING=/home/janecki/workspace_vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/Xilinx.spec
+CMAKE_SPECS_FILE:STRING=/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/Xilinx.spec
 
 // Device Id
 DEVICE_ID:STRING=xck26

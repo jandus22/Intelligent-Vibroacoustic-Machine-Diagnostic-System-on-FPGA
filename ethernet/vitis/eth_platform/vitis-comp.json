@@ -3,7 +3,7 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/ethernet_wrapper.xsa",
+    "xsa": "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/ethernet_wrapper.xsa",
     "xsaPathInPlatform": "eth_platform/hw/ethernet_wrapper.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",

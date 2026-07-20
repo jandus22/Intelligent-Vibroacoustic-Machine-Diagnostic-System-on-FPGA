@@ -1,4 +1,4 @@
-# Install script for directory: /home/janecki/workspace_vitis/eth_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/xilpm/src/zynqmp/client
+# Install script for directory: /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/xilpm/src/zynqmp/client
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,16 +34,16 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/janecki/workspace_vitis/eth_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilpm/src/zynqmp/client/common/cmake_install.cmake")
+  include("/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilpm/src/zynqmp/client/common/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/janecki/workspace_vitis/eth_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilpm/src/zynqmp/client/apu/cmake_install.cmake")
+  include("/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xilpm/src/zynqmp/client/apu/cmake_install.cmake")
 endif()
 

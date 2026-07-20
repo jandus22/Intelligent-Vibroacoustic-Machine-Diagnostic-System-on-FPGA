@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-g++")
+set(CMAKE_CXX_COMPILER "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-g++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "13.3.0")
@@ -19,15 +19,15 @@ set(CMAKE_CXX_SIMULATE_ID "")
 set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "")
 set(CMAKE_CXX_SIMULATE_VERSION "")
 
-set(CMAKE_CXX_COMPILER_SYSROOT "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/../aarch64-xilinx-elf/usr")
-set(CMAKE_COMPILER_SYSROOT "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/../aarch64-xilinx-elf/usr")
+set(CMAKE_CXX_COMPILER_SYSROOT "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/../aarch64-xilinx-elf/usr")
+set(CMAKE_COMPILER_SYSROOT "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/../aarch64-xilinx-elf/usr")
 
 
 set(CMAKE_AR "aarch64-none-elf-ar")
-set(CMAKE_CXX_COMPILER_AR "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-gcc-ar")
-set(CMAKE_RANLIB "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-gcc-ranlib")
-set(CMAKE_LINKER "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ld")
+set(CMAKE_CXX_COMPILER_AR "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-gcc-ar")
+set(CMAKE_RANLIB "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ranlib")
+set(CMAKE_CXX_COMPILER_RANLIB "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-gcc-ranlib")
+set(CMAKE_LINKER "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-ld")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCXX 1)
 set(CMAKE_CXX_COMPILER_LOADED 1)
@@ -78,7 +78,7 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/home/janecki/workspace_vitis/eth_platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include;/home/janecki/vitis/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include;/home/janecki/vitis/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed;/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include/c++/13.3.0;/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include/c++/13.3.0/aarch64-xilinx-elf;/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include/c++/13.3.0/backward;/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/psu_cortexa53_0/standalone_psu_cortexa53_0/bsp/include;/home/kuszman/Xilinx/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include;/home/kuszman/Xilinx/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0/include-fixed;/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include/c++/13.3.0;/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include/c++/13.3.0/aarch64-xilinx-elf;/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include/c++/13.3.0/backward;/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc;c;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/home/janecki/vitis/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0;/home/janecki/vitis/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc;/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/lib64/aarch64-xilinx-elf/13.3.0;/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/lib64")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/home/kuszman/Xilinx/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/13.3.0;/home/kuszman/Xilinx/2025.2/gnu/aarch64/lin/aarch64-none/x86_64-oesdk-linux/usr/lib/aarch64-xilinx-elf/gcc;/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/lib64/aarch64-xilinx-elf/13.3.0;/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/aarch64-xilinx-elf/usr/lib64")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

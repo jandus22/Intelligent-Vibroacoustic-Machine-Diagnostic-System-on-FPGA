@@ -1,4 +1,4 @@
-# Install script for directory: /home/janecki/workspace_vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/libsrc/lwip220/src/lwip-2.2.0/contrib/ports/xilinx
+# Install script for directory: /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/libsrc/lwip220/src/lwip-2.2.0/contrib/ports/xilinx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/janecki/vitis/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/janecki/workspace_vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/libsrc/build_configs/gen_bsp/libsrc/lwip220/src/lwip-2.2.0/contrib/ports/xilinx/netif/cmake_install.cmake")
+  include("/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/libsrc/build_configs/gen_bsp/libsrc/lwip220/src/lwip-2.2.0/contrib/ports/xilinx/netif/cmake_install.cmake")
 
 endif()
 

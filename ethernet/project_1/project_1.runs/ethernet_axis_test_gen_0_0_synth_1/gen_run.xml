@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="ethernet_axis_test_gen_0_0_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1774366425">
+<GenRun Id="ethernet_axis_test_gen_0_0_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1784531621">
+  <File Type="VDS-TIMINGSUMMARY" Name="ethernet_axis_test_gen_0_0_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="ethernet_axis_test_gen_0_0.dcp"/>
-  <File Type="RDS-RDS" Name="ethernet_axis_test_gen_0_0.vds"/>
-  <File Type="RDS-UTIL" Name="ethernet_axis_test_gen_0_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="ethernet_axis_test_gen_0_0_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="ethernet_axis_test_gen_0_0.tcl"/>
+  <File Type="RDS-UTIL" Name="ethernet_axis_test_gen_0_0_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="ethernet_axis_test_gen_0_0_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="ethernet_axis_test_gen_0_0.vds"/>
   <File Type="REPORTS-TCL" Name="ethernet_axis_test_gen_0_0_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="ethernet_axis_test_gen_0_0_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="ethernet_axis_test_gen_0_0.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ethernet_axis_test_gen_0_0" RelGenDir="$PGENDIR/ethernet_axis_test_gen_0_0">
     <File Path="$PSRCDIR/sources_1/bd/ethernet/ip/ethernet_axis_test_gen_0_0/ethernet_axis_test_gen_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -22,6 +26,7 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ethernet_axis_test_gen_0_0" RelGenDir="$PGENDIR/ethernet_axis_test_gen_0_0">
     <File Path="$PSRCDIR/sources_1/bd/ethernet/ip/ethernet_axis_test_gen_0_0/ethernet_axis_test_gen_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,6 +39,14 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/ethernet_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>

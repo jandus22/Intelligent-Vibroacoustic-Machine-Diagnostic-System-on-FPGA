@@ -8,9 +8,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/janecki/vitis/2025.2/Vitis/bin:/home/janecki/vitis/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/janecki/vitis/2025.2/Vivado/bin
+  PATH=/home/kuszman/Xilinx/2025.2/Vitis/bin:/home/kuszman/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/kuszman/Xilinx/2025.2/Vivado/bin
 else
-  PATH=/home/janecki/vitis/2025.2/Vitis/bin:/home/janecki/vitis/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/janecki/vitis/2025.2/Vivado/bin:$PATH
+  PATH=/home/kuszman/Xilinx/2025.2/Vitis/bin:/home/kuszman/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64:/home/kuszman/Xilinx/2025.2/Vivado/bin:$PATH
 fi
 export PATH
 
@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/synth_1'
+HD_PWD='/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log tb_axis_test_gen.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tb_axis_test_gen.tcl
+EAStep vivado -log ethernet_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ethernet_wrapper.tcl

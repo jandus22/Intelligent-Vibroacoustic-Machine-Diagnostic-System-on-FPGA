@@ -1,0 +1,71 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "tcf-debug",
+			"request": "launch",
+			"name": "udp_app_app_hw_1",
+			"debugType": "baremetal-zu",
+			"attachToRunningTargetOptions": {
+				"targetSetupMode": "standalone",
+				"executeScript": true,
+				"scriptPath": ""
+			},
+			"autoAttachProcessChildren": false,
+			"target": {
+				"targetConnectionId": "Local",
+				"peersIniPath": "../../_ide/.peers.ini",
+				"context": "ZUPlus"
+			},
+			"pathMap": [],
+			"targetSetup": {
+				"resetSystem": true,
+				"programDevice": true,
+				"partialBitstream": false,
+				"skipRevisionCheck": false,
+				"device": {
+					"plDevice": "Auto Detect",
+					"psDevice": "Auto Detect"
+				},
+				"enableRPUSplitMode": false,
+				"resetAPU": false,
+				"resetRPU": false,
+				"bitstreamFile": "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/impl_1/ethernet_wrapper.bit",
+				"zuInitialization": {
+					"isFsbl": true,
+					"usingFSBL": {
+						"initWithFSBL": true,
+						"fsblFile": "${workspaceFolder}/eth_platform/export/eth_platform/sw/boot/fsbl.elf",
+						"fsblExitSymbol": "XFsbl_Exit"
+					},
+					"usingPsuInit": {
+						"runPsuInit": true,
+						"plPowerup": true,
+						"psuInitTclFile": "${workspaceFolder}/udp_app/_ide/psinit/psu_init.tcl"
+					}
+				},
+				"zuTraceOptions": {
+					"isSelected": false,
+					"scratchAddress": "0x60000",
+					"scratchSize": "0x60000",
+					"traceOutputPath": ""
+				},
+				"downloadElf": [
+					{
+						"core": "psu_cortexa53_0",
+						"resetProcessor": true,
+						"elfFile": "${workspaceFolder}/udp_app/build/udp_app.elf",
+						"stopAtEntry": false,
+						"isSelfRelocatingApp": false,
+						"relativeAddress": ""
+					}
+				],
+				"crossTriggerBreakpoints": {
+					"isSelected": false,
+					"breakpoints": []
+				}
+			},
+			"internalConsoleOptions": "openOnSessionStart"
+		}
+	]
+}
