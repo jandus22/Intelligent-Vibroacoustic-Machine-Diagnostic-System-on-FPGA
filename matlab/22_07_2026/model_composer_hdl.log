@@ -1,0 +1,55 @@
+--------------------------------------------------------------------------------
+Vitis Model Composer 6296885 2025.2 Thu Nov 13 21:30:29 MST 2025 
+--------------------------------------------------------------------------------
+Model Composer: D:/Programy/Xilinx/2025.2/Model_Composer
+Vivado: D:/Programy/Xilinx/2025.2/Vivado
+Vitis: D:/Programy/Xilinx/2025.2/Vitis
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: Illegal period. Ensure that this block's sample period is...
+     Block: 'Uklad_simulink_vivado_trzy_sciezki/Subsystem/s_axis_data/s_axis_data_tdata'
+Error 0002: Illegal period. Ensure that this block's sample period is...
+     Block: 'Uklad_simulink_vivado_trzy_sciezki/Subsystem/s_axis_data/s_axis_data_tvalid'
+Error 0003: Illegal period. Ensure that this block's sample period is...
+     Block: 'Uklad_simulink_vivado_trzy_sciezki/Subsystem/m_axis_data/m_axis_data_tready'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'Uklad_simulink_vivado_trzy_sciezki/Subsystem/s_axis_data/s_axis_data_tdata'
+
+Details:
+Illegal period. Ensure that this block's sample period is an
+integer multiple of the Simulink system period as configured in
+the Settings tab of the Vitis Model Composer Hub block.
+Error occurred during "Block Configuration".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'Uklad_simulink_vivado_trzy_sciezki/Subsystem/s_axis_data/s_axis_data_tvalid'
+
+Details:
+Illegal period. Ensure that this block's sample period is an
+integer multiple of the Simulink system period as configured in
+the Settings tab of the Vitis Model Composer Hub block.
+Error occurred during "Block Configuration".
+
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'Uklad_simulink_vivado_trzy_sciezki/Subsystem/m_axis_data/m_axis_data_tready'
+
+Details:
+Illegal period. Ensure that this block's sample period is an
+integer multiple of the Simulink system period as configured in
+the Settings tab of the Vitis Model Composer Hub block.
+Error occurred during "Block Configuration".
+
+--------------------------------------------------------------------------------
