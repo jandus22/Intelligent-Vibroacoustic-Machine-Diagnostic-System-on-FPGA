@@ -238,8 +238,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/home/kuszman/Xilinx/2025.2/Vitis/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-strip
 
-//No help, variable specified on the command line.
-CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/cortexa53_toolchain.cmake
+//The CMake toolchain file
+CMAKE_TOOLCHAIN_FILE:FILEPATH=/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/psu_cortexa53_0/lwip_domain/bsp/cortexa53_toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -647,8 +647,8 @@ lwip220_tcpip_mbox_size:STRING=200
 //Zynq Ethernet Interface number
 lwip220_temac_emac_number:STRING=0
 
-//link speed as negotiated by the PHY
-lwip220_temac_phy_link_speed:STRING=CONFIG_LINKSPEED_AUTODETECT
+//Fixed 1000 Mbps for KR260
+lwip220_temac_phy_link_speed:STRING=CONFIG_LINKSPEED1000
 
 //Offload TCP and IP Receive checksum calculation (hardware support
 // required)

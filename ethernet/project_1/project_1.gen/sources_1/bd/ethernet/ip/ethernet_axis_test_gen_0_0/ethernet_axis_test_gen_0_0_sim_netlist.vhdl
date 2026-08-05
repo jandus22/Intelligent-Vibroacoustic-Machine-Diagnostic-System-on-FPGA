@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Mon Jul 20 09:14:11 2026
+-- Date        : Tue Jul 28 08:21:09 2026
 -- Host        : Magisterka running 64-bit Ubuntu 26.04 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axis_test_gen_0_0/ethernet_axis_test_gen_0_0_sim_netlist.vhdl
@@ -17,9 +17,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ethernet_axis_test_gen_0_0_axis_test_gen is
   port (
-    m_axis_tlast : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    m_axis_tlast : out STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 13 downto 0 );
     clk : in STD_LOGIC;
     rstn : in STD_LOGIC;
     m_axis_tready : in STD_LOGIC
@@ -36,36 +36,46 @@ architecture STRUCTURE of ethernet_axis_test_gen_0_0_axis_test_gen is
   signal \^q\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^m_axis_tlast\ : STD_LOGIC;
   signal m_axis_tlast_INST_0_i_1_n_0 : STD_LOGIC;
-  signal sample_cnt : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal m_axis_tlast_INST_0_i_2_n_0 : STD_LOGIC;
+  signal sample_cnt : STD_LOGIC_VECTOR ( 11 downto 0 );
+  signal \sample_cnt[11]_i_1_n_0\ : STD_LOGIC;
+  signal \sample_cnt[11]_i_2_n_0\ : STD_LOGIC;
+  signal \sample_cnt[11]_i_3_n_0\ : STD_LOGIC;
+  signal \sample_cnt[1]_i_1_n_0\ : STD_LOGIC;
+  signal \sample_cnt[3]_i_1_n_0\ : STD_LOGIC;
+  signal \sample_cnt[6]_i_1_n_0\ : STD_LOGIC;
   signal \sample_cnt[6]_i_2_n_0\ : STD_LOGIC;
-  signal \sample_cnt[9]_i_1_n_0\ : STD_LOGIC;
-  signal \sample_cnt__0\ : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal \sample_cnt__0\ : STD_LOGIC_VECTOR ( 10 downto 0 );
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[0]\ : label is "ST_HDR0:0001,ST_HDR1:0010,ST_HDR2:0100,ST_DATA:1000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[1]\ : label is "ST_HDR0:0001,ST_HDR1:0010,ST_HDR2:0100,ST_DATA:1000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[2]\ : label is "ST_HDR0:0001,ST_HDR1:0010,ST_HDR2:0100,ST_DATA:1000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[3]\ : label is "ST_HDR0:0001,ST_HDR1:0010,ST_HDR2:0100,ST_DATA:1000";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \m_axis_tdata[0]_INST_0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \m_axis_tdata[1]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_axis_tdata[24]_INST_0\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \m_axis_tdata[29]_INST_0\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \m_axis_tdata[2]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_axis_tdata[3]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \m_axis_tdata[4]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_axis_tdata[5]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_axis_tdata[6]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_axis_tdata[7]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_axis_tdata[8]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \m_axis_tdata[9]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \sample_cnt[0]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \sample_cnt[1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \sample_cnt[2]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \sample_cnt[3]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_axis_tdata[0]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m_axis_tdata[10]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_axis_tdata[11]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \m_axis_tdata[24]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_axis_tdata[29]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_axis_tdata[2]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m_axis_tdata[3]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m_axis_tdata[4]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \m_axis_tdata[5]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m_axis_tdata[6]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m_axis_tdata[7]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_axis_tdata[8]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_axis_tdata[9]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of m_axis_tlast_INST_0_i_2 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \sample_cnt[0]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \sample_cnt[10]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \sample_cnt[11]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \sample_cnt[1]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \sample_cnt[2]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \sample_cnt[3]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \sample_cnt[5]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \sample_cnt[6]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \sample_cnt[7]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \sample_cnt[8]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \sample_cnt[6]_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \sample_cnt[7]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \sample_cnt[8]_i_1\ : label is "soft_lutpair1";
 begin
   Q(1 downto 0) <= \^q\(1 downto 0);
   m_axis_tlast <= \^m_axis_tlast\;
@@ -142,6 +152,24 @@ begin
       I1 => sample_cnt(0),
       O => m_axis_tdata(0)
     );
+\m_axis_tdata[10]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \FSM_onehot_state_reg_n_0_[3]\,
+      I1 => sample_cnt(10),
+      O => m_axis_tdata(10)
+    );
+\m_axis_tdata[11]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \FSM_onehot_state_reg_n_0_[3]\,
+      I1 => sample_cnt(11),
+      O => m_axis_tdata(11)
+    );
 \m_axis_tdata[1]_INST_0\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
@@ -159,7 +187,7 @@ begin
       I0 => \^q\(0),
       I1 => \FSM_onehot_state_reg_n_0_[0]\,
       I2 => \^q\(1),
-      O => m_axis_tdata(11)
+      O => m_axis_tdata(13)
     );
 \m_axis_tdata[29]_INST_0\: unisim.vcomponents.LUT2
     generic map(
@@ -168,7 +196,7 @@ begin
         port map (
       I0 => \^q\(0),
       I1 => \FSM_onehot_state_reg_n_0_[0]\,
-      O => m_axis_tdata(10)
+      O => m_axis_tdata(12)
     );
 \m_axis_tdata[2]_INST_0\: unisim.vcomponents.LUT2
     generic map(
@@ -244,29 +272,39 @@ begin
     );
 m_axis_tlast_INST_0: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0800000000000000"
+      INIT => X"0000000080000000"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[3]\,
-      I1 => sample_cnt(7),
+      I0 => sample_cnt(7),
+      I1 => sample_cnt(6),
       I2 => m_axis_tlast_INST_0_i_1_n_0,
-      I3 => sample_cnt(6),
-      I4 => sample_cnt(8),
-      I5 => sample_cnt(9),
+      I3 => sample_cnt(8),
+      I4 => sample_cnt(9),
+      I5 => m_axis_tlast_INST_0_i_2_n_0,
       O => \^m_axis_tlast\
     );
 m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"7FFFFFFFFFFFFFFF"
+      INIT => X"8000000000000000"
     )
         port map (
-      I0 => sample_cnt(2),
+      I0 => sample_cnt(1),
       I1 => sample_cnt(0),
-      I2 => sample_cnt(1),
+      I2 => sample_cnt(2),
       I3 => sample_cnt(5),
-      I4 => sample_cnt(3),
-      I5 => sample_cnt(4),
+      I4 => sample_cnt(4),
+      I5 => sample_cnt(3),
       O => m_axis_tlast_INST_0_i_1_n_0
+    );
+m_axis_tlast_INST_0_i_2: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"7F"
+    )
+        port map (
+      I0 => sample_cnt(11),
+      I1 => sample_cnt(10),
+      I2 => \FSM_onehot_state_reg_n_0_[3]\,
+      O => m_axis_tlast_INST_0_i_2_n_0
     );
 \sample_cnt[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -277,15 +315,58 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
       I1 => sample_cnt(0),
       O => \sample_cnt__0\(0)
     );
-\sample_cnt[1]_i_1\: unisim.vcomponents.LUT3
+\sample_cnt[10]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"28"
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[3]\,
+      I1 => \sample_cnt[11]_i_3_n_0\,
+      I2 => sample_cnt(10),
+      O => \sample_cnt__0\(10)
+    );
+\sample_cnt[11]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"A8"
+    )
+        port map (
+      I0 => m_axis_tready,
+      I1 => \^q\(1),
+      I2 => \FSM_onehot_state_reg_n_0_[3]\,
+      O => \sample_cnt[11]_i_1_n_0\
+    );
+\sample_cnt[11]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7800"
+    )
+        port map (
+      I0 => \sample_cnt[11]_i_3_n_0\,
+      I1 => sample_cnt(10),
+      I2 => sample_cnt(11),
+      I3 => \FSM_onehot_state_reg_n_0_[3]\,
+      O => \sample_cnt[11]_i_2_n_0\
+    );
+\sample_cnt[11]_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"80000000"
+    )
+        port map (
+      I0 => sample_cnt(9),
+      I1 => sample_cnt(8),
+      I2 => m_axis_tlast_INST_0_i_1_n_0,
+      I3 => sample_cnt(6),
+      I4 => sample_cnt(7),
+      O => \sample_cnt[11]_i_3_n_0\
+    );
+\sample_cnt[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"60"
+    )
+        port map (
+      I0 => sample_cnt(0),
       I1 => sample_cnt(1),
-      I2 => sample_cnt(0),
-      O => \sample_cnt__0\(1)
+      I2 => \FSM_onehot_state_reg_n_0_[3]\,
+      O => \sample_cnt[1]_i_1_n_0\
     );
 \sample_cnt[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -293,22 +374,22 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[3]\,
-      I1 => sample_cnt(0),
-      I2 => sample_cnt(1),
+      I1 => sample_cnt(1),
+      I2 => sample_cnt(0),
       I3 => sample_cnt(2),
       O => \sample_cnt__0\(2)
     );
 \sample_cnt[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2AAA8000"
+      INIT => X"7F800000"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[3]\,
-      I1 => sample_cnt(1),
-      I2 => sample_cnt(0),
-      I3 => sample_cnt(2),
-      I4 => sample_cnt(3),
-      O => \sample_cnt__0\(3)
+      I0 => sample_cnt(2),
+      I1 => sample_cnt(0),
+      I2 => sample_cnt(1),
+      I3 => sample_cnt(3),
+      I4 => \FSM_onehot_state_reg_n_0_[3]\,
+      O => \sample_cnt[3]_i_1_n_0\
     );
 \sample_cnt[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -317,89 +398,79 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[3]\,
       I1 => sample_cnt(3),
-      I2 => sample_cnt(2),
+      I2 => sample_cnt(1),
       I3 => sample_cnt(0),
-      I4 => sample_cnt(1),
+      I4 => sample_cnt(2),
       I5 => sample_cnt(4),
       O => \sample_cnt__0\(4)
     );
 \sample_cnt[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"8AAA2000"
+      INIT => X"2AAA8000"
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[3]\,
-      I1 => \sample_cnt[6]_i_2_n_0\,
-      I2 => sample_cnt(3),
-      I3 => sample_cnt(4),
+      I1 => sample_cnt(4),
+      I2 => \sample_cnt[6]_i_2_n_0\,
+      I3 => sample_cnt(3),
       I4 => sample_cnt(5),
       O => \sample_cnt__0\(5)
     );
 \sample_cnt[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"8AAAAAAA20000000"
+      INIT => X"7FFF800000000000"
     )
         port map (
-      I0 => \FSM_onehot_state_reg_n_0_[3]\,
-      I1 => \sample_cnt[6]_i_2_n_0\,
-      I2 => sample_cnt(5),
+      I0 => \sample_cnt[6]_i_2_n_0\,
+      I1 => sample_cnt(5),
+      I2 => sample_cnt(4),
       I3 => sample_cnt(3),
-      I4 => sample_cnt(4),
-      I5 => sample_cnt(6),
-      O => \sample_cnt__0\(6)
+      I4 => sample_cnt(6),
+      I5 => \FSM_onehot_state_reg_n_0_[3]\,
+      O => \sample_cnt[6]_i_1_n_0\
     );
 \sample_cnt[6]_i_2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"7F"
+      INIT => X"80"
     )
         port map (
-      I0 => sample_cnt(1),
+      I0 => sample_cnt(2),
       I1 => sample_cnt(0),
-      I2 => sample_cnt(2),
+      I2 => sample_cnt(1),
       O => \sample_cnt[6]_i_2_n_0\
     );
 \sample_cnt[7]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"8A20"
-    )
-        port map (
-      I0 => \FSM_onehot_state_reg_n_0_[3]\,
-      I1 => m_axis_tlast_INST_0_i_1_n_0,
-      I2 => sample_cnt(6),
-      I3 => sample_cnt(7),
-      O => \sample_cnt__0\(7)
-    );
-\sample_cnt[8]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"A2AA0800"
+      INIT => X"2A80"
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[3]\,
       I1 => sample_cnt(6),
       I2 => m_axis_tlast_INST_0_i_1_n_0,
       I3 => sample_cnt(7),
+      O => \sample_cnt__0\(7)
+    );
+\sample_cnt[8]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"2AAA8000"
+    )
+        port map (
+      I0 => \FSM_onehot_state_reg_n_0_[3]\,
+      I1 => m_axis_tlast_INST_0_i_1_n_0,
+      I2 => sample_cnt(6),
+      I3 => sample_cnt(7),
       I4 => sample_cnt(8),
       O => \sample_cnt__0\(8)
     );
-\sample_cnt[9]_i_1\: unisim.vcomponents.LUT3
+\sample_cnt[9]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A8"
-    )
-        port map (
-      I0 => m_axis_tready,
-      I1 => \^q\(1),
-      I2 => \FSM_onehot_state_reg_n_0_[3]\,
-      O => \sample_cnt[9]_i_1_n_0\
-    );
-\sample_cnt[9]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A2AAAAAA08000000"
+      INIT => X"2AAAAAAA80000000"
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[3]\,
       I1 => sample_cnt(7),
-      I2 => m_axis_tlast_INST_0_i_1_n_0,
-      I3 => sample_cnt(6),
+      I2 => sample_cnt(6),
+      I3 => m_axis_tlast_INST_0_i_1_n_0,
       I4 => sample_cnt(8),
       I5 => sample_cnt(9),
       O => \sample_cnt__0\(9)
@@ -407,23 +478,39 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
 \sample_cnt_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
+      CE => \sample_cnt[11]_i_1_n_0\,
       D => \sample_cnt__0\(0),
       Q => sample_cnt(0),
+      R => \FSM_onehot_state[2]_i_1_n_0\
+    );
+\sample_cnt_reg[10]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \sample_cnt[11]_i_1_n_0\,
+      D => \sample_cnt__0\(10),
+      Q => sample_cnt(10),
+      R => \FSM_onehot_state[2]_i_1_n_0\
+    );
+\sample_cnt_reg[11]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \sample_cnt[11]_i_1_n_0\,
+      D => \sample_cnt[11]_i_2_n_0\,
+      Q => sample_cnt(11),
       R => \FSM_onehot_state[2]_i_1_n_0\
     );
 \sample_cnt_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
-      D => \sample_cnt__0\(1),
+      CE => \sample_cnt[11]_i_1_n_0\,
+      D => \sample_cnt[1]_i_1_n_0\,
       Q => sample_cnt(1),
       R => \FSM_onehot_state[2]_i_1_n_0\
     );
 \sample_cnt_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
+      CE => \sample_cnt[11]_i_1_n_0\,
       D => \sample_cnt__0\(2),
       Q => sample_cnt(2),
       R => \FSM_onehot_state[2]_i_1_n_0\
@@ -431,15 +518,15 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
 \sample_cnt_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
-      D => \sample_cnt__0\(3),
+      CE => \sample_cnt[11]_i_1_n_0\,
+      D => \sample_cnt[3]_i_1_n_0\,
       Q => sample_cnt(3),
       R => \FSM_onehot_state[2]_i_1_n_0\
     );
 \sample_cnt_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
+      CE => \sample_cnt[11]_i_1_n_0\,
       D => \sample_cnt__0\(4),
       Q => sample_cnt(4),
       R => \FSM_onehot_state[2]_i_1_n_0\
@@ -447,7 +534,7 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
 \sample_cnt_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
+      CE => \sample_cnt[11]_i_1_n_0\,
       D => \sample_cnt__0\(5),
       Q => sample_cnt(5),
       R => \FSM_onehot_state[2]_i_1_n_0\
@@ -455,15 +542,15 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
 \sample_cnt_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
-      D => \sample_cnt__0\(6),
+      CE => \sample_cnt[11]_i_1_n_0\,
+      D => \sample_cnt[6]_i_1_n_0\,
       Q => sample_cnt(6),
       R => \FSM_onehot_state[2]_i_1_n_0\
     );
 \sample_cnt_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
+      CE => \sample_cnt[11]_i_1_n_0\,
       D => \sample_cnt__0\(7),
       Q => sample_cnt(7),
       R => \FSM_onehot_state[2]_i_1_n_0\
@@ -471,7 +558,7 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
 \sample_cnt_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
+      CE => \sample_cnt[11]_i_1_n_0\,
       D => \sample_cnt__0\(8),
       Q => sample_cnt(8),
       R => \FSM_onehot_state[2]_i_1_n_0\
@@ -479,7 +566,7 @@ m_axis_tlast_INST_0_i_1: unisim.vcomponents.LUT6
 \sample_cnt_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => \sample_cnt[9]_i_1_n_0\,
+      CE => \sample_cnt[11]_i_1_n_0\,
       D => \sample_cnt__0\(9),
       Q => sample_cnt(9),
       R => \FSM_onehot_state[2]_i_1_n_0\
@@ -548,9 +635,7 @@ begin
   m_axis_tdata(14) <= \<const0>\;
   m_axis_tdata(13) <= \<const0>\;
   m_axis_tdata(12) <= \<const0>\;
-  m_axis_tdata(11) <= \<const0>\;
-  m_axis_tdata(10) <= \<const0>\;
-  m_axis_tdata(9 downto 0) <= \^m_axis_tdata\(9 downto 0);
+  m_axis_tdata(11 downto 0) <= \^m_axis_tdata\(11 downto 0);
   m_axis_tvalid <= \^rstn\;
 GND: unisim.vcomponents.GND
      port map (
@@ -561,9 +646,9 @@ inst: entity work.ethernet_axis_test_gen_0_0_axis_test_gen
       Q(1) => \^m_axis_tdata\(30),
       Q(0) => \^m_axis_tdata\(28),
       clk => clk,
-      m_axis_tdata(11) => \^m_axis_tdata\(31),
-      m_axis_tdata(10) => \^m_axis_tdata\(29),
-      m_axis_tdata(9 downto 0) => \^m_axis_tdata\(9 downto 0),
+      m_axis_tdata(13) => \^m_axis_tdata\(31),
+      m_axis_tdata(12) => \^m_axis_tdata\(29),
+      m_axis_tdata(11 downto 0) => \^m_axis_tdata\(11 downto 0),
       m_axis_tlast => m_axis_tlast,
       m_axis_tready => m_axis_tready,
       rstn => \^rstn\

@@ -499,7 +499,7 @@ lib_info:
     path: /home/janecki/vitis/2025.2/Vitis/data/embeddedsw/lib/sw_services/xiltimer_v2_3
     examples: {}
   lwip220:
-    path: /home/kuszman/Xilinx/2025.2/Vitis/data/embeddedsw/ThirdParty/sw_services/lwip220_v1_3
+    path: /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/local_sw_repo/ThirdParty/sw_services/lwip220_v1_3
     examples: {}
 lib_config:
   xiltimer:
@@ -1140,14 +1140,14 @@ lib_config:
       name: lwip220_temac_phy_link_speed
       permission: read_write
       type: string
-      value: CONFIG_LINKSPEED_AUTODETECT
-      default: CONFIG_LINKSPEED_AUTODETECT
+      value: CONFIG_LINKSPEED1000
+      default: CONFIG_LINKSPEED1000
       options:
       - CONFIG_LINKSPEED10
       - CONFIG_LINKSPEED100
       - CONFIG_LINKSPEED1000
       - CONFIG_LINKSPEED_AUTODETECT
-      description: link speed as negotiated by the PHY
+      description: Fixed 1000 Mbps for KR260
     lwip220_temac_tcp_ip_rx_checksum_offload:
       name: lwip220_temac_tcp_ip_rx_checksum_offload
       permission: read_write

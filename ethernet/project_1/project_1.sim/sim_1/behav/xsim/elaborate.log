@@ -7,10 +7,4 @@ WARNING: [XSIM 43-3431] One or more environment variables have been detected whi
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.axis_test_gen
-Compiling module xil_defaultlib.tb_axis_test_gen
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_axis_test_gen_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

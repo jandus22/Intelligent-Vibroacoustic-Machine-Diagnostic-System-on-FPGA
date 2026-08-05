@@ -19,7 +19,7 @@ XAxiDma_Config XAxiDma_ConfigTable[] __attribute__ ((section (".drvcfg_sec"))) =
 		0x10, /* xlnx,s2mm-burst-size */
 		0x0, /* xlnx,micro-dma */
 		0x20, /* xlnx,addrwidth */
-		0xe, /* xlnx,sg-length-width */
+		0x10, /* xlnx,sg-length-width */
 		{0xffff,  0xffff}, /* interrupts */
 		0xffff /* interrupt-parent */
 	},

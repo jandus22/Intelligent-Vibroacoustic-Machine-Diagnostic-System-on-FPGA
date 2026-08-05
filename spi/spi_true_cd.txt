@@ -1,0 +1,1 @@
+/home/kuszman/Xilinx/2025.2/Vivado/bin/project_spi_true/project_spi_true.xpr

@@ -15,7 +15,8 @@
       "axi_dma_0": "",
       "axi_smc": "",
       "rst_ps8_0_99M": "",
-      "axis_test_gen_0": ""
+      "axis_test_gen_0": "",
+      "xlconstant_0": ""
     },
     "components": {
       "zynq_ultra_ps_e_0": {
@@ -1508,6 +1509,9 @@
           },
           "c_m_axi_mm2s_data_width": {
             "value": "128"
+          },
+          "c_sg_length_width": {
+            "value": "16"
           }
         },
         "interface_ports": {
@@ -1752,6 +1756,14 @@
             }
           }
         }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "10",
+        "xci_name": "ethernet_xlconstant_0_0",
+        "xci_path": "ip/ethernet_xlconstant_0_0/ethernet_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "has_run_ip_tcl": "true"
       }
     },
     "interface_nets": {
@@ -1789,6 +1801,12 @@
           "axis_test_gen_0/rstn"
         ]
       },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "rst_ps8_0_99M/dcm_locked"
+        ]
+      },
       "zynq_ultra_ps_e_0_pl_clk0": {
         "ports": [
           "zynq_ultra_ps_e_0/pl_clk0",
@@ -1797,10 +1815,10 @@
           "axi_dma_0/s_axi_lite_aclk",
           "rst_ps8_0_99M/slowest_sync_clk",
           "axi_dma_0/m_axi_s2mm_aclk",
-          "axis_test_gen_0/clk",
           "zynq_ultra_ps_e_0/maxihpm0_fpd_aclk",
           "zynq_ultra_ps_e_0/saxihp0_fpd_aclk",
-          "axi_dma_0/m_axi_mm2s_aclk"
+          "axi_dma_0/m_axi_mm2s_aclk",
+          "axis_test_gen_0/clk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
@@ -1828,10 +1846,28 @@
         "address_spaces": {
           "Data_S2MM": {
             "segments": {
+              "SEG_zynq_ultra_ps_e_0_HP0_DDR_HIGH": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_HIGH",
+                "offset": "0x800000000",
+                "range": "4G",
+                "is_excluded": "TRUE"
+              },
               "SEG_zynq_ultra_ps_e_0_HP0_DDR_LOW": {
                 "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW",
                 "offset": "0x00000000",
                 "range": "2G"
+              },
+              "SEG_zynq_ultra_ps_e_0_HP0_LPS_OCM": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM",
+                "offset": "0x00000000",
+                "range": "1",
+                "is_excluded": "TRUE"
+              },
+              "SEG_zynq_ultra_ps_e_0_HP0_QSPI": {
+                "address_block": "/zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI",
+                "offset": "0x00000000",
+                "range": "1",
+                "is_excluded": "TRUE"
               }
             }
           }

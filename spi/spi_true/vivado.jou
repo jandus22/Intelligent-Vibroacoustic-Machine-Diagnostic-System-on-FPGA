@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Aug  5 07:40:23 2026
+# Process ID         : 2237357
+# Current directory  : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true
+# Command line       : vivado -mode batch -source /tmp/make_ltx_17.tcl
+# Log file           : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/vivado.log
+# Journal file       : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/vivado.jou
+# Running On         : Magisterka
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : AMD Ryzen 7 PRO 4750G with Radeon Graphics
+# CPU Frequency      : 2376.700 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 15479 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 19774 MB
+# Available Virtual  : 6764 MB
+#-----------------------------------------------------------
+source /tmp/make_ltx_17.tcl

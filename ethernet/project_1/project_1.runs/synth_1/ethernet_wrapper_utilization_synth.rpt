@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon Jul 20 09:17:30 2026
+| Date         : Wed Jul 29 08:33:25 2026
 | Host         : Magisterka running 64-bit Ubuntu 26.04 LTS
 | Command      : report_utilization -file ethernet_wrapper_utilization_synth.rpt -pb ethernet_wrapper_utilization_synth.pb
 | Design       : ethernet_wrapper

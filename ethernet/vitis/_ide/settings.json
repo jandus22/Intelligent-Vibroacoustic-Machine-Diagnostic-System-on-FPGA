@@ -1,3 +1,6 @@
 {
-    "clangd.fallbackFlags": []
+  "clangd.fallbackFlags": [],
+  "vitis.software.repositories": [
+    "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/local_sw_repo"
+  ]
 }

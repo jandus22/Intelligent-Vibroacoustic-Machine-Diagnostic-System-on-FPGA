@@ -4270,7 +4270,7 @@
                 compatible = "simple-bus";
                 #address-cells = <0x2>;
                 #size-cells = <0x2>;
-                firmware-name = "ethernet_wrapper.bit.bin";
+                firmware-name = "ethernet_wrapper_4096.bit.bin";
 
                 clocking1: clocking1 {
                         phandle = <0x10d>;
@@ -4313,7 +4313,7 @@
                         xlnx,m-axi-mm2s-data-width = <0x80>;
                         xlnx,num-s2mm-channels = <0x1>;
                         xlnx,dlytmr-resolution = <0x7d>;
-                        xlnx,sg-length-width = <0xe>;
+                        xlnx,sg-length-width = <0x10>;
                         xlnx,prmry-is-aclk-async = <0x0>;
                         xlnx,include-s2mm-sf = <0x1>;
                         #dma-cells = <0x1>;

@@ -263,8 +263,8 @@ lwip220_tcpip_mbox_size:STRING=200
 // Zynq Ethernet Interface number
 lwip220_temac_emac_number:STRING=0
 
-// link speed as negotiated by the PHY
-lwip220_temac_phy_link_speed:STRING=CONFIG_LINKSPEED_AUTODETECT
+// Fixed 1000 Mbps for KR260
+lwip220_temac_phy_link_speed:STRING=CONFIG_LINKSPEED1000
 
 // Offload TCP and IP Receive checksum calculation (hardware support required)
 lwip220_temac_tcp_ip_rx_checksum_offload:BOOL=OFF

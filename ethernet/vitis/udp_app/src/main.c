@@ -4,6 +4,12 @@
 #include "sleep.h"
 #include "platform.h"
 
+#ifdef SDT
+#include "xiltimer.h"
+#else
+#include "xtime_l.h"
+#endif
+
 #include "xaxidma.h"
 #include "xaxidma_hw.h"
 
@@ -12,10 +18,13 @@
 #include "lwip/ip_addr.h"
 #include "lwip/pbuf.h"
 #include "lwip/netif.h"
+#include "lwip/sys.h"
 
 #include "netif/xadapter.h"
 
-#include <string.h>
+#include "udp_protocol.h"
+
+#include <stddef.h>
 #include <stdint.h>
 
 /* -------------------- Hardware configuration -------------------- */
@@ -25,7 +34,7 @@
 
 /* -------------------- DMA frame configuration -------------------- */
 
-#define FFT_SIZE               1024U
+#define FFT_SIZE               4096U
 #define FRAME_HEADER_WORDS     3U
 
 #define DMA_FRAME_WORDS        (FRAME_HEADER_WORDS + FFT_SIZE)
@@ -41,10 +50,21 @@
 
 #define DMA_TIMEOUT            100000000U
 
-/* -------------------- UDP configuration -------------------- */
+/* -------------------- UDP/protocol configuration -------------------- */
 
-#define UDP_CHUNK_WORDS        256U
 #define DEST_PORT              5001U
+#define UDP_CHUNK_WORDS        VIBR_ELEMENTS_PER_PACKET
+
+/*
+ * Obecny axis_test_gen wysyła 4096 wartości 0..4095 reprezentujących
+ * testową ramkę próbek czasowych. GUI wykonuje z nich 4096-punktową FFT.
+ *
+ * Po podłączeniu gotowego modułu FFT przed DMA typ wiadomości należy
+ * odpowiednio zmienić na VIBR_DATA_FFT_MAGNITUDE albo
+ * VIBR_DATA_FFT_COMPLEX.
+ */
+#define MEASUREMENT_DATA_KIND  VIBR_DATA_TIME_SAMPLES
+#define MEASUREMENT_CHANNEL    0U
 
 /*
  * Po pierwszym pakiecie UDP stos może najpierw wysłać zapytanie ARP.
@@ -53,19 +73,34 @@
 #define ARP_WAIT_TIME_MS       250U
 #define BETWEEN_PACKETS_MS     2U
 #define AFTER_SEND_WAIT_MS     2U
+#define AFTER_CONTROL_MSG_MS   1U
 
+#define BOARD_STATUS_PERIOD_MS 1000U
 #define STATUS_PRINT_PERIOD    100U
 #define VERBOSE_FRAME_COUNT    3U
 
-typedef struct {
-    uint32_t frame_id;
-    uint16_t packet_id;
-    uint16_t packet_count;
-} __attribute__((packed)) udp_header_t;
+/* Testowy model: zdrowe / uszkodzenie pierścienia wewnętrznego / zewnętrznego. */
+#define TEST_MODEL_VERSION     1U
+#define TEST_INFERENCE_US      4200U
+#define TEST_CONFIDENCE        900U
+#define TEST_OTHER_SCORE       50U
+
+/*
+ * Testowa klasa zmienia się co dwie sekundy, niezależnie od liczby
+ * przesyłanych ramek na sekundę.
+ */
+#define TEST_CLASS_HOLD_MS      2000U
+
+/* Kody aplikacji przekazywane w polu last_error pakietu 0x03. */
+#define APP_ERROR_NONE                 0U
+#define APP_ERROR_DMA                  1U
+#define APP_ERROR_INVALID_FRAME        2U
+#define APP_ERROR_MEASUREMENT_UDP      3U
+#define APP_ERROR_CLASSIFICATION_UDP   4U
+#define APP_ERROR_STATUS_UDP           5U
 
 /* -------------------- Global objects -------------------- */
 
-static uint32_t frame_counter = 0U;
 static struct netif server_netif;
 struct netif *echo_netif;
 
@@ -81,6 +116,30 @@ static uint32_t fft_buffer[DMA_BUFFER_WORDS]
 static unsigned char mac_ethernet_address[] = {
     0x00, 0x0A, 0x35, 0x00, 0x01, 0x02
 };
+
+/* -------------------- Application time -------------------- */
+
+static uint32_t app_now_ms(void)
+{
+    XTime current_time;
+    uint64_t timer_frequency;
+
+    XTime_GetTime(&current_time);
+
+#ifdef SDT
+    timer_frequency = (uint64_t)XSLEEPTIMER_FREQ;
+#else
+    timer_frequency = (uint64_t)COUNTS_PER_SECOND;
+#endif
+
+    if (timer_frequency == 0ULL) {
+        return 0U;
+    }
+
+    return (uint32_t)(
+        ((uint64_t)current_time * 1000ULL) / timer_frequency
+    );
+}
 
 /* -------------------- Ethernet service -------------------- */
 
@@ -130,9 +189,7 @@ static int receive_dma_frame(void)
         fft_buffer[i] = 0xDEADBEEFU;
     }
 
-    /*
-     * Usunięcie brudnych linii cache przed zapisaniem danych przez DMA.
-     */
+    /* Usunięcie brudnych linii cache przed zapisaniem danych przez DMA. */
     Xil_DCacheFlushRange(
         (UINTPTR)fft_buffer,
         DMA_BUFFER_BYTES
@@ -162,12 +219,8 @@ static int receive_dma_frame(void)
             ) != 0) &&
            (timeout > 0U)) {
 
-        /*
-         * Nawet podczas oczekiwania na DMA obsługujemy Ethernet.
-         * Dzięki temu lwIP może odpowiadać na ARP oraz ICMP.
-         */
+        /* Podczas oczekiwania na DMA nadal obsługujemy Ethernet. */
         xemacif_input(&server_netif);
-
         timeout--;
     }
 
@@ -185,9 +238,7 @@ static int receive_dma_frame(void)
         return XST_FAILURE;
     }
 
-    /*
-     * Unieważnienie cache po zapisaniu bufora przez DMA.
-     */
+    /* Unieważnienie cache po zapisaniu bufora przez DMA. */
     Xil_DCacheInvalidateRange(
         (UINTPTR)fft_buffer,
         DMA_BUFFER_BYTES
@@ -196,14 +247,70 @@ static int receive_dma_frame(void)
     return XST_SUCCESS;
 }
 
-/* -------------------- UDP transmission -------------------- */
+/* -------------------- Common UDP send helper -------------------- */
+
+static int send_udp_datagram(
+    struct udp_pcb *pcb,
+    const uint8_t *data,
+    uint16_t data_length
+)
+{
+    struct pbuf *p;
+    err_t err;
+
+    if ((pcb == NULL) || (data == NULL) || (data_length == 0U)) {
+        return XST_FAILURE;
+    }
+
+    p = pbuf_alloc(
+        PBUF_TRANSPORT,
+        data_length,
+        PBUF_RAM
+    );
+
+    if (p == NULL) {
+        xil_printf(
+            "ERROR: pbuf_alloc failed for %u-byte datagram\r\n",
+            (unsigned int)data_length
+        );
+
+        return XST_FAILURE;
+    }
+
+    err = pbuf_take(p, data, data_length);
+
+    if (err == ERR_OK) {
+        err = udp_send(pcb, p);
+    }
+
+    /*
+     * Po udp_send() stos zachowuje własną referencję, jeśli datagram czeka
+     * jeszcze na rozwiązanie ARP. Referencję aplikacji można zwolnić.
+     */
+    pbuf_free(p);
+
+    if (err != ERR_OK) {
+        xil_printf(
+            "ERROR: UDP datagram send failed: %d\r\n",
+            (int)err
+        );
+
+        return XST_FAILURE;
+    }
+
+    return XST_SUCCESS;
+}
+
+/* -------------------- Message 0x01: FFT data -------------------- */
 
 static int send_fft_frame_udp(
     struct udp_pcb *pcb,
-    uint32_t frame_id
+    uint32_t frame_id,
+    uint64_t timestamp_us
 )
 {
-    uint32_t offset = 0U;
+    uint8_t datagram[VIBR_MEAS_INT32_DATAGRAM_SIZE];
+    uint32_t sample_offset = 0U;
     uint16_t packet_id = 0U;
 
     const uint16_t total_packets =
@@ -212,68 +319,87 @@ static int send_fft_frame_udp(
             UDP_CHUNK_WORDS
         );
 
-    while (offset < FFT_SIZE) {
+    while (sample_offset < FFT_SIZE) {
         uint32_t chunk = UDP_CHUNK_WORDS;
         uint16_t payload_size;
+        uint16_t datagram_size;
+        uint32_t i;
+        size_t wire_offset;
 
-        struct pbuf *p;
-        udp_header_t header;
-        err_t err;
+        vibr_header_t header;
+        vibr_measurement_meta_t meta;
 
-        if ((offset + chunk) > FFT_SIZE) {
-            chunk = FFT_SIZE - offset;
+        if ((sample_offset + chunk) > FFT_SIZE) {
+            chunk = FFT_SIZE - sample_offset;
         }
 
         payload_size = (uint16_t)(
-            sizeof(udp_header_t) +
+            VIBR_MEAS_META_SIZE +
             chunk * sizeof(uint32_t)
         );
 
-        p = pbuf_alloc(
-            PBUF_TRANSPORT,
-            payload_size,
-            PBUF_RAM
+        datagram_size = (uint16_t)(
+            VIBR_HEADER_SIZE + payload_size
         );
 
-        if (p == NULL) {
-            xil_printf(
-                "ERROR: pbuf_alloc failed for packet %u\r\n",
-                (unsigned int)packet_id
-            );
-
-            return XST_FAILURE;
-        }
-
+        header.message_type = VIBR_MSG_MEASUREMENT;
+        header.flags = 0U;
         header.frame_id = frame_id;
         header.packet_id = packet_id;
         header.packet_count = total_packets;
+        header.payload_length = payload_size;
+        header.timestamp_us = timestamp_us;
 
-        memcpy(
-            p->payload,
-            &header,
-            sizeof(header)
+        meta.data_kind = MEASUREMENT_DATA_KIND;
+        meta.element_format = VIBR_FORMAT_INT32;
+        meta.channel = MEASUREMENT_CHANNEL;
+        meta.first_index = (uint16_t)sample_offset;
+        meta.element_count = (uint16_t)chunk;
+
+        wire_offset = vibr_pack_header(
+            datagram,
+            sizeof(datagram),
+            &header
         );
 
-        memcpy(
-            (uint8_t *)p->payload + sizeof(header),
-            &fft_buffer[FRAME_HEADER_WORDS + offset],
-            chunk * sizeof(uint32_t)
+        if (wire_offset != VIBR_HEADER_SIZE) {
+            xil_printf("ERROR: VIBR header packing failed\r\n");
+            return XST_FAILURE;
+        }
+
+        wire_offset += vibr_pack_measurement_meta(
+            datagram + wire_offset,
+            sizeof(datagram) - wire_offset,
+            &meta
         );
 
-        err = udp_send(pcb, p);
+        if (wire_offset != (VIBR_HEADER_SIZE + VIBR_MEAS_META_SIZE)) {
+            xil_printf("ERROR: VIBR measurement metadata packing failed\r\n");
+            return XST_FAILURE;
+        }
 
         /*
-         * udp_send() kończy korzystanie z referencji należącej
-         * do aplikacji. Jeżeli pakiet jest chwilowo kolejkowany
-         * przez ARP, stos utrzymuje własną referencję.
+         * Na przewodzie wartości int32 są przesyłane w big-endian.
+         * Użycie funkcji zapisującej uint32 zachowuje również reprezentację
+         * liczb ujemnych w kodzie uzupełnień do dwóch.
          */
-        pbuf_free(p);
+        for (i = 0U; i < chunk; i++) {
+            vibr_write_u32_be(
+                datagram + wire_offset + i * sizeof(uint32_t),
+                fft_buffer[FRAME_HEADER_WORDS + sample_offset + i]
+            );
+        }
 
-        if (err != ERR_OK) {
+        if (send_udp_datagram(
+                pcb,
+                datagram,
+                datagram_size
+            ) != XST_SUCCESS) {
+
             xil_printf(
-                "ERROR: udp_send failed for packet %u: %d\r\n",
-                (unsigned int)packet_id,
-                (int)err
+                "ERROR: measurement frame %lu packet %u failed\r\n",
+                (unsigned long)frame_id,
+                (unsigned int)packet_id
             );
 
             return XST_FAILURE;
@@ -281,50 +407,200 @@ static int send_fft_frame_udp(
 
         if (frame_id < VERBOSE_FRAME_COUNT) {
             xil_printf(
-                "Frame %lu: UDP packet %u/%u, samples %lu-%lu\r\n",
+                "Frame %lu: VIBR 0x01 packet %u/%u, bins %lu-%lu\r\n",
                 (unsigned long)frame_id,
                 (unsigned int)(packet_id + 1U),
                 (unsigned int)total_packets,
-                (unsigned long)offset,
-                (unsigned long)(offset + chunk - 1U)
+                (unsigned long)sample_offset,
+                (unsigned long)(sample_offset + chunk - 1U)
             );
         }
 
-        /*
-         * Pierwsze udp_send() może jedynie wysłać zapytanie ARP.
-         * Dajemy stosowi czas na odebranie odpowiedzi ARP od PC.
-         */
+        /* Zachowujemy działającą obsługę pierwszego ARP. */
         if ((frame_id == 0U) && (packet_id == 0U)) {
-            xil_printf(
-                "Waiting for initial ARP response...\r\n"
-            );
-        
-            service_ethernet_ms(
-                ARP_WAIT_TIME_MS,
-                1
-            );
+            xil_printf("Waiting for initial ARP response...\r\n");
+            service_ethernet_ms(ARP_WAIT_TIME_MS, 1);
         } else {
-            service_ethernet_ms(
-                BETWEEN_PACKETS_MS,
-                0
-            );
+            service_ethernet_ms(BETWEEN_PACKETS_MS, 0);
         }
 
-        offset += chunk;
+        sample_offset += chunk;
         packet_id++;
     }
 
-    
+    service_ethernet_ms(AFTER_SEND_WAIT_MS, 1);
+    return XST_SUCCESS;
+}
 
-    /*
-     * Przetwarzamy jeszcze ewentualną odpowiedź ARP
-     * i dane oczekujące w kolejce sterownika.
-     */
-    service_ethernet_ms(
-        AFTER_SEND_WAIT_MS,
-        1
+/* -------------------- Message 0x02: model result -------------------- */
+
+static void make_test_classification(
+    uint32_t frame_id,
+    vibr_classification_t *result
+)
+{
+    uint8_t selected_class;
+
+    if (result == NULL) {
+        return;
+    }
+
+    (void)frame_id;
+
+    selected_class = (uint8_t)(
+        (app_now_ms() / TEST_CLASS_HOLD_MS) % 3U
     );
 
+    result->class_id = selected_class;
+    result->class_count = 3U;
+    result->confidence_permille = TEST_CONFIDENCE;
+
+    result->score_healthy =
+        selected_class == VIBR_CLASS_HEALTHY
+            ? TEST_CONFIDENCE
+            : TEST_OTHER_SCORE;
+
+    result->score_inner =
+        selected_class == VIBR_CLASS_INNER_FAULT
+            ? TEST_CONFIDENCE
+            : TEST_OTHER_SCORE;
+
+    result->score_outer =
+        selected_class == VIBR_CLASS_OUTER_FAULT
+            ? TEST_CONFIDENCE
+            : TEST_OTHER_SCORE;
+
+    result->inference_time_us = TEST_INFERENCE_US;
+    result->model_version = TEST_MODEL_VERSION;
+}
+
+static int send_test_classification_udp(
+    struct udp_pcb *pcb,
+    uint32_t frame_id,
+    uint64_t timestamp_us
+)
+{
+    uint8_t datagram[VIBR_HEADER_SIZE + VIBR_CLASS_PAYLOAD_SIZE];
+    vibr_header_t header;
+    vibr_classification_t result;
+    size_t wire_offset;
+
+    make_test_classification(frame_id, &result);
+
+    header.message_type = VIBR_MSG_CLASSIFICATION;
+    header.flags = 0U;
+    header.frame_id = frame_id;
+    header.packet_id = 0U;
+    header.packet_count = 1U;
+    header.payload_length = VIBR_CLASS_PAYLOAD_SIZE;
+    header.timestamp_us = timestamp_us;
+
+    wire_offset = vibr_pack_header(
+        datagram,
+        sizeof(datagram),
+        &header
+    );
+
+    if (wire_offset != VIBR_HEADER_SIZE) {
+        return XST_FAILURE;
+    }
+
+    if (vibr_pack_classification(
+            datagram + wire_offset,
+            sizeof(datagram) - wire_offset,
+            &result
+        ) != VIBR_CLASS_PAYLOAD_SIZE) {
+
+        return XST_FAILURE;
+    }
+
+    if (send_udp_datagram(
+            pcb,
+            datagram,
+            (uint16_t)sizeof(datagram)
+        ) != XST_SUCCESS) {
+
+        return XST_FAILURE;
+    }
+
+    service_ethernet_ms(AFTER_CONTROL_MSG_MS, 0);
+
+    if (frame_id < VERBOSE_FRAME_COUNT) {
+        xil_printf(
+            "Frame %lu: VIBR 0x02 class=%u confidence=%u.%u%%\r\n",
+            (unsigned long)frame_id,
+            (unsigned int)result.class_id,
+            (unsigned int)(result.confidence_permille / 10U),
+            (unsigned int)(result.confidence_permille % 10U)
+        );
+    }
+
+    return XST_SUCCESS;
+}
+
+/* -------------------- Message 0x03: board status -------------------- */
+
+static int send_board_status_udp(
+    struct udp_pcb *pcb,
+    uint32_t last_frame_id,
+    uint32_t dropped_frames,
+    uint32_t last_error
+)
+{
+    uint8_t datagram[VIBR_HEADER_SIZE + VIBR_STATUS_PAYLOAD_SIZE];
+    vibr_header_t header;
+    vibr_board_status_t board_status;
+    uint32_t now_ms;
+    size_t wire_offset;
+
+    now_ms = app_now_ms();
+
+    board_status.board_state = VIBR_STATE_RUNNING;
+    board_status.dma_state = VIBR_STATE_RUNNING;
+    board_status.model_state = VIBR_STATE_RUNNING; /* model testowy */
+    board_status.ethernet_state = VIBR_STATE_RUNNING;
+    board_status.last_frame_id = last_frame_id;
+    board_status.dropped_frames = dropped_frames;
+    board_status.uptime_ms = now_ms;
+    board_status.last_error = last_error;
+
+    header.message_type = VIBR_MSG_BOARD_STATUS;
+    header.flags = 0U;
+    header.frame_id = last_frame_id;
+    header.packet_id = 0U;
+    header.packet_count = 1U;
+    header.payload_length = VIBR_STATUS_PAYLOAD_SIZE;
+    header.timestamp_us = (uint64_t)now_ms * 1000ULL;
+
+    wire_offset = vibr_pack_header(
+        datagram,
+        sizeof(datagram),
+        &header
+    );
+
+    if (wire_offset != VIBR_HEADER_SIZE) {
+        return XST_FAILURE;
+    }
+
+    if (vibr_pack_board_status(
+            datagram + wire_offset,
+            sizeof(datagram) - wire_offset,
+            &board_status
+        ) != VIBR_STATUS_PAYLOAD_SIZE) {
+
+        return XST_FAILURE;
+    }
+
+    if (send_udp_datagram(
+            pcb,
+            datagram,
+            (uint16_t)sizeof(datagram)
+        ) != XST_SUCCESS) {
+
+        return XST_FAILURE;
+    }
+
+    service_ethernet_ms(AFTER_CONTROL_MSG_MS, 0);
     return XST_SUCCESS;
 }
 
@@ -336,8 +612,7 @@ static int validate_test_frame(
     uint32_t i;
 
     for (i = 0U; i < FFT_SIZE; i++) {
-        uint32_t value =
-            fft_buffer[FRAME_HEADER_WORDS + i];
+        uint32_t value = fft_buffer[FRAME_HEADER_WORDS + i];
 
         if (value != i) {
             if (invalid_sample != NULL) {
@@ -365,22 +640,16 @@ int main(void)
     ip_addr_t dest_ip;
 
     struct udp_pcb *pcb;
-
     XAxiDma_Config *DmaCfg;
 
     err_t err;
     int status;
 
     echo_netif = &server_netif;
-
     init_platform();
 
-    /*
-     * Ten komunikat potwierdza, że init_platform() zakończyło działanie.
-     * Nie wymaga modyfikowania platform_zynqmp.c.
-     */
     xil_printf("\r\nDEBUG: init_platform returned\r\n");
-    xil_printf("UDP + DMA app start\r\n");
+    xil_printf("UDP + DMA + VIBR protocol app start\r\n");
 
     /* -------------------- Static IPv4 configuration -------------------- */
 
@@ -389,7 +658,6 @@ int main(void)
     IP4_ADDR(&gw, 192, 168, 1, 1);
 
     lwip_init();
-
     xil_printf("lwip_init done\r\n");
 
     if (xemac_add(
@@ -408,16 +676,9 @@ int main(void)
     netif_set_default(&server_netif);
 
 #ifndef SDT
-    /*
-     * Dla klasycznego BSP przerwania są włączane jawnie.
-     */
     platform_enable_interrupts();
     xil_printf("platform_enable_interrupts done\r\n");
 #else
-    /*
-     * W przepływie SDT pomijamy jawne wywołanie,
-     * zgodnie z przykładami AMD.
-     */
     xil_printf(
         "SDT build: explicit platform_enable_interrupts skipped\r\n"
     );
@@ -430,11 +691,17 @@ int main(void)
     xil_printf("Netmask: 255.255.255.0\r\n");
     xil_printf("Destination IP: 192.168.1.100\r\n");
     xil_printf("Destination UDP port: %u\r\n", DEST_PORT);
+    xil_printf(
+        "Measurement frame: %u samples, %u UDP packets, %lu DMA bytes\r\n",
+        (unsigned int)FFT_SIZE,
+        (unsigned int)(
+            (FFT_SIZE + UDP_CHUNK_WORDS - 1U) /
+            UDP_CHUNK_WORDS
+        ),
+        (unsigned long)DMA_FRAME_BYTES
+    );
+    xil_printf("VIBR protocol version: %u\r\n", VIBR_PROTOCOL_VERSION);
 
-    /*
-     * Krótki okres obsługi wejścia przed rozpoczęciem DMA.
-     * Płytka może już w tym czasie odpowiedzieć na ARP lub ping.
-     */
     service_ethernet_ms(100U, 1);
 
     /* -------------------- UDP initialization -------------------- */
@@ -465,10 +732,19 @@ int main(void)
     }
 
     xil_printf("UDP PCB configured\r\n");
+        /* -------------------- DMA initialization -------------------- */
 
-    /* -------------------- DMA initialization -------------------- */
+    xil_printf(
+        "DEBUG: DMA lookup, base=0x%08lx\r\n",
+        (unsigned long)DMA_BASEADDR
+    );
 
     DmaCfg = XAxiDma_LookupConfig(DMA_BASEADDR);
+
+    xil_printf(
+        "DEBUG: DMA lookup returned 0x%08lx\r\n",
+        (unsigned long)(UINTPTR)DmaCfg
+    );
 
     if (DmaCfg == NULL) {
         xil_printf(
@@ -479,9 +755,30 @@ int main(void)
         service_ethernet_forever();
     }
 
+    xil_printf(
+        "DEBUG: DMA config base=0x%08lx\r\n",
+        (unsigned long)DmaCfg->BaseAddr
+    );
+
+    xil_printf("DEBUG: DMA CfgInitialize begin\r\n");
+    
+    xil_printf(
+    "DMA CFG: MM2S=%d S2MM=%d SG=%d ADDR=%d LEN=%d\r\n",
+    DmaCfg->HasMm2S,
+    DmaCfg->HasS2Mm,
+    DmaCfg->HasSg,
+    DmaCfg->AddrWidth,
+    DmaCfg->SgLengthWidth
+    );
+
     status = XAxiDma_CfgInitialize(
         &AxiDma,
         DmaCfg
+    );
+
+    xil_printf(
+        "DEBUG: DMA CfgInitialize returned %d\r\n",
+        status
     );
 
     if (status != XST_SUCCESS) {
@@ -505,11 +802,6 @@ int main(void)
 
     /* -------------------- DMA synchronization -------------------- */
 
-    /*
-     * Generator działa niezależnie od aplikacji.
-     * Pierwszy transfer może rozpocząć się w środku ramki,
-     * dlatego pierwszą odebraną ramkę odrzucamy.
-     */
     xil_printf("Discarding first DMA frame...\r\n");
 
     if (receive_dma_frame() != XST_SUCCESS) {
@@ -517,62 +809,64 @@ int main(void)
         service_ethernet_forever();
     }
 
-    /*
-     * Drugi transfer powinien rozpocząć się od granicy
-     * kolejnej pełnej ramki.
-     */
     /* -------------------- Continuous DMA to UDP loop -------------------- */
 
     {
         uint32_t next_frame_id = 0U;
-    
+        uint32_t last_frame_id = 0U;
+        uint32_t last_status_ms = app_now_ms();
+        uint32_t last_error = APP_ERROR_NONE;
+
         uint32_t dma_frames_received = 0U;
-        uint32_t udp_frames_sent = 0U;
-    
+        uint32_t measurement_frames_sent = 0U;
+        uint32_t classifications_sent = 0U;
+        uint32_t status_messages_sent = 0U;
+
         uint32_t invalid_frames = 0U;
         uint32_t dma_errors = 0U;
-        uint32_t udp_errors = 0U;
-    
-        xil_printf("Starting continuous DMA to UDP transmission\r\n");
-    
+        uint32_t measurement_udp_errors = 0U;
+        uint32_t classification_udp_errors = 0U;
+        uint32_t status_udp_errors = 0U;
+
+        xil_printf(
+            "Starting continuous DMA to VIBR UDP transmission\r\n"
+        );
+
         while (1) {
             uint32_t frame_id;
             uint32_t invalid_sample = 0U;
             uint32_t received_value = 0U;
-    
-            /* Odbiór dokładnie jednej ramki z AXI DMA. */
+            uint32_t now_ms;
+            uint32_t dropped_frames;
+            uint64_t frame_timestamp_us;
+
             status = receive_dma_frame();
-    
+
             if (status != XST_SUCCESS) {
                 dma_errors++;
-    
+                last_error = APP_ERROR_DMA;
+
                 xil_printf(
                     "ERROR: DMA reception stopped, "
                     "received=%lu dma_errors=%lu\r\n",
                     (unsigned long)dma_frames_received,
                     (unsigned long)dma_errors
                 );
-    
-                /*
-                 * Bez resetu i ponownej synchronizacji nie próbujemy
-                 * kontynuować pracy z potencjalnie zablokowanym DMA.
-                 */
+
                 break;
             }
-    
+
             dma_frames_received++;
-    
-            /*
-             * Kontrola wzorca generowanego obecnie przez axis_test_gen.
-             */
+
             status = validate_test_frame(
                 &invalid_sample,
                 &received_value
             );
-    
+
             if (status != XST_SUCCESS) {
                 invalid_frames++;
-    
+                last_error = APP_ERROR_INVALID_FRAME;
+
                 xil_printf(
                     "ERROR: Invalid frame %lu, "
                     "sample=%lu expected=0x%08lx received=0x%08lx, "
@@ -585,78 +879,136 @@ int main(void)
                     (unsigned long)fft_buffer[1],
                     (unsigned long)fft_buffer[2]
                 );
-    
-                /*
-                 * DMA odebrało całą ramkę zakończoną TLAST,
-                 * więc próbujemy odebrać następną.
-                 */
+
                 continue;
             }
-    
-            /*
-             * Numer jest pobierany przed wywołaniem udp_send().
-             * Jeżeli wysłanie części ramki się nie powiedzie,
-             * następna ramka otrzyma kolejny numer. Python wykryje lukę.
-             */
+
             frame_id = next_frame_id;
             next_frame_id++;
-    
+            last_frame_id = frame_id;
+            frame_timestamp_us = (uint64_t)app_now_ms() * 1000ULL;
+
+            /* 0x01: szesnaście pakietów danych z tym samym frame_id. */
             status = send_fft_frame_udp(
                 pcb,
-                frame_id
+                frame_id,
+                frame_timestamp_us
             );
-    
+
             if (status != XST_SUCCESS) {
-                udp_errors++;
-    
+                measurement_udp_errors++;
+                last_error = APP_ERROR_MEASUREMENT_UDP;
+
                 xil_printf(
-                    "ERROR: UDP frame %lu failed, "
-                    "udp_errors=%lu\r\n",
+                    "ERROR: VIBR 0x01 frame %lu failed, "
+                    "measurement_udp_errors=%lu\r\n",
                     (unsigned long)frame_id,
-                    (unsigned long)udp_errors
+                    (unsigned long)measurement_udp_errors
                 );
             } else {
-                udp_frames_sent++;
-    
-                if (frame_id < VERBOSE_FRAME_COUNT) {
-                    xil_printf(
-                        "Frame %lu sent successfully\r\n",
-                        (unsigned long)frame_id
-                    );
-                }
+                measurement_frames_sent++;
             }
-    
+
+            /*
+             * 0x02: na razie wynik testowy. Pakiet ma dokładnie ten sam
+             * frame_id, więc odbiornik może zsynchronizować go z FFT.
+             */
+            status = send_test_classification_udp(
+                pcb,
+                frame_id,
+                frame_timestamp_us
+            );
+
+            if (status != XST_SUCCESS) {
+                classification_udp_errors++;
+                last_error = APP_ERROR_CLASSIFICATION_UDP;
+
+                xil_printf(
+                    "ERROR: VIBR 0x02 frame %lu failed, "
+                    "classification_udp_errors=%lu\r\n",
+                    (unsigned long)frame_id,
+                    (unsigned long)classification_udp_errors
+                );
+            } else {
+                classifications_sent++;
+            }
+
+            /* 0x03: niezależny status płytki wysyłany raz na sekundę. */
+            now_ms = app_now_ms();
+
+            if ((uint32_t)(now_ms - last_status_ms) >=
+                BOARD_STATUS_PERIOD_MS) {
+
+                dropped_frames =
+                    invalid_frames + measurement_udp_errors;
+
+                status = send_board_status_udp(
+                    pcb,
+                    last_frame_id,
+                    dropped_frames,
+                    last_error
+                );
+
+                if (status != XST_SUCCESS) {
+                    status_udp_errors++;
+                    last_error = APP_ERROR_STATUS_UDP;
+
+                    xil_printf(
+                        "ERROR: VIBR 0x03 failed, "
+                        "status_udp_errors=%lu\r\n",
+                        (unsigned long)status_udp_errors
+                    );
+                } else {
+                    status_messages_sent++;
+                }
+
+                last_status_ms = now_ms;
+            }
+
+            if (frame_id < VERBOSE_FRAME_COUNT) {
+                xil_printf(
+                    "Frame %lu protocol transmission completed\r\n",
+                    (unsigned long)frame_id
+                );
+            }
+
             if ((dma_frames_received % STATUS_PRINT_PERIOD) == 0U) {
                 xil_printf(
                     "STATS: dma_received=%lu "
-                    "udp_sent=%lu "
+                    "measurement_sent=%lu "
+                    "classification_sent=%lu "
+                    "status_sent=%lu "
                     "invalid=%lu "
                     "dma_errors=%lu "
-                    "udp_errors=%lu "
+                    "measurement_udp_errors=%lu "
+                    "classification_udp_errors=%lu "
+                    "status_udp_errors=%lu "
                     "next_frame_id=%lu\r\n",
                     (unsigned long)dma_frames_received,
-                    (unsigned long)udp_frames_sent,
+                    (unsigned long)measurement_frames_sent,
+                    (unsigned long)classifications_sent,
+                    (unsigned long)status_messages_sent,
                     (unsigned long)invalid_frames,
                     (unsigned long)dma_errors,
-                    (unsigned long)udp_errors,
+                    (unsigned long)measurement_udp_errors,
+                    (unsigned long)classification_udp_errors,
+                    (unsigned long)status_udp_errors,
                     (unsigned long)next_frame_id
                 );
             }
         }
     }
-    
+
     xil_printf(
         "Continuous transmission stopped; "
         "entering Ethernet service loop\r\n"
     );
-    
+
     service_ethernet_forever();
-    
 
     udp_disconnect(pcb);
     udp_remove(pcb);
 
     cleanup_platform();
-
     return 0;
 }

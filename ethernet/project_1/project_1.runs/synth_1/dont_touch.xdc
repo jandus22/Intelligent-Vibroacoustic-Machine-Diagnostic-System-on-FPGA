@@ -19,4 +19,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ethernet_rs
 # IP: bd/ethernet/ip/ethernet_axis_test_gen_0_0/ethernet_axis_test_gen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ethernet_axis_test_gen_0_0 || ORIG_REF_NAME==ethernet_axis_test_gen_0_0} -quiet] -quiet
 
+# IP: bd/ethernet/ip/ethernet_xlconstant_0_0/ethernet_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ethernet_xlconstant_0_0 || ORIG_REF_NAME==ethernet_xlconstant_0_0} -quiet] -quiet
+
 # XDC: /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ethernet_ooc.xdc

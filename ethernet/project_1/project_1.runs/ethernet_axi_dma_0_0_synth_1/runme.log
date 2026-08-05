@@ -7,7 +7,7 @@
   **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
   **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
   **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-  **** Start of session at: Tue Mar 24 16:33:49 2026
+  **** Start of session at: Tue Jul 28 08:50:42 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -19,11 +19,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10912
+INFO: [Synth 8-7075] Helper process launched with PID 77154
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2757.461 ; gain = 141.688 ; free physical = 2988 ; free virtual = 8333
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2747.250 ; gain = 150.688 ; free physical = 282 ; free virtual = 8497
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'ethernet_axi_dma_0_0' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/synth/ethernet_axi_dma_0_0.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'ethernet_axi_dma_0_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/synth/ethernet_axi_dma_0_0.vhd:128]
 	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_DLYTMR_RESOLUTION bound to: 125 - type: integer 
@@ -34,7 +34,7 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_axi_dma_0_0' [/home/janecki/ma
 	Parameter C_INCLUDE_SG bound to: 0 - type: integer 
 	Parameter C_SG_INCLUDE_STSCNTRL_STRM bound to: 0 - type: integer 
 	Parameter C_SG_USE_STSAPP_LENGTH bound to: 0 - type: integer 
-	Parameter C_SG_LENGTH_WIDTH bound to: 14 - type: integer 
+	Parameter C_SG_LENGTH_WIDTH bound to: 16 - type: integer 
 	Parameter C_M_AXI_SG_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_SG_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_MM2S_CNTRL_TDATA_WIDTH bound to: 32 - type: integer 
@@ -56,87 +56,87 @@ INFO: [Synth 8-638] synthesizing module 'ethernet_axi_dma_0_0' [/home/janecki/ma
 	Parameter C_INCLUDE_S2MM_DRE bound to: 0 - type: integer 
 	Parameter C_INCREASE_THROUGHPUT bound to: 0 - type: integer 
 	Parameter C_FAMILY bound to: zynquplus - type: string 
-INFO: [Synth 8-3491] module 'axi_dma' declared at '/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21634' bound to instance 'U0' of component 'axi_dma' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/synth/ethernet_axi_dma_0_0.vhd:388]
-INFO: [Synth 8-638] synthesizing module 'axi_dma' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21979]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_rst_module' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:1589]
+INFO: [Synth 8-3491] module 'axi_dma' declared at '/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21634' bound to instance 'U0' of component 'axi_dma' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/synth/ethernet_axi_dma_0_0.vhd:388]
+INFO: [Synth 8-638] synthesizing module 'axi_dma' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21979]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_rst_module' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:1589]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT bound to: 32'sb00000000000000000000000000000000 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_cdc_sync_rst' declared at '/home/janecki/vitis/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059' bound to instance 'REG_HRD_RST' of component 'xpm_cdc_sync_rst' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:1642]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-3491] module 'xpm_cdc_sync_rst' declared at '/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059' bound to instance 'REG_HRD_RST' of component 'xpm_cdc_sync_rst' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:1642]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT bound to: 32'sb00000000000000000000000000000000 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_cdc_sync_rst' declared at '/home/janecki/vitis/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059' bound to instance 'REG_HRD_RST_OUT' of component 'xpm_cdc_sync_rst' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:1667]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_reset' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:641]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_reset' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:641]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_rst_module' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:1589]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_reg_module' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:8360]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_lite_if' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2039]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_lite_if' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2039]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_register' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:3531]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_register' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:3531]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_register_s2mm' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:4776]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_register_s2mm' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:4776]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_reg_module' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:8360]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_mngr' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:15036]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_smple_sm' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:11850]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_smple_sm' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:11850]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_cmdsts_if' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:13832]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_cmdsts_if' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:13832]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_sts_mngr' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:14148]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_sts_mngr' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:14148]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_mngr' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:15036]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_sofeof_gen' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:11341]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_sofeof_gen' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:11341]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_mngr' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:20387]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_cmdsts_if' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:18680]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_cmdsts_if' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:18680]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_sts_mngr' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:19111]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_sts_mngr' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:19111]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_mngr' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:20387]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:55430]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:53569]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:259]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:259]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13919]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13919]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:7613]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
-INFO: [Synth 8-226] default block is never used [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:9687]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:7613]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:12364]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10866]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10866]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized0' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized0' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:12364]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_sf' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:20342]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized1' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized1' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+INFO: [Synth 8-3491] module 'xpm_cdc_sync_rst' declared at '/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059' bound to instance 'REG_HRD_RST_OUT' of component 'xpm_cdc_sync_rst' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:1667]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_reset' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:641]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_reset' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:641]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_rst_module' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:1589]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_reg_module' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:8360]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_lite_if' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2039]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_lite_if' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2039]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_register' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:3531]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_register' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:3531]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_register_s2mm' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:4776]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_register_s2mm' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:4776]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_reg_module' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:8360]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_mngr' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:15036]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_smple_sm' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:11850]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_smple_sm' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:11850]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_cmdsts_if' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:13832]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_cmdsts_if' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:13832]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_sts_mngr' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:14148]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_sts_mngr' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:14148]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_mngr' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:15036]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_sofeof_gen' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:11341]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_sofeof_gen' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:11341]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_mngr' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:20387]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_cmdsts_if' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:18680]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_cmdsts_if' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:18680]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_sts_mngr' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:19111]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_sts_mngr' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:19111]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_mngr' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:20387]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:55430]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:53569]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:259]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13919]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13919]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:7613]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:9687]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:7613]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:12364]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10866]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10866]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:12364]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_sf' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:20342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized1' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized1' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
 	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
 	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
 	Parameter WRITE_DATA_WIDTH bound to: 147 - type: integer 
@@ -152,76 +152,76 @@ INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [/home/jane
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975' bound to instance 'I_SYNC_FIFOGEN_FIFO' of component 'xpm_fifo_sync' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1498]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_sf' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:20342]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:53569]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:50012]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status__parameterized0' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status__parameterized0' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:17859]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized2' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized2' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized6' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized3' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized3' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized6' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:17859]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_ibttcc' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:25827]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ibttcc' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:25827]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:47044]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized7' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized4' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized4' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized7' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:45156]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:44213]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:42655]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:42655]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:44213]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized1' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized1' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:44901]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:44901]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized8' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized5' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized5' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized8' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:45156]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:47044]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_indet_btt' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28518]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set_nodre' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:24311]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set_nodre' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:24311]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975' bound to instance 'I_SYNC_FIFOGEN_FIFO' of component 'xpm_fifo_sync' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1498]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_sf' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:20342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:53569]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:50012]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status__parameterized0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status__parameterized0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2913]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:17859]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized2' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized2' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized6' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized3' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized3' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized6' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:17859]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ibttcc' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:25827]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ibttcc' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:25827]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:47044]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized7' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized4' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized4' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized7' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:45156]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:44213]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:42655]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:42655]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:44213]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized1' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized1' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:4545]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:44901]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:44901]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized8' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized5' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized5' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized8' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:45156]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:47044]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_indet_btt' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28518]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set_nodre' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:24311]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set_nodre' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:24311]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
 	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
 	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
@@ -237,27 +237,27 @@ INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameteriz
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975' bound to instance 'I_SYNC_FIFOGEN_FIFO' of component 'xpm_fifo_sync' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1449]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized1' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
-INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:522]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized6' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized6' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized7' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized7' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized1' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized0' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized1' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975' bound to instance 'I_SYNC_FIFOGEN_FIFO' of component 'xpm_fifo_sync' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1449]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized1' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:522]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized6' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized6' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized7' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized7' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized1' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized1' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
 	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
 	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
 	Parameter WRITE_DATA_WIDTH bound to: 38 - type: integer 
@@ -273,96 +273,92 @@ INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameteriz
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975' bound to instance 'I_SYNC_FIFOGEN_FIFO' of component 'xpm_fifo_sync' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1498]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized3' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized1' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
-INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
-INFO: [Synth 8-226] default block is never used [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized1' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized3' (0#1) [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized1' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf__parameterized0' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf__parameterized0' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_indet_btt' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28518]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:15835]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized9' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized6' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_v5_1_37_srl_fifo__parameterized6' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1881]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized9' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2109]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:15835]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19147]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:14284]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:14284]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19147]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:50012]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:55430]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21979]
-INFO: [Synth 8-256] done synthesizing module 'ethernet_axi_dma_0_0' (0#1) [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/synth/ethernet_axi_dma_0_0.vhd:128]
-INFO: [Synth 8-6014] Unused sequential element awaddr_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2133]
-INFO: [Synth 8-6014] Unused sequential element wdata_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2135]
-INFO: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.axi2ip_wrdata_i_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2288]
-INFO: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.awready_i_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2120]
-INFO: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.rdy1_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2249]
-INFO: [Synth 8-6014] Unused sequential element GEN_SYNC_READ.arvalid_re_d1_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2997]
-INFO: [Synth 8-6014] Unused sequential element sg_ftch_error_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:3919]
-INFO: [Synth 8-6014] Unused sequential element sg_updt_error_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:3920]
-INFO: [Synth 8-6014] Unused sequential element sg_ftch_error_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:5567]
-INFO: [Synth 8-6014] Unused sequential element sg_updt_error_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:5568]
-INFO: [Synth 8-3848] Net mm2s_desc_flush in module/entity axi_dma_mm2s_mngr does not have driver. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:14953]
-INFO: [Synth 8-6014] Unused sequential element GEN_S2MM_DMA_CONTROL.s2mm_desc_flush_i_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:20518]
-INFO: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2237]
-INFO: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2237]
-INFO: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:8245]
-INFO: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:8556]
-INFO: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10601]
-INFO: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10608]
-INFO: [Synth 8-6014] Unused sequential element sig_next_dre_src_align_reg_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13065]
-INFO: [Synth 8-6014] Unused sequential element sig_next_dre_dest_align_reg_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13066]
-INFO: [Synth 8-6014] Unused sequential element sig_coelsc_reg_empty_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13404]
-WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
-WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
-WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:982]
-WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
-INFO: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1586]
-INFO: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2237]
-INFO: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:26470]
-INFO: [Synth 8-6014] Unused sequential element sig_psm_ld_calc2_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:26674]
-INFO: [Synth 8-6014] Unused sequential element sig_child_cmd_reg_empty_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:27130]
-INFO: [Synth 8-6014] Unused sequential element sig_first_child_xfer_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:27675]
-INFO: [Synth 8-6014] Unused sequential element sig_xfer_is_seq_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28174]
-INFO: [Synth 8-6014] Unused sequential element sig_xfer_reg_empty_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28267]
-INFO: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28268]
-INFO: [Synth 8-6014] Unused sequential element sig_sm_ld_scatter_cmd_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:47543]
-WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
-WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
-WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:982]
-WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
-INFO: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1586]
-WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
-WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
-WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:982]
-WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
-INFO: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1586]
-INFO: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10601]
-INFO: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10608]
-INFO: [Synth 8-6014] Unused sequential element sig_next_last_strb_reg_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:17126]
-INFO: [Synth 8-6014] Unused sequential element sig_next_eof_reg_reg was removed.  [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:17131]
-INFO: [Synth 8-3848] Net m_axi_sg_awuser in module/entity axi_dma does not have driver. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21824]
-INFO: [Synth 8-3848] Net m_axi_sg_aruser in module/entity axi_dma does not have driver. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21850]
-INFO: [Synth 8-3848] Net strm_valid in module/entity axi_dma does not have driver. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22540]
-INFO: [Synth 8-3848] Net bd_eq in module/entity axi_dma does not have driver. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22533]
-INFO: [Synth 8-3848] Net m_axis_ftch1_desc_available in module/entity axi_dma does not have driver. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22442]
-INFO: [Synth 8-3848] Net s2mm_desc_info_in in module/entity axi_dma does not have driver. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22513]
-INFO: [Synth 8-3848] Net m_axis_ftch2_desc_available in module/entity axi_dma does not have driver. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22442]
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975' bound to instance 'I_SYNC_FIFOGEN_FIFO' of component 'xpm_fifo_sync' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1498]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized3' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized1' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized1' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized3' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1975]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized1' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1372]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf__parameterized0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf__parameterized0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19643]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_indet_btt' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28518]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10191]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:15835]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:15835]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19147]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:14284]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:14284]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:19147]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:50012]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:55430]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21979]
+INFO: [Synth 8-256] done synthesizing module 'ethernet_axi_dma_0_0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/synth/ethernet_axi_dma_0_0.vhd:128]
+INFO: [Synth 8-6014] Unused sequential element awaddr_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2133]
+INFO: [Synth 8-6014] Unused sequential element wdata_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2135]
+INFO: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.axi2ip_wrdata_i_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2288]
+INFO: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.awready_i_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2120]
+INFO: [Synth 8-6014] Unused sequential element GEN_SYNC_WRITE.rdy1_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2249]
+INFO: [Synth 8-6014] Unused sequential element GEN_SYNC_READ.arvalid_re_d1_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:2997]
+INFO: [Synth 8-6014] Unused sequential element sg_ftch_error_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:3919]
+INFO: [Synth 8-6014] Unused sequential element sg_updt_error_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:3920]
+INFO: [Synth 8-6014] Unused sequential element sg_ftch_error_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:5567]
+INFO: [Synth 8-6014] Unused sequential element sg_updt_error_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:5568]
+INFO: [Synth 8-3848] Net mm2s_desc_flush in module/entity axi_dma_mm2s_mngr does not have driver. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:14953]
+INFO: [Synth 8-6014] Unused sequential element GEN_S2MM_DMA_CONTROL.s2mm_desc_flush_i_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:20518]
+INFO: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2237]
+INFO: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2237]
+INFO: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:8245]
+INFO: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:8556]
+INFO: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10601]
+INFO: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10608]
+INFO: [Synth 8-6014] Unused sequential element sig_next_dre_src_align_reg_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13065]
+INFO: [Synth 8-6014] Unused sequential element sig_next_dre_dest_align_reg_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13066]
+INFO: [Synth 8-6014] Unused sequential element sig_coelsc_reg_empty_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:13404]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:982]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+INFO: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1586]
+INFO: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:2237]
+INFO: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:26470]
+INFO: [Synth 8-6014] Unused sequential element sig_psm_ld_calc2_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:26674]
+INFO: [Synth 8-6014] Unused sequential element sig_child_cmd_reg_empty_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:27130]
+INFO: [Synth 8-6014] Unused sequential element sig_first_child_xfer_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:27675]
+INFO: [Synth 8-6014] Unused sequential element sig_xfer_is_seq_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28174]
+INFO: [Synth 8-6014] Unused sequential element sig_xfer_reg_empty_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28267]
+INFO: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:28268]
+INFO: [Synth 8-6014] Unused sequential element sig_sm_ld_scatter_cmd_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:47543]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:982]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+INFO: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1586]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:982]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+INFO: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:1586]
+INFO: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10601]
+INFO: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:10608]
+INFO: [Synth 8-6014] Unused sequential element sig_next_last_strb_reg_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:17126]
+INFO: [Synth 8-6014] Unused sequential element sig_next_eof_reg_reg was removed.  [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/d44a/hdl/axi_datamover_v5_1_vh_rfs.vhd:17131]
+INFO: [Synth 8-3848] Net m_axi_sg_awuser in module/entity axi_dma does not have driver. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21824]
+INFO: [Synth 8-3848] Net m_axi_sg_aruser in module/entity axi_dma does not have driver. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:21850]
+INFO: [Synth 8-3848] Net strm_valid in module/entity axi_dma does not have driver. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22540]
+INFO: [Synth 8-3848] Net bd_eq in module/entity axi_dma does not have driver. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22533]
+INFO: [Synth 8-3848] Net m_axis_ftch1_desc_available in module/entity axi_dma does not have driver. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22442]
+INFO: [Synth 8-3848] Net s2mm_desc_info_in in module/entity axi_dma does not have driver. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22513]
+INFO: [Synth 8-3848] Net m_axis_ftch2_desc_available in module/entity axi_dma does not have driver. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:22442]
 INFO: [Synth 8-7129] Port debeat_saddr_lsb[1] in module axi_datamover_wr_demux is either unconnected or has no load
 INFO: [Synth 8-7129] Port debeat_saddr_lsb[0] in module axi_datamover_wr_demux is either unconnected or has no load
-INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized9 is either unconnected or has no load
-INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized7 is either unconnected or has no load
 INFO: [Synth 8-7129] Port end_addr_offset[1] in module axi_datamover_strb_gen2__parameterized1 is either unconnected or has no load
 INFO: [Synth 8-7129] Port end_addr_offset[0] in module axi_datamover_strb_gen2__parameterized1 is either unconnected or has no load
 INFO: [Synth 8-7129] Port realign2wdc_eop_error in module axi_datamover_wrdata_cntl is either unconnected or has no load
@@ -438,8 +434,6 @@ INFO: [Synth 8-7129] Port SFIFO_Clr_Rd_Data_Valid in module axi_datamover_sfifo_
 INFO: [Synth 8-7129] Port dre2ibtt_strt_addr_offset[0] in module axi_datamover_indet_btt is either unconnected or has no load
 INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized8 is either unconnected or has no load
 INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized8 is either unconnected or has no load
-INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized7 is either unconnected or has no load
-INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized7 is either unconnected or has no load
 INFO: [Synth 8-7129] Port cmd2mstr_command[25] in module axi_datamover_ibttcc is either unconnected or has no load
 INFO: [Synth 8-7129] Port cmd2mstr_command[24] in module axi_datamover_ibttcc is either unconnected or has no load
 INFO: [Synth 8-7129] Port cmd2mstr_command[23] in module axi_datamover_ibttcc is either unconnected or has no load
@@ -450,8 +444,6 @@ INFO: [Synth 8-7129] Port cmd2mstr_command[19] in module axi_datamover_ibttcc is
 INFO: [Synth 8-7129] Port cmd2mstr_command[18] in module axi_datamover_ibttcc is either unconnected or has no load
 INFO: [Synth 8-7129] Port cmd2mstr_command[17] in module axi_datamover_ibttcc is either unconnected or has no load
 INFO: [Synth 8-7129] Port cmd2mstr_command[16] in module axi_datamover_ibttcc is either unconnected or has no load
-INFO: [Synth 8-7129] Port cmd2mstr_command[15] in module axi_datamover_ibttcc is either unconnected or has no load
-INFO: [Synth 8-7129] Port cmd2mstr_command[14] in module axi_datamover_ibttcc is either unconnected or has no load
 INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized6 is either unconnected or has no load
 INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized6 is either unconnected or has no load
 INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
@@ -459,45 +451,49 @@ INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parame
 INFO: [Synth 8-7129] Port calc2wsc_calc_error in module axi_datamover_wr_status_cntl is either unconnected or has no load
 INFO: [Synth 8-7129] Port addr2wsc_fifo_empty in module axi_datamover_wr_status_cntl is either unconnected or has no load
 INFO: [Synth 8-7129] Port data2wsc_last_error in module axi_datamover_wr_status_cntl is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo is either unconnected or has no load
+INFO: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2921.398 ; gain = 305.625 ; free physical = 2140 ; free virtual = 7513
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2910.219 ; gain = 313.656 ; free physical = 181 ; free virtual = 8317
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2921.398 ; gain = 305.625 ; free physical = 2116 ; free virtual = 7490
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2910.219 ; gain = 313.656 ; free physical = 181 ; free virtual = 8316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2921.398 ; gain = 305.625 ; free physical = 2116 ; free virtual = 7490
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2910.219 ; gain = 313.656 ; free physical = 181 ; free virtual = 8316
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2921.398 ; gain = 0.000 ; free physical = 2088 ; free virtual = 7461
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2918.219 ; gain = 0.000 ; free physical = 188 ; free virtual = 8323
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0.xdc] for cell 'U0'
-Parsing XDC File [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/ethernet_axi_dma_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/ethernet_axi_dma_0_0_synth_1/dont_touch.xdc]
-Parsing XDC File [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0_clocks.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/janecki/vitis/2025.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ethernet_axi_dma_0_0_propImpl.xdc].
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0.xdc] for cell 'U0'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/ethernet_axi_dma_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/ethernet_axi_dma_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ip/ethernet_axi_dma_0_0/ethernet_axi_dma_0_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ethernet_axi_dma_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/ethernet_axi_dma_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Project 1-1714] 5 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3009.434 ; gain = 0.000 ; free physical = 2043 ; free virtual = 7424
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2993.051 ; gain = 0.000 ; free physical = 319 ; free virtual = 8335
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3009.469 ; gain = 0.000 ; free physical = 2041 ; free virtual = 7422
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2993.086 ; gain = 0.000 ; free physical = 317 ; free virtual = 8333
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 3009.469 ; gain = 393.695 ; free physical = 1740 ; free virtual = 7187
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2993.086 ; gain = 396.523 ; free physical = 400 ; free virtual = 8269
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -505,13 +501,13 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 3017.438 ; gain = 401.664 ; free physical = 1738 ; free virtual = 7185
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3001.055 ; gain = 404.492 ; free physical = 399 ; free virtual = 8268
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 3017.438 ; gain = 401.664 ; free physical = 1728 ; free virtual = 7175
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3001.055 ; gain = 404.492 ; free physical = 399 ; free virtual = 8268
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'smpl_cs_reg' in module 'axi_dma_smple_sm'
 INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
@@ -607,7 +603,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 3017.438 ; gain = 401.664 ; free physical = 3371 ; free virtual = 8822
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3001.055 ; gain = 404.492 ; free physical = 460 ; free virtual = 8188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -615,7 +611,7 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   16 Bit       Adders := 5     
-	   3 Input   14 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 6     
 	   4 Input    8 Bit       Adders := 8     
 	   2 Input    7 Bit       Adders := 6     
@@ -641,8 +637,7 @@ Detailed RTL Component Info :
 	               35 Bit    Registers := 1     
 	               32 Bit    Registers := 17    
 	               23 Bit    Registers := 2     
-	               16 Bit    Registers := 12    
-	               14 Bit    Registers := 12    
+	               16 Bit    Registers := 24    
 	               11 Bit    Registers := 2     
 	               10 Bit    Registers := 3     
 	                9 Bit    Registers := 3     
@@ -664,10 +659,9 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit        Muxes := 8     
 	   4 Input   32 Bit        Muxes := 1     
 	   2 Input   23 Bit        Muxes := 3     
-	   2 Input   16 Bit        Muxes := 14    
-	   2 Input   14 Bit        Muxes := 5     
-	   4 Input   14 Bit        Muxes := 2     
-	   3 Input   14 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 19    
+	   4 Input   16 Bit        Muxes := 2     
+	   3 Input   16 Bit        Muxes := 1     
 	   2 Input   11 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 14    
 	   8 Input    8 Bit        Muxes := 1     
@@ -678,7 +672,7 @@ Detailed RTL Component Info :
 	   3 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 20    
 	   4 Input    4 Bit        Muxes := 5     
-	   2 Input    3 Bit        Muxes := 29    
+	   2 Input    3 Bit        Muxes := 27    
 	   6 Input    3 Bit        Muxes := 2     
 	   5 Input    3 Bit        Muxes := 3     
 	   3 Input    3 Bit        Muxes := 1     
@@ -707,8 +701,8 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6904] The RAM "U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst /gen_wr_a.gen_word_narrow.mem_reg" of size (depth=16 x width=9) is automatically implemented using LUTRAM. BRAM implementation would be inefficient 
-INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_MM2S_SOF_EOF_GENERATOR.I_MM2S_DMA_MNGR/GEN_MM2S_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_MM2S_SMPL_SM/GEN_CMD_BTT_LESS_23.cmnd_data_reg' and it is trimmed from '153' to '75' bits. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:12014]
-INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_LESS_23.cmnd_data_reg' and it is trimmed from '153' to '75' bits. [/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:12014]
+INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_MM2S_SOF_EOF_GENERATOR.I_MM2S_DMA_MNGR/GEN_MM2S_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_MM2S_SMPL_SM/GEN_CMD_BTT_LESS_23.cmnd_data_reg' and it is trimmed from '153' to '75' bits. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:12014]
+INFO: [Synth 8-3936] Found unconnected internal register 'INCLUDE_S2MM_SOF_EOF_GENERATOR.I_S2MM_DMA_MNGR/GEN_S2MM_DMA_CONTROL.GEN_SIMPLE_DMA_MODE.I_S2MM_SMPL_SM/GEN_CMD_BTT_LESS_23.cmnd_data_reg' and it is trimmed from '153' to '75' bits. [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.gen/sources_1/bd/ethernet/ipshared/7f6a/hdl/axi_dma_v7_1_vh_rfs.vhd:12014]
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -730,7 +724,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-3332] Sequential element (I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC/FSM_onehot_sig_csm_state_reg[3]) is unused and will be removed from module axi_dma.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 3017.438 ; gain = 401.664 ; free physical = 1270 ; free virtual = 6819
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 3017.062 ; gain = 420.500 ; free physical = 507 ; free virtual = 8102
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -767,7 +761,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 3608.305 ; gain = 992.531 ; free physical = 7050 ; free virtual = 12599
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3583.078 ; gain = 986.516 ; free physical = 198 ; free virtual = 7616
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -778,7 +772,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 3692.016 ; gain = 1076.242 ; free physical = 6569 ; free virtual = 12118
+Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 3710.922 ; gain = 1114.359 ; free physical = 328 ; free virtual = 7483
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -807,7 +801,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 3708.031 ; gain = 1092.258 ; free physical = 6469 ; free virtual = 12018
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 3710.922 ; gain = 1114.359 ; free physical = 310 ; free virtual = 7466
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -825,37 +819,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:34 . Memory (MB): peak = 3854.844 ; gain = 1239.070 ; free physical = 6250 ; free virtual = 11800
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 3843.734 ; gain = 1247.172 ; free physical = 324 ; free virtual = 7418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:34 . Memory (MB): peak = 3854.844 ; gain = 1239.070 ; free physical = 6250 ; free virtual = 11800
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 3843.734 ; gain = 1247.172 ; free physical = 324 ; free virtual = 7418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3854.844 ; gain = 1239.070 ; free physical = 6233 ; free virtual = 11783
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3843.734 ; gain = 1247.172 ; free physical = 323 ; free virtual = 7417
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3854.844 ; gain = 1239.070 ; free physical = 6232 ; free virtual = 11782
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3843.734 ; gain = 1247.172 ; free physical = 323 ; free virtual = 7417
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3854.844 ; gain = 1239.070 ; free physical = 6227 ; free virtual = 11777
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3843.734 ; gain = 1247.172 ; free physical = 323 ; free virtual = 7417
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3854.844 ; gain = 1239.070 ; free physical = 6224 ; free virtual = 11774
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3843.734 ; gain = 1247.172 ; free physical = 323 ; free virtual = 7417
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -869,10 +863,9 @@ Dynamic Shift Register Report:
 |dsrl__1     | data_reg[3]  | 55     | 55         | 55     | 0       | 0      | 0      | 0      | 
 |dsrl__2     | data_reg[3]  | 9      | 9          | 9      | 0       | 0      | 0      | 0      | 
 |dsrl__3     | data_reg[5]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
-|dsrl__4     | data_reg[5]  | 21     | 21         | 21     | 0       | 0      | 0      | 0      | 
-|dsrl__5     | data_reg[3]  | 25     | 25         | 25     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | data_reg[5]  | 23     | 23         | 23     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | data_reg[3]  | 27     | 27         | 27     | 0       | 0      | 0      | 0      | 
 |dsrl__6     | data_reg[15] | 9      | 9          | 9      | 0       | 0      | 0      | 0      | 
-|dsrl__7     | data_reg[3]  | 27     | 27         | 27     | 0       | 0      | 0      | 0      | 
 +------------+--------------+--------+------------+--------+---------+--------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -894,47 +887,47 @@ Report Cell Usage:
 +------+---------+------+
 |1     |CARRY8   |    18|
 |2     |LUT1     |    71|
-|3     |LUT2     |   184|
-|4     |LUT3     |   389|
-|5     |LUT4     |   302|
-|6     |LUT5     |   261|
-|7     |LUT6     |   369|
+|3     |LUT2     |   195|
+|4     |LUT3     |   378|
+|5     |LUT4     |   315|
+|6     |LUT5     |   299|
+|7     |LUT6     |   379|
 |8     |RAM32M16 |     1|
 |9     |RAMB18E2 |     1|
 |10    |RAMB36E2 |     3|
-|11    |SRL16E   |   172|
-|12    |FDRE     |  1844|
-|13    |FDSE     |    80|
+|11    |SRL16E   |   176|
+|12    |FDRE     |  1874|
+|13    |FDSE     |    82|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3854.844 ; gain = 1239.070 ; free physical = 6223 ; free virtual = 11773
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3843.734 ; gain = 1247.172 ; free physical = 323 ; free virtual = 7417
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 3854.844 ; gain = 1151.000 ; free physical = 6195 ; free virtual = 11745
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 3854.844 ; gain = 1239.070 ; free physical = 6195 ; free virtual = 11745
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 3843.734 ; gain = 1164.305 ; free physical = 309 ; free virtual = 7403
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 3843.734 ; gain = 1247.172 ; free physical = 309 ; free virtual = 7403
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3854.844 ; gain = 0.000 ; free physical = 6363 ; free virtual = 11912
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3843.734 ; gain = 0.000 ; free physical = 541 ; free virtual = 7579
 INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3854.844 ; gain = 0.000 ; free physical = 6523 ; free virtual = 12072
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3843.734 ; gain = 0.000 ; free physical = 533 ; free virtual = 7572
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 1 instance 
 
-Synth Design complete | Checksum: 1e1159c3
+Synth Design complete | Checksum: 13f99aa5
 INFO: [Common 17-83] Releasing license: Synthesis
-411 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+407 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:41 . Memory (MB): peak = 3854.844 ; gain = 2242.500 ; free physical = 6523 ; free virtual = 12073
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2853.264; main = 2808.164; forked = 237.276
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4673.770; main = 3837.184; forked = 993.777
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3861.195 ; gain = 0.000 ; free physical = 6523 ; free virtual = 12073
-INFO: [Common 17-1381] The checkpoint '/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/ethernet_axi_dma_0_0_synth_1/ethernet_axi_dma_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ethernet_axi_dma_0_0, cache-ID = 49669044dc402577
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:00:54 . Memory (MB): peak = 3843.734 ; gain = 2231.586 ; free physical = 497 ; free virtual = 7536
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3045.259; main = 2920.577; forked = 281.961
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4699.141; main = 3826.078; forked = 988.215
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3850.086 ; gain = 0.000 ; free physical = 492 ; free virtual = 7531
+INFO: [Common 17-1381] The checkpoint '/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/ethernet_axi_dma_0_0_synth_1/ethernet_axi_dma_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ethernet_axi_dma_0_0, cache-ID = 486d65f154cd1faf
 INFO: [Coretcl 2-1174] Renamed 99 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3861.195 ; gain = 0.000 ; free physical = 6520 ; free virtual = 12075
-INFO: [Common 17-1381] The checkpoint '/home/janecki/magister/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/ethernet_axi_dma_0_0_synth_1/ethernet_axi_dma_0_0.dcp' has been generated.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3850.086 ; gain = 0.000 ; free physical = 458 ; free virtual = 7504
+INFO: [Common 17-1381] The checkpoint '/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/project_1.runs/ethernet_axi_dma_0_0_synth_1/ethernet_axi_dma_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file ethernet_axi_dma_0_0_utilization_synth.rpt -pb ethernet_axi_dma_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 24 16:34:44 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 28 08:51:43 2026...

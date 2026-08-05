@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="ila_spi_debug_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1785907320">
+  <File Type="RDS-DCP" Name="ila_spi_debug.dcp"/>
+  <File Type="RDS-RDS" Name="ila_spi_debug.vds"/>
+  <File Type="REPORTS-TCL" Name="ila_spi_debug_reports.tcl"/>
+  <File Type="PA-TCL" Name="ila_spi_debug.tcl"/>
+  <File Type="RDS-UTIL" Name="ila_spi_debug_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="ila_spi_debug_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_spi_debug" RelGenDir="$PGENDIR/ila_spi_debug">
+    <File Path="$PSRCDIR/sources_1/ip/ila_spi_debug/ila_spi_debug.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Xilinx/2025.2/Vivado/bin/project_spi_true/project_spi_true.srcs/sources_1/ip/ila_spi_debug/ila_spi_debug.xci"/>
+        <Attr Name="ImportTime" Val="1785146251"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="ila_spi_debug"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ila_spi_debug" RelGenDir="$PGENDIR/ila_spi_debug">
+    <File Path="$PSRCDIR/sources_1/ip/ila_spi_debug/ila_spi_debug.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Xilinx/2025.2/Vivado/bin/project_spi_true/project_spi_true.srcs/sources_1/ip/ila_spi_debug/ila_spi_debug.xci"/>
+        <Attr Name="ImportTime" Val="1785146251"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="ila_spi_debug"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/iis3dwbg1_kr260_hw_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

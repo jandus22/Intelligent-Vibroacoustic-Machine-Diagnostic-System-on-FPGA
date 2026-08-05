@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2025.2
-| Date         : Mon Jul 20 09:18:54 2026
+| Date         : Wed Jul 29 08:34:40 2026
 | Host         : Magisterka
 | Design       : design_1
 | Device       : xck26-sfvc784-2LV-C-

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Mon Jul 20 09:19:38 2026
+| Date             : Wed Jul 29 08:35:24 2026
 | Host             : Magisterka running 64-bit Ubuntu 26.04 LTS
 | Command          : report_power -file ethernet_wrapper_power_routed.rpt -pb ethernet_wrapper_power_summary_routed.pb -rpx ethernet_wrapper_power_routed.rpx
 | Design           : ethernet_wrapper
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.006 |        4 |       --- |             --- |
-| CLB Logic                |     0.002 |     5210 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1815 |    117120 |            1.55 |
-|   Register               |    <0.001 |     2443 |    234240 |            1.04 |
-|   LUT as Shift Register  |    <0.001 |       88 |     57600 |            0.15 |
+| CLB Logic                |     0.002 |     5288 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1838 |    117120 |            1.57 |
+|   Register               |    <0.001 |     2485 |    234240 |            1.06 |
+|   LUT as Shift Register  |    <0.001 |       91 |     57600 |            0.16 |
 |   CARRY8                 |    <0.001 |       22 |     14640 |            0.15 |
 |   LUT as Distributed RAM |    <0.001 |        8 |     57600 |            0.01 |
-|   Others                 |     0.000 |      235 |       --- |             --- |
+|   Others                 |     0.000 |      234 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |        3 |    117120 |           <0.01 |
-| Signals                  |     0.002 |     4033 |       --- |             --- |
+| Signals                  |     0.002 |     4087 |       --- |             --- |
 | Block RAM                |    <0.001 |      2.5 |       144 |            1.74 |
 | PS8                      |     2.672 |        1 |       --- |             --- |
 | Static Power             |     0.302 |          |           |                 |

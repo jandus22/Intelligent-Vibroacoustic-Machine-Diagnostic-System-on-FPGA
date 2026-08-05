@@ -3,8 +3,8 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/ethernet_wrapper.xsa",
-    "xsaPathInPlatform": "eth_platform/hw/ethernet_wrapper.xsa",
+    "xsa": "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/project_1/fresh_4096/ethernet_wrapper_4096.xsa",
+    "xsaPathInPlatform": "eth_platform/hw/ethernet_wrapper_4096.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",
     "isCustomFSBL": false,

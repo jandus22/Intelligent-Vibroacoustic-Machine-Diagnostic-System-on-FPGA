@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Fri Jul 10 08:48:23 2026
+//Date        : Tue Jul 28 10:08:34 2026
 //Host        : Magisterka running 64-bit Ubuntu 26.04 LTS
 //Command     : generate_target ethernet.bd
 //Design      : ethernet
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "ethernet,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ethernet,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "ethernet.hwdef" *) 
+(* CORE_GENERATION_INFO = "ethernet,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ethernet,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "ethernet.hwdef" *) 
 module ethernet
    ();
 
@@ -51,6 +51,7 @@ module ethernet
   wire axis_test_gen_0_m_axis_TREADY;
   wire axis_test_gen_0_m_axis_TVALID;
   wire [0:0]rst_ps8_0_99M_peripheral_aresetn;
+  wire [0:0]xlconstant_0_dout;
   wire [39:0]zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_ARADDR;
   wire [1:0]zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_ARBURST;
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM1_FPD_ARCACHE;
@@ -208,11 +209,13 @@ module ethernet
         .rstn(rst_ps8_0_99M_peripheral_aresetn));
   ethernet_rst_ps8_0_99M_0 rst_ps8_0_99M
        (.aux_reset_in(1'b1),
-        .dcm_locked(1'b1),
+        .dcm_locked(xlconstant_0_dout),
         .ext_reset_in(zynq_ultra_ps_e_0_pl_resetn0),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps8_0_99M_peripheral_aresetn),
         .slowest_sync_clk(zynq_ultra_ps_e_0_pl_clk0));
+  ethernet_xlconstant_0_0 xlconstant_0
+       (.dout(xlconstant_0_dout));
   ethernet_zynq_ultra_ps_e_0_0 zynq_ultra_ps_e_0
        (.maxigp0_arready(1'b0),
         .maxigp0_awready(1'b0),

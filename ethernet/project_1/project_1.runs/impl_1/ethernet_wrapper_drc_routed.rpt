@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date         : Mon Jul 20 09:19:31 2026
+| Date         : Wed Jul 29 08:35:17 2026
 | Host         : Magisterka running 64-bit Ubuntu 26.04 LTS
 | Command      : report_drc -file ethernet_wrapper_drc_routed.rpt -pb ethernet_wrapper_drc_routed.pb -rpx ethernet_wrapper_drc_routed.rpx
 | Design       : ethernet_wrapper
