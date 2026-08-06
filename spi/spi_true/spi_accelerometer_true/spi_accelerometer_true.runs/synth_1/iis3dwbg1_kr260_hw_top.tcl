@@ -85,6 +85,7 @@ read_verilog -library xil_defaultlib {
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_master_byte_mode0.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_register_access_mode0.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v
+  /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v
 }
 read_ip -quiet /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/ip/ila_spi_debug/ila_spi_debug.xci
 set_property used_in_synthesis false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/ip/ila_spi_debug/ila_v6_2/constraints/ila_impl.xdc]

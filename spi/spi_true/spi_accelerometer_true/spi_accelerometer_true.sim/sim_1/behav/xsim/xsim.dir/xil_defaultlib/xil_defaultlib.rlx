@@ -1,0 +1,15 @@
+0.7
+2020.2
+Nov 14 2025
+12:36:23
+/home/kuszman/Downloads/iis3dwbg1_spi_step5_multisample/iis3dwbg1_sensor_model_multisample.v,1785138012,verilog,,/home/kuszman/Downloads/iis3dwbg1_spi_step5_multisample/tb_iis3dwbg1_tdm16_multisample.v,,iis3dwbg1_sensor_model_multisample,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Downloads/iis3dwbg1_spi_step5_multisample/tb_iis3dwbg1_tdm16_multisample.v,1785138012,verilog,,,,tb_iis3dwbg1_tdm16_multisample,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/axis_xyz_tdm16.v,1785137360,verilog,,/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_tdm16.v,,axis_xyz_tdm16,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v,1785994604,verilog,,/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v,,iis3dwbg1_kr260_hw_top,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_tdm16.v,1785137360,verilog,,/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_xyz.v,,iis3dwbg1_tdm16,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_xyz.v,1785911240,verilog,,/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_master_byte_mode0.v,,iis3dwbg1_xyz,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_master_byte_mode0.v,1785137360,verilog,,/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_register_access_mode0.v,,spi_master_byte_mode0,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_register_access_mode0.v,1785137360,verilog,,/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v,,spi_register_access_mode0,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/ip/ila_spi_debug/sim/ila_spi_debug.v,1785907302,verilog,,/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/axis_xyz_tdm16.v,,ila_spi_debug,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,
+/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,,,,,,,
+/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v,1785994050,verilog,,/home/kuszman/Downloads/iis3dwbg1_spi_step5_multisample/iis3dwbg1_sensor_model_multisample.v,,axis_xyz_frame_4096,,,../../../../../../../../../Xilinx/2025.2/data/rsb/busdef,,,,,

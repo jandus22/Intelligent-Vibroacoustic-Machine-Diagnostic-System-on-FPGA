@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_iis3dwbg1_tdm16_multisample_behav/xsimk -simmode gui -wdb tb_iis3dwbg1_tdm16_multisample_behav.wdb -simrunnum 0 -socket 37923
+Design successfully loaded
+Design Loading Memory Usage: 196796 KB (Peak: 196796 KB)
+Design Loading CPU Usage: 1130 ms

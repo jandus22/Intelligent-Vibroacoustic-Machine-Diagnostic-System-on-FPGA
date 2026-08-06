@@ -1,0 +1,23 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/ip/ila_spi_debug/sim/ila_spi_debug.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ila_spi_debug
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/axis_xyz_tdm16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_xyz_tdm16
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_tdm16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iis3dwbg1_tdm16
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_xyz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iis3dwbg1_xyz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_master_byte_mode0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_master_byte_mode0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_register_access_mode0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module spi_register_access_mode0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iis3dwbg1_kr260_hw_top
+WARNING: [VRFC 10-2938] 'frame_debug_bus' is already implicitly declared on line 172 [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:186]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_xyz_frame_4096
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Downloads/iis3dwbg1_spi_step5_multisample/iis3dwbg1_sensor_model_multisample.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module iis3dwbg1_sensor_model_multisample
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Downloads/iis3dwbg1_spi_step5_multisample/tb_iis3dwbg1_tdm16_multisample.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_iis3dwbg1_tdm16_multisample
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
