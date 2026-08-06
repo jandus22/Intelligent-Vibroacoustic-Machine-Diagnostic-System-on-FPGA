@@ -1,4 +1,5 @@
 # ninja log v5
+<<<<<<< Updated upstream
 29	263	1785311092059526604	CMakeFiles/fsbl.elf.dir/xfsbl_board.c.obj	e68a822fbba149e6
 43	292	1785311092088526605	CMakeFiles/fsbl.elf.dir/xfsbl_tpm_util.c.obj	4ee09fbfa6920bde
 28	265	1784553142627188239	CMakeFiles/fsbl.elf.dir/xfsbl_exit.S.obj	a8bba85fe90fcfb2
@@ -53,3 +54,61 @@
 33	421	1785311341714380668	CMakeFiles/fsbl.elf.dir/xfsbl_partition_load.c.obj	d49463d43bc45cc3
 28	570	1785311341862720855	CMakeFiles/fsbl.elf.dir/psu_init.c.obj	b9259ac0b2f5274b
 570	1992	1785311343235780791	fsbl.elf	9c11c8e98e4a5bc4
+=======
+28	249	1784546420767539266	CMakeFiles/fsbl.elf.dir/xfsbl_board.c.obj	e68a822fbba149e6
+36	292	1784546420817304451	CMakeFiles/fsbl.elf.dir/xfsbl_tpm_util.c.obj	4ee09fbfa6920bde
+30	279	1783668494458694084	CMakeFiles/fsbl.elf.dir/xfsbl_exit.S.obj	a8bba85fe90fcfb2
+249	381	1784546420909258030	CMakeFiles/fsbl.elf.dir/xfsbl_usb.c.obj	1028b4090efe89fb
+36	286	1784546420813421874	CMakeFiles/fsbl.elf.dir/xfsbl_sd.c.obj	e437edcb21eaa112
+31	276	1784546420797539265	CMakeFiles/fsbl.elf.dir/xfsbl_nand.c.obj	c7b891612045abc2
+34	375	1784546420903394420	CMakeFiles/fsbl.elf.dir/xfsbl_qspi.c.obj	399398684f63c5e8
+30	317	1784546420845047367	CMakeFiles/fsbl.elf.dir/xfsbl_misc.c.obj	d46c7fee72e00b1e
+33	346	1784546420874559607	CMakeFiles/fsbl.elf.dir/xfsbl_plpartition_valid.c.obj	22d170372e39dc3a
+1	27	0	/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/zynqmp_fsbl/build/CMakeFiles/print_build_info	f81d36eb9568851b
+29	238	1784192423398364412	CMakeFiles/fsbl.elf.dir/xfsbl_translation_table_a53_64.S.obj	1817a406bd907798
+28	314	1784546420841108551	CMakeFiles/fsbl.elf.dir/xfsbl_authentication.c.obj	db9dfca7530f9b5f
+29	301	1784546420826849419	CMakeFiles/fsbl.elf.dir/xfsbl_csu_dma.c.obj	20ef1be4d6213a30
+31	373	1784546420901388517	CMakeFiles/fsbl.elf.dir/xfsbl_partition_load.c.obj	d49463d43bc45cc3
+29	289	1784546420809539264	CMakeFiles/fsbl.elf.dir/xfsbl_dfu_util.c.obj	409ab6326d9a0b37
+28	314	1784546420841612019	CMakeFiles/fsbl.elf.dir/xfsbl_bs.c.obj	d8113f4854d561fb
+29	297	1784546420824977785	CMakeFiles/fsbl.elf.dir/xfsbl_hooks.c.obj	bbf2e39c33b3e59
+35	301	1784546420826659950	CMakeFiles/fsbl.elf.dir/xfsbl_rsa_sha.c.obj	1ae8932fffa15e3
+29	286	1784546420810539264	CMakeFiles/fsbl.elf.dir/xfsbl_ddr_init.c.obj	2c0931ff9e794b54
+1	27	0	CMakeFiles/print_build_info	f81d36eb9568851b
+30	297	1784546420825148625	CMakeFiles/fsbl.elf.dir/xfsbl_main.c.obj	97c46d79191c9e9c
+27	539	1784546421067101775	CMakeFiles/fsbl.elf.dir/psu_init.c.obj	b9259ac0b2f5274b
+36	268	1784546420789546555	CMakeFiles/fsbl.elf.dir/xfsbl_tpm.c.obj	5bb5997f1551d420
+31	291	1784546420817975909	CMakeFiles/fsbl.elf.dir/xfsbl_misc_drivers.c.obj	e398fe0e37068520
+539	2367	1784546422842996303	fsbl.elf	9c11c8e98e4a5bc4
+29	337	1784546420865499858	CMakeFiles/fsbl.elf.dir/xfsbl_handoff.c.obj	725ab1b3d2e8861b
+30	323	1784546420851150977	CMakeFiles/fsbl.elf.dir/xfsbl_image_header.c.obj	774140fdccce326c
+30	328	1784546420855867601	CMakeFiles/fsbl.elf.dir/xfsbl_initialization.c.obj	16c135590879d146
+1	28	0	CMakeFiles/print_build_info	f81d36eb9568851b
+1	28	0	/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/ethernet/vitis/eth_platform/zynqmp_fsbl/build/CMakeFiles/print_build_info	f81d36eb9568851b
+29	249	1784550694434316088	CMakeFiles/fsbl.elf.dir/xfsbl_exit.S.obj	a8bba85fe90fcfb2
+30	263	1784550694456316087	CMakeFiles/fsbl.elf.dir/xfsbl_ddr_init.c.obj	2c0931ff9e794b54
+29	269	1784550694458316087	CMakeFiles/fsbl.elf.dir/xfsbl_translation_table_a53_64.S.obj	1817a406bd907798
+30	285	1784550694477830947	CMakeFiles/fsbl.elf.dir/xfsbl_board.c.obj	e68a822fbba149e6
+42	290	1784550694484316085	CMakeFiles/fsbl.elf.dir/xfsbl_sd.c.obj	e437edcb21eaa112
+30	293	1784550694486502658	CMakeFiles/fsbl.elf.dir/xfsbl_dfu_util.c.obj	409ab6326d9a0b37
+36	299	1784550694490316085	CMakeFiles/fsbl.elf.dir/xfsbl_nand.c.obj	c7b891612045abc2
+31	310	1784550694503937129	CMakeFiles/fsbl.elf.dir/xfsbl_hooks.c.obj	bbf2e39c33b3e59
+30	310	1784550694505316084	CMakeFiles/fsbl.elf.dir/xfsbl_csu_dma.c.obj	20ef1be4d6213a30
+30	311	1784550694506342351	CMakeFiles/fsbl.elf.dir/xfsbl_bs.c.obj	d8113f4854d561fb
+32	326	1784550694520615532	CMakeFiles/fsbl.elf.dir/xfsbl_main.c.obj	97c46d79191c9e9c
+34	326	1784550694521067621	CMakeFiles/fsbl.elf.dir/xfsbl_misc_drivers.c.obj	e398fe0e37068520
+40	326	1784550694521067621	CMakeFiles/fsbl.elf.dir/xfsbl_rsa_sha.c.obj	1ae8932fffa15e3
+29	339	1784550694533648338	CMakeFiles/fsbl.elf.dir/xfsbl_authentication.c.obj	db9dfca7530f9b5f
+31	355	1784550694550018073	CMakeFiles/fsbl.elf.dir/xfsbl_handoff.c.obj	725ab1b3d2e8861b
+32	357	1784550694553180162	CMakeFiles/fsbl.elf.dir/xfsbl_initialization.c.obj	16c135590879d146
+33	377	1784550694571557050	CMakeFiles/fsbl.elf.dir/xfsbl_misc.c.obj	d46c7fee72e00b1e
+32	389	1784550694585341523	CMakeFiles/fsbl.elf.dir/xfsbl_image_header.c.obj	774140fdccce326c
+249	399	1784550694594316080	CMakeFiles/fsbl.elf.dir/xfsbl_tpm.c.obj	5bb5997f1551d420
+38	400	1784550694595853438	CMakeFiles/fsbl.elf.dir/xfsbl_plpartition_valid.c.obj	22d170372e39dc3a
+271	410	1784550694605316079	CMakeFiles/fsbl.elf.dir/xfsbl_usb.c.obj	1028b4090efe89fb
+263	410	1784550694606401502	CMakeFiles/fsbl.elf.dir/xfsbl_tpm_util.c.obj	4ee09fbfa6920bde
+37	429	1784550694624850409	CMakeFiles/fsbl.elf.dir/xfsbl_partition_load.c.obj	d49463d43bc45cc3
+39	442	1784550694637900875	CMakeFiles/fsbl.elf.dir/xfsbl_qspi.c.obj	399398684f63c5e8
+29	583	1784550694778933568	CMakeFiles/fsbl.elf.dir/psu_init.c.obj	b9259ac0b2f5274b
+583	2350	1784550696496315980	fsbl.elf	9c11c8e98e4a5bc4
+>>>>>>> Stashed changes

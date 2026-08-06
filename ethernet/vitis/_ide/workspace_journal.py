@@ -42,12 +42,15 @@ status = platform.build()
 
 comp.build()
 
+<<<<<<< Updated upstream
 status = comp.clean()
 
 status = platform.build()
 
 comp.build()
 
+=======
+>>>>>>> Stashed changes
 status = platform.build()
 
 comp.build()
