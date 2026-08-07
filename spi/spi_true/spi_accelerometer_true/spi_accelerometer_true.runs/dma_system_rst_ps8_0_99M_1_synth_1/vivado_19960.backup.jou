@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Aug  6 09:21:02 2026
+# Process ID         : 19960
+# Current directory  : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_rst_ps8_0_99M_1_synth_1
+# Command line       : vivado -log dma_system_rst_ps8_0_99M_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_system_rst_ps8_0_99M_1.tcl
+# Log file           : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_rst_ps8_0_99M_1_synth_1/dma_system_rst_ps8_0_99M_1.vds
+# Journal file       : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_rst_ps8_0_99M_1_synth_1/vivado.jou
+# Running On         : Magisterka
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : AMD Ryzen 7 PRO 4750G with Radeon Graphics
+# CPU Frequency      : 4324.967 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 15480 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 19774 MB
+# Available Virtual  : 13560 MB
+#-----------------------------------------------------------
+source dma_system_rst_ps8_0_99M_1.tcl -notrace

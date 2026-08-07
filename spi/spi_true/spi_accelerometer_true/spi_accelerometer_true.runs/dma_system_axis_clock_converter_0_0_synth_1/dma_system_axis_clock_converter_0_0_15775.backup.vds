@@ -1,0 +1,336 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Aug  6 09:15:32 2026
+# Process ID         : 15775
+# Current directory  : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_axis_clock_converter_0_0_synth_1
+# Command line       : vivado -log dma_system_axis_clock_converter_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_system_axis_clock_converter_0_0.tcl
+# Log file           : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_axis_clock_converter_0_0_synth_1/dma_system_axis_clock_converter_0_0.vds
+# Journal file       : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_axis_clock_converter_0_0_synth_1/vivado.jou
+# Running On         : Magisterka
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : AMD Ryzen 7 PRO 4750G with Radeon Graphics
+# CPU Frequency      : 3201.565 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 15480 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 19774 MB
+# Available Virtual  : 13768 MB
+#-----------------------------------------------------------
+source dma_system_axis_clock_converter_0_0.tcl -notrace
+Command: synth_design -top dma_system_axis_clock_converter_0_0 -part xck26-sfvc784-2LV-c -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15975
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2746.570 ; gain = 143.688 ; free physical = 199 ; free virtual = 2950
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dma_system_axis_clock_converter_0_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axis_clock_converter_0_0/synth/dma_system_axis_clock_converter_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axis_clock_converter_v1_1_36_axis_clock_converter' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/c5c7/hdl/axis_clock_converter_v1_1_vl_rfs.v:920]
+INFO: [Synth 8-6157] synthesizing module 'axis_clock_converter_v1_1_36_axisc_async_clock_converter' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/c5c7/hdl/axis_clock_converter_v1_1_vl_rfs.v:338]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst__parameterized0' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst__parameterized0' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+INFO: [Synth 8-6155] done synthesizing module 'axis_clock_converter_v1_1_36_axisc_async_clock_converter' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/c5c7/hdl/axis_clock_converter_v1_1_vl_rfs.v:338]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_clock_converter_v1_1_36_axis_clock_converter' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/c5c7/hdl/axis_clock_converter_v1_1_vl_rfs.v:920]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_axis_clock_converter_0_0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axis_clock_converter_0_0/synth/dma_system_axis_clock_converter_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:550]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+INFO: [Synth 8-7129] Port TSTRB[1] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TSTRB[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TID[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TDEST[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port TUSER[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+INFO: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port web[0] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[18] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[17] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[16] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[15] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[14] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[13] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[12] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[11] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_aclken in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axis_aclken in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2839.539 ; gain = 236.656 ; free physical = 211 ; free virtual = 2432
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2839.539 ; gain = 236.656 ; free physical = 202 ; free virtual = 2353
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2839.539 ; gain = 236.656 ; free physical = 202 ; free virtual = 2353
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2839.539 ; gain = 0.000 ; free physical = 275 ; free virtual = 2198
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_axis_clock_converter_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_axis_clock_converter_0_0_synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dma_system_axis_clock_converter_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dma_system_axis_clock_converter_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kuszman/Xilinx/2025.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dma_system_axis_clock_converter_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dma_system_axis_clock_converter_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 8 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2931.777 ; gain = 0.000 ; free physical = 157 ; free virtual = 1752
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2931.812 ; gain = 0.000 ; free physical = 155 ; free virtual = 1752
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2931.812 ; gain = 328.930 ; free physical = 172 ; free virtual = 1746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2939.781 ; gain = 336.898 ; free physical = 172 ; free virtual = 1747
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 2939.781 ; gain = 336.898 ; free physical = 169 ; free virtual = 1746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2939.781 ; gain = 336.898 ; free physical = 162 ; free virtual = 1740
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input    6 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   4 Input    5 Bit       Adders := 3     
+	   4 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      6 Bit         XORs := 2     
+	   2 Input      5 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 18    
++---Registers : 
+	               19 Bit    Registers := 2     
+	                6 Bit    Registers := 12    
+	                5 Bit    Registers := 11    
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 8     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 33    
+	   4 Input    2 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 5     
+	   6 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port web[0] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[18] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[17] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[16] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[15] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[14] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[13] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[12] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[11] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_aclken in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axis_aclken in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[1] in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tstrb[0] in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tid[0] in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tdest[0] in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_tuser[0] in module axis_clock_converter_v1_1_36_axis_clock_converter is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2939.781 ; gain = 336.898 ; free physical = 208 ; free virtual = 1725
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+|Module Name                                                                                                                                      | RTL Object                       | Inference      | Size (Depth x Width) | Primitives    | 
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+|inst/\gen_async_conv.axisc_async_clock_converter_0/xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 19              | RAM32M16 x 2  | 
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 3548.641 ; gain = 945.758 ; free physical = 243 ; free virtual = 479
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 3580.688 ; gain = 977.805 ; free physical = 186 ; free virtual = 445
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+|Module Name                                                                                                                                      | RTL Object                       | Inference      | Size (Depth x Width) | Primitives    | 
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+|inst/\gen_async_conv.axisc_async_clock_converter_0/xpm_fifo_async_inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 19              | RAM32M16 x 2  | 
++-------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:37 . Memory (MB): peak = 3581.695 ; gain = 978.812 ; free physical = 181 ; free virtual = 390
+---------------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1785994665" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/iis3dwbg1_kr260_hw_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1786084856" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/iis3dwbg1_kr260_hw_top.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="iis3dwbg1_kr260_hw_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="iis3dwbg1_kr260_hw_top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="iis3dwbg1_kr260_hw_top_utilization_synth.pb"/>
@@ -60,6 +60,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/dma_system/dma_system.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/dma_system/dma_system_sv.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="iis3dwbg1_kr260_hw_top"/>
@@ -95,5 +109,11 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="dma_system_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_system_axis_clock_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_system_axi_smc_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_system_rst_ps8_0_99M_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_system_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dma_system_zynq_ultra_ps_e_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="ila_spi_debug"/>
 </GenRun>

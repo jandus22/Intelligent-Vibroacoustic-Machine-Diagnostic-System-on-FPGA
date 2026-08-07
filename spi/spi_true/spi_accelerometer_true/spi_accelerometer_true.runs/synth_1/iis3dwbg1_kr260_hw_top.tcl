@@ -57,9 +57,9 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
-set_param tcl.collectionResultDisplayLimit 0
+set_param general.maxThreads 2
 set_param general.usePosixSpawnForFork 1
+set_param bd.open.in_stealth_mode 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -69,7 +69,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.cache/wt [current_project]
 set_property parent.project_path /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part xilinx.com:kr260_som:part0:1.1 [current_project]
@@ -78,6 +78,7 @@ set_property ip_output_repo /home/kuszman/Magisterka/Intelligent-Vibroacoustic-M
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_verilog -library xil_defaultlib -sv /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/dma_system_sv.sv
 read_verilog -library xil_defaultlib {
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/axis_xyz_tdm16.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_tdm16.v
@@ -87,6 +88,52 @@ read_verilog -library xil_defaultlib {
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v
   /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v
 }
+add_files /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/bd/dma_system/dma_system.bd
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/bd_0/ip/ip_1/bd_0dac_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/bd_0/ip/ip_5/bd_0dac_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/bd_0/ip/ip_6/bd_0dac_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/bd_0/ip/ip_7/bd_0dac_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/bd_0/ip/ip_8/bd_0dac_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/bd_0/ip/ip_9/bd_0dac_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/bd_0/ip/ip_10/bd_0dac_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/bd_0/ip/ip_11/bd_0dac_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_rst_ps8_0_99M_1/dma_system_rst_ps8_0_99M_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_rst_ps8_0_99M_1/dma_system_rst_ps8_0_99M_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_1/bd_2185_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_2/bd_2185_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_3/bd_2185_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_4/bd_2185_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_5/bd_2185_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_6/bd_2185_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_10/bd_2185_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_11/bd_2185_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_12/bd_2185_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_13/bd_2185_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_17/bd_2185_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_18/bd_2185_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_19/bd_2185_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_20/bd_2185_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_21/bd_2185_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_22/bd_2185_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_23/bd_2185_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_24/bd_2185_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/bd_0/ip/ip_25/bd_2185_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/smartconnect.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_ila_0_0/dma_system_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/dma_system_ooc.xdc]
+
 read_ip -quiet /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/ip/ila_spi_debug/ila_spi_debug.xci
 set_property used_in_synthesis false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/ip/ila_spi_debug/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/ip/ila_spi_debug/ila_v6_2/constraints/ila_impl.xdc]
@@ -105,6 +152,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/kr260_pmod1_spi.xdc
 set_property used_in_implementation false [get_files /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/kr260_pmod1_spi.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/utils_1/imports/synth_1/iis3dwbg1_kr260_hw_top.dcp

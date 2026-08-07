@@ -1,0 +1,4 @@
+domain_path: /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/vitis/spi_dma_platform/zynqmp_fsbl/zynqmp_fsbl_bsp
+app_src_dir: /home/kuszman/Xilinx/2025.2/Vitis/data/embeddedsw/lib/sw_apps/zynqmp_fsbl
+template: zynqmp_fsbl
+lang: c

@@ -1,0 +1,4 @@
+/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/vitis/spi_dma_platform/zynqmp_fsbl/build/CMakeFiles/fsbl.elf.dir
+/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/vitis/spi_dma_platform/zynqmp_fsbl/build/CMakeFiles/print_build_info.dir
+/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/vitis/spi_dma_platform/zynqmp_fsbl/build/CMakeFiles/edit_cache.dir
+/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/vitis/spi_dma_platform/zynqmp_fsbl/build/CMakeFiles/rebuild_cache.dir

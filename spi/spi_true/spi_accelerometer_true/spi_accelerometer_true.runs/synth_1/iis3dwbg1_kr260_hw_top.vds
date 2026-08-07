@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Aug  6 07:37:48 2026
-# Process ID         : 3591491
+# Start of session at: Fri Aug  7 08:43:02 2026
+# Process ID         : 183406
 # Current directory  : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1
 # Command line       : vivado -log iis3dwbg1_kr260_hw_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source iis3dwbg1_kr260_hw_top.tcl
 # Log file           : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/iis3dwbg1_kr260_hw_top.vds
@@ -13,15 +13,24 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04 LTS
 # Processor Detail   : AMD Ryzen 7 PRO 4750G with Radeon Graphics
-# CPU Frequency      : 2999.711 MHz
+# CPU Frequency      : 4400.188 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 15479 MB
-# Swap memory        : 4294 MB
-# Total Virtual      : 19774 MB
-# Available Virtual  : 7069 MB
+# Swap memory        : 38654 MB
+# Total Virtual      : 54134 MB
+# Available Virtual  : 43898 MB
 #-----------------------------------------------------------
+Sourcing tcl script '/home/kuszman/.Xilinx/Vivado/Vivado_init.tcl'
 source iis3dwbg1_kr260_hw_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/kuszman/Xilinx/2025.2/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/bd/dma_system/dma_system.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ dma_system_xlconstant_0_0
 Command: read_checkpoint -auto_incremental -incremental /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/utils_1/imports/synth_1/iis3dwbg1_kr260_hw_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/utils_1/imports/synth_1/iis3dwbg1_kr260_hw_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -32,15 +41,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3591548
+INFO: [Synth 8-7075] Helper process launched with PID 183469
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2765.223 ; gain = 143.688 ; free physical = 786 ; free virtual = 4910
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2809.418 ; gain = 142.688 ; free physical = 4125 ; free virtual = 39920
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-11241] undeclared symbol 'framed_axis_data', assumed default net type 'wire' [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:169]
-INFO: [Synth 8-11241] undeclared symbol 'frame_debug_bus', assumed default net type 'wire' [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:172]
-WARNING: [Synth 8-8895] 'frame_debug_bus' is already implicitly declared on line 172 [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:186]
+INFO: [Synth 8-11241] undeclared symbol 'framed_axis_data', assumed default net type 'wire' [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:179]
+INFO: [Synth 8-11241] undeclared symbol 'frame_debug_bus', assumed default net type 'wire' [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:182]
+WARNING: [Synth 8-8895] 'frame_debug_bus' is already implicitly declared on line 182 [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:196]
 INFO: [Synth 8-6157] synthesizing module 'iis3dwbg1_kr260_hw_top' [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:14]
 INFO: [Synth 8-6157] synthesizing module 'iis3dwbg1_tdm16' [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_tdm16.v:8]
 	Parameter CLK_FREQ_HZ bound to: 25000000 - type: integer 
@@ -66,48 +75,106 @@ INFO: [Synth 8-6155] done synthesizing module 'axis_xyz_tdm16' (0#1) [/home/kusz
 INFO: [Synth 8-6155] done synthesizing module 'iis3dwbg1_tdm16' (0#1) [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_tdm16.v:8]
 INFO: [Synth 8-6157] synthesizing module 'axis_xyz_frame_4096' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'axis_xyz_frame_4096' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v:3]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:159]
-INFO: [Synth 8-6157] synthesizing module 'ila_spi_debug' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-3591491-Magisterka/realtime/ila_spi_debug_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ila_spi_debug' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-3591491-Magisterka/realtime/ila_spi_debug_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 'probe5' does not match port width (16) of module 'ila_spi_debug' [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:169]
+INFO: [Synth 8-6157] synthesizing module 'dma_system' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:13]
+INFO: [Synth 8-6157] synthesizing module 'dma_system_axi_dma_0_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_axi_dma_0_0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'dma_system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:169]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'dma_system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:169]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'dma_system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:169]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'dma_system_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:169]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'dma_system_axi_dma_0_0' has 64 connections declared, but only 60 given [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:169]
+INFO: [Synth 8-6157] synthesizing module 'dma_system_axi_smc_1' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_axi_smc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_axi_smc_1' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_axi_smc_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'dma_system_axi_smc_1' is unconnected for instance 'axi_smc' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:230]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'dma_system_axi_smc_1' is unconnected for instance 'axi_smc' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:230]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'dma_system_axi_smc_1' is unconnected for instance 'axi_smc' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:230]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'dma_system_axi_smc_1' has 60 connections declared, but only 57 given [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:230]
+INFO: [Synth 8-6157] synthesizing module 'dma_system_axi_smc_1_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_axi_smc_1_0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_axi_smc_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dma_system_axis_clock_converter_0_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_axis_clock_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_axis_clock_converter_0_0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_axis_clock_converter_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:372]
+INFO: [Synth 8-6157] synthesizing module 'dma_system_ila_0_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_ila_0_0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dma_system_rst_ps8_0_99M_1' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_rst_ps8_0_99M_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_rst_ps8_0_99M_1' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_rst_ps8_0_99M_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'dma_system_rst_ps8_0_99M_1' is unconnected for instance 'rst_ps8_0_99M' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:379]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'dma_system_rst_ps8_0_99M_1' is unconnected for instance 'rst_ps8_0_99M' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:379]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'dma_system_rst_ps8_0_99M_1' is unconnected for instance 'rst_ps8_0_99M' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:379]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'dma_system_rst_ps8_0_99M_1' is unconnected for instance 'rst_ps8_0_99M' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:379]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_99M' of module 'dma_system_rst_ps8_0_99M_1' has 10 connections declared, but only 6 given [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:379]
+INFO: [Synth 8-6157] synthesizing module 'dma_system_xlconstant_0_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_xlconstant_0_0/synth/dma_system_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_xlconstant_0_0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_xlconstant_0_0/synth/dma_system_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'dma_system_zynq_ultra_ps_e_0_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_zynq_ultra_ps_e_0_0' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/dma_system_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'dma_system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:388]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'dma_system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:388]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'dma_system_zynq_ultra_ps_e_0_0' has 83 connections declared, but only 81 given [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:388]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:13]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:169]
+INFO: [Synth 8-6157] synthesizing module 'ila_spi_debug' [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/ila_spi_debug_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ila_spi_debug' (0#1) [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/.Xil/Vivado-183406-Magisterka/realtime/ila_spi_debug_stub.v:6]
+WARNING: [Synth 8-689] width (1) of port connection 'probe5' does not match port width (16) of module 'ila_spi_debug' [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:179]
 INFO: [Synth 8-6155] done synthesizing module 'iis3dwbg1_kr260_hw_top' (0#1) [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:14]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_0'. This will prevent further optimization [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:169]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:372]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconstant_0'. This will prevent further optimization [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/synth/dma_system.v:386]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'sensor_tdm_inst'. This will prevent further optimization [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:100]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_spi_debug_inst'. This will prevent further optimization [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:159]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_spi_debug_inst'. This will prevent further optimization [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:169]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_xyz_frame_4096_inst'. This will prevent further optimization [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:129]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'dma_system_inst'. This will prevent further optimization [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v:145]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2862.191 ; gain = 240.656 ; free physical = 644 ; free virtual = 4770
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2913.387 ; gain = 246.656 ; free physical = 4016 ; free virtual = 39813
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2862.191 ; gain = 240.656 ; free physical = 644 ; free virtual = 4770
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2913.387 ; gain = 246.656 ; free physical = 4016 ; free virtual = 39813
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2862.191 ; gain = 240.656 ; free physical = 644 ; free virtual = 4770
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2913.387 ; gain = 246.656 ; free physical = 4016 ; free virtual = 39813
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2862.191 ; gain = 0.000 ; free physical = 643 ; free virtual = 4770
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2913.387 ; gain = 0.000 ; free physical = 4016 ; free virtual = 39813
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'dma_system_inst/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'dma_system_inst/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0_in_context.xdc] for cell 'dma_system_inst/axi_dma_0'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0_in_context.xdc] for cell 'dma_system_inst/axi_dma_0'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/dma_system_axi_smc_1/dma_system_axi_smc_1_in_context.xdc] for cell 'dma_system_inst/axi_smc'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1/dma_system_axi_smc_1/dma_system_axi_smc_1_in_context.xdc] for cell 'dma_system_inst/axi_smc'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_rst_ps8_0_99M_1/dma_system_rst_ps8_0_99M_1/dma_system_rst_ps8_0_99M_1_in_context.xdc] for cell 'dma_system_inst/rst_ps8_0_99M'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_rst_ps8_0_99M_1/dma_system_rst_ps8_0_99M_1/dma_system_rst_ps8_0_99M_1_in_context.xdc] for cell 'dma_system_inst/rst_ps8_0_99M'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/dma_system_axi_smc_1_0/dma_system_axi_smc_1_0_in_context.xdc] for cell 'dma_system_inst/axi_smc_1'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axi_smc_1_0/dma_system_axi_smc_1_0/dma_system_axi_smc_1_0_in_context.xdc] for cell 'dma_system_inst/axi_smc_1'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0_in_context.xdc] for cell 'dma_system_inst/axis_clock_converter_0'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0_in_context.xdc] for cell 'dma_system_inst/axis_clock_converter_0'
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_ila_0_0/dma_system_ila_0_0/dma_system_ila_0_0_in_context.xdc] for cell 'dma_system_inst/ila_0'
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_ila_0_0/dma_system_ila_0_0/dma_system_ila_0_0_in_context.xdc] for cell 'dma_system_inst/ila_0'
 Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/ip/ila_spi_debug/ila_spi_debug/ila_spi_debug_in_context.xdc] for cell 'ila_spi_debug_inst'
 Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/ip/ila_spi_debug/ila_spi_debug/ila_spi_debug_in_context.xdc] for cell 'ila_spi_debug_inst'
 Parsing XDC File [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/kr260_pmod1_spi.xdc]
 Finished Parsing XDC File [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/kr260_pmod1_spi.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/kr260_pmod1_spi.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/iis3dwbg1_kr260_hw_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/iis3dwbg1_kr260_hw_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2958.023 ; gain = 0.000 ; free physical = 660 ; free virtual = 4791
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3022.258 ; gain = 0.000 ; free physical = 4038 ; free virtual = 39835
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2958.059 ; gain = 0.000 ; free physical = 660 ; free virtual = 4791
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3022.293 ; gain = 0.000 ; free physical = 4038 ; free virtual = 39835
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2958.059 ; gain = 336.523 ; free physical = 678 ; free virtual = 4811
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3022.293 ; gain = 355.562 ; free physical = 4078 ; free virtual = 39875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -115,13 +182,13 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2966.027 ; gain = 344.492 ; free physical = 678 ; free virtual = 4811
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3030.262 ; gain = 363.531 ; free physical = 4078 ; free virtual = 39875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2966.027 ; gain = 344.492 ; free physical = 678 ; free virtual = 4811
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 3030.262 ; gain = 363.531 ; free physical = 4078 ; free virtual = 39875
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_register_access_mode0'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'iis3dwbg1_xyz'
@@ -176,7 +243,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axis_xyz_tdm16'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2966.027 ; gain = 344.492 ; free physical = 668 ; free virtual = 4802
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3030.262 ; gain = 363.531 ; free physical = 4087 ; free virtual = 39885
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -240,25 +307,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2966.027 ; gain = 344.492 ; free physical = 595 ; free virtual = 4742
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3030.262 ; gain = 363.531 ; free physical = 4070 ; free virtual = 39874
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3579.887 ; gain = 958.352 ; free physical = 255 ; free virtual = 4271
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3619.309 ; gain = 952.578 ; free physical = 3542 ; free virtual = 39345
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3613.934 ; gain = 992.398 ; free physical = 216 ; free virtual = 4231
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 3653.355 ; gain = 986.625 ; free physical = 3510 ; free virtual = 39314
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 3613.934 ; gain = 992.398 ; free physical = 215 ; free virtual = 4230
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3653.355 ; gain = 986.625 ; free physical = 3510 ; free virtual = 39314
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -276,93 +343,107 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3780.746 ; gain = 1159.211 ; free physical = 208 ; free virtual = 4158
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3827.168 ; gain = 1160.438 ; free physical = 3364 ; free virtual = 39168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3780.746 ; gain = 1159.211 ; free physical = 208 ; free virtual = 4158
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3827.168 ; gain = 1160.438 ; free physical = 3364 ; free virtual = 39168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3780.746 ; gain = 1159.211 ; free physical = 208 ; free virtual = 4158
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3827.168 ; gain = 1160.438 ; free physical = 3364 ; free virtual = 39168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3780.746 ; gain = 1159.211 ; free physical = 208 ; free virtual = 4158
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3827.168 ; gain = 1160.438 ; free physical = 3364 ; free virtual = 39168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3780.746 ; gain = 1159.211 ; free physical = 208 ; free virtual = 4158
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3827.168 ; gain = 1160.438 ; free physical = 3364 ; free virtual = 39168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3780.746 ; gain = 1159.211 ; free physical = 208 ; free virtual = 4158
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3827.168 ; gain = 1160.438 ; free physical = 3364 ; free virtual = 39168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |ila_spi_debug |         1|
-+------+--------------+----------+
++------+------------------------------------+----------+
+|      |BlackBox name                       |Instances |
++------+------------------------------------+----------+
+|1     |dma_system_axi_dma_0_0              |         1|
+|2     |dma_system_axi_smc_1                |         1|
+|3     |dma_system_axi_smc_1_0              |         1|
+|4     |dma_system_axis_clock_converter_0_0 |         1|
+|5     |dma_system_ila_0_0                  |         1|
+|6     |dma_system_rst_ps8_0_99M_1          |         1|
+|7     |dma_system_zynq_ultra_ps_e_0_0      |         1|
+|8     |ila_spi_debug                       |         1|
++------+------------------------------------+----------+
 
 Report Cell Usage: 
-+------+--------------+------+
-|      |Cell          |Count |
-+------+--------------+------+
-|1     |ila_spi_debug |     1|
-|2     |BUFG          |     1|
-|3     |CARRY8        |    18|
-|4     |LUT1          |    11|
-|5     |LUT2          |    31|
-|6     |LUT3          |    33|
-|7     |LUT4          |    49|
-|8     |LUT5          |    92|
-|9     |LUT6          |    77|
-|10    |FDRE          |   323|
-|11    |FDSE          |     7|
-|12    |IBUF          |     2|
-|13    |OBUF          |     3|
-+------+--------------+------+
++------+----------------------------------+------+
+|      |Cell                              |Count |
++------+----------------------------------+------+
+|1     |dma_system_axi_dma_0              |     1|
+|2     |dma_system_axi_smc                |     1|
+|3     |dma_system_axi_smc_1              |     1|
+|4     |dma_system_axis_clock_converter_0 |     1|
+|5     |dma_system_ila_0                  |     1|
+|6     |dma_system_rst_ps8_0_99M          |     1|
+|7     |dma_system_zynq_ultra_ps_e_0      |     1|
+|8     |ila_spi_debug                     |     1|
+|9     |BUFG                              |     1|
+|10    |CARRY8                            |    18|
+|11    |LUT1                              |    11|
+|12    |LUT2                              |    31|
+|13    |LUT3                              |    33|
+|14    |LUT4                              |    50|
+|15    |LUT5                              |   108|
+|16    |LUT6                              |    77|
+|17    |FDRE                              |   371|
+|18    |FDSE                              |     7|
+|19    |IBUF                              |     2|
+|20    |OBUF                              |     3|
++------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3780.746 ; gain = 1159.211 ; free physical = 208 ; free virtual = 4158
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 3827.168 ; gain = 1160.438 ; free physical = 3364 ; free virtual = 39168
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3780.746 ; gain = 1063.344 ; free physical = 165 ; free virtual = 4115
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3780.746 ; gain = 1159.211 ; free physical = 165 ; free virtual = 4115
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3827.168 ; gain = 1051.531 ; free physical = 3364 ; free virtual = 39168
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 3827.168 ; gain = 1160.438 ; free physical = 3364 ; free virtual = 39168
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3780.746 ; gain = 0.000 ; free physical = 216 ; free virtual = 4107
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3827.168 ; gain = 0.000 ; free physical = 3531 ; free virtual = 39335
 INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3780.746 ; gain = 0.000 ; free physical = 338 ; free virtual = 4230
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3827.168 ; gain = 0.000 ; free physical = 3534 ; free virtual = 39338
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 3 instances were transformed.
   BUFG => BUFGCE: 1 instance 
   IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
 
-Synth Design complete | Checksum: 3134c4dc
+Synth Design complete | Checksum: 75bc7629
 INFO: [Common 17-83] Releasing license: Synthesis
-50 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+78 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 3780.746 ; gain = 2161.672 ; free physical = 340 ; free virtual = 4232
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3035.440; main = 2835.754; forked = 271.412
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4720.152; main = 3763.090; forked = 988.215
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3787.098 ; gain = 0.000 ; free physical = 340 ; free virtual = 4232
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 3827.168 ; gain = 2213.953 ; free physical = 3534 ; free virtual = 39338
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3155.165; main = 2934.366; forked = 283.462
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4741.699; main = 3761.488; forked = 988.215
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3827.168 ; gain = 0.000 ; free physical = 3535 ; free virtual = 39338
 INFO: [Common 17-1381] The checkpoint '/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/iis3dwbg1_kr260_hw_top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file iis3dwbg1_kr260_hw_top_utilization_synth.rpt -pb iis3dwbg1_kr260_hw_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Aug  6 07:38:32 2026...
+INFO: [Common 17-206] Exiting Vivado at Fri Aug  7 08:43:52 2026...

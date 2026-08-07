@@ -38,7 +38,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log iis3dwbg1_kr260_hw_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source iis3dwbg1_kr260_hw_top.tcl -notrace
 
 
