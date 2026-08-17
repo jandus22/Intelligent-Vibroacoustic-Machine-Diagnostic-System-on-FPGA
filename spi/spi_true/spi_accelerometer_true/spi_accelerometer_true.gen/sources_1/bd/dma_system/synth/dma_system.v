@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Fri Aug  7 08:40:51 2026
+//Date        : Wed Aug 12 10:37:43 2026
 //Host        : Magisterka running 64-bit Ubuntu 26.04 LTS
 //Command     : generate_target dma_system.bd
 //Design      : dma_system
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "dma_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=dma_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "dma_system.hwdef" *) 
+(* CORE_GENERATION_INFO = "dma_system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=dma_system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_zynq_ultra_ps_e_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "dma_system.hwdef" *) 
 module dma_system
    (sensor_axis_aclk,
     sensor_axis_aresetn,
@@ -115,6 +115,11 @@ module dma_system
   wire axis_clock_converter_0_M_AXIS_TLAST;
   wire axis_clock_converter_0_M_AXIS_TREADY;
   wire axis_clock_converter_0_M_AXIS_TVALID;
+  wire [15:0]axis_xyz_tlast_0_m_axis_tdata;
+  wire [1:0]axis_xyz_tlast_0_m_axis_tkeep;
+  wire axis_xyz_tlast_0_m_axis_tlast;
+  wire axis_xyz_tlast_0_m_axis_tvalid;
+  wire axis_xyz_tlast_0_s_axis_tready;
   wire [0:0]rst_ps8_0_99M_peripheral_aresetn;
   wire sensor_axis_aclk;
   wire sensor_axis_aresetn;
@@ -202,7 +207,7 @@ module dma_system
         .m_axis_mm2s_tdata(axi_dma_0_m_axis_mm2s_tdata),
         .m_axis_mm2s_tkeep(axi_dma_0_m_axis_mm2s_tkeep),
         .m_axis_mm2s_tlast(axi_dma_0_m_axis_mm2s_tlast),
-        .m_axis_mm2s_tready(xlconstant_0_dout),
+        .m_axis_mm2s_tready(axis_xyz_tlast_0_s_axis_tready),
         .m_axis_mm2s_tvalid(axi_dma_0_m_axis_mm2s_tvalid),
         .s2mm_introut(axi_dma_0_s2mm_introut),
         .s_axi_lite_aclk(zynq_ultra_ps_e_0_pl_clk0),
@@ -369,13 +374,26 @@ module dma_system
         .s_axis_tlast(sensor_axis_tlast),
         .s_axis_tready(sensor_axis_tready),
         .s_axis_tvalid(sensor_axis_tvalid));
+  dma_system_axis_xyz_tlast_0_0 axis_xyz_tlast_0
+       (.aclk(zynq_ultra_ps_e_0_pl_clk0),
+        .aresetn(rst_ps8_0_99M_peripheral_aresetn),
+        .m_axis_tdata(axis_xyz_tlast_0_m_axis_tdata),
+        .m_axis_tkeep(axis_xyz_tlast_0_m_axis_tkeep),
+        .m_axis_tlast(axis_xyz_tlast_0_m_axis_tlast),
+        .m_axis_tready(xlconstant_0_dout),
+        .m_axis_tvalid(axis_xyz_tlast_0_m_axis_tvalid),
+        .s_axis_tdata(axi_dma_0_m_axis_mm2s_tdata),
+        .s_axis_tkeep(axi_dma_0_m_axis_mm2s_tkeep),
+        .s_axis_tlast(axi_dma_0_m_axis_mm2s_tlast),
+        .s_axis_tready(axis_xyz_tlast_0_s_axis_tready),
+        .s_axis_tvalid(axi_dma_0_m_axis_mm2s_tvalid));
   dma_system_ila_0_0 ila_0
        (.clk(zynq_ultra_ps_e_0_pl_clk0),
-        .probe0(axi_dma_0_m_axis_mm2s_tdata),
-        .probe1(axi_dma_0_m_axis_mm2s_tlast),
-        .probe2(axi_dma_0_m_axis_mm2s_tvalid),
+        .probe0(axis_xyz_tlast_0_m_axis_tdata),
+        .probe1(axis_xyz_tlast_0_m_axis_tlast),
+        .probe2(axis_xyz_tlast_0_m_axis_tvalid),
         .probe3(xlconstant_0_dout),
-        .probe4(axi_dma_0_m_axis_mm2s_tkeep));
+        .probe4(axis_xyz_tlast_0_m_axis_tkeep));
   dma_system_rst_ps8_0_99M_1 rst_ps8_0_99M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

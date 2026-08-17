@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log dma_system_axi_smc_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_system_axi_smc_1_0.tcl" );
+         "-log dma_system_axis_xyz_tlast_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_system_axis_xyz_tlast_0_0.tcl" );
 
 
 

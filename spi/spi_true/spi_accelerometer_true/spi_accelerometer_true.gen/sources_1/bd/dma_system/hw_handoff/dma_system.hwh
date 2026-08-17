@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Aug  7 08:40:54 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Aug 12 10:37:45 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:kr260_som_som240_1_connector_kd240_carrier_som240_1_connector_som240_2_connector_kd240_carrier_som40_2_connector:part0:1.1" DEVICE="xck26" NAME="dma_system" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -1113,27 +1113,27 @@
         </PORT>
         <PORT DIR="O" LEFT="15" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="s_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="s_axis_tkeep"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_mm2s_tlast" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="s_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axis_mm2s_tready" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+        <PORT DIR="I" NAME="m_axis_mm2s_tready" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_s_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="s_axis_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_mm2s_tvalid" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="mm2s_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
@@ -1452,8 +1452,8 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
-        <MEMRANGE ADDRESSBLOCK="HP0_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_S2MM" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
         <MEMRANGE ADDRESSBLOCK="HP0_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_MM2S" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
+        <MEMRANGE ADDRESSBLOCK="HP0_DDR_LOW" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x7FFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_S2MM" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
         <MEMRANGE ADDRESSBLOCK="HP0_QSPI" BASENAME="C_BASEADDR" BASEVALUE="0xC0000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0xDFFFFFFF" INSTANCE="zynq_ultra_ps_e_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="M_AXI_S2MM" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0_FPD"/>
       </MEMORYMAP>
       <PERIPHERALS>
@@ -2544,6 +2544,121 @@
             <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
             <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/axis_xyz_tlast_0" HWVERSION="1.0" INSTANCE="axis_xyz_tlast_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_xyz_tlast" VLNV="xilinx.com:module_ref:axis_xyz_tlast:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="dma_system_axis_xyz_tlast_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="99999001" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_ps8_0_99M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_ps8_0_99M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="s_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="m_axis" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="dma_system_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="s_axis" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="dma_system_zynq_ultra_ps_e_0_0_pl_clk0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -5693,19 +5808,19 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tdata">
+        <PORT DIR="I" LEFT="15" NAME="probe0" RIGHT="0" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_m_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tdata"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tlast">
+        <PORT DIR="I" LEFT="0" NAME="probe1" RIGHT="0" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_m_axis_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tlast"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="m_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tvalid">
+        <PORT DIR="I" LEFT="0" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_m_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tvalid"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
@@ -5713,9 +5828,9 @@
             <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_m_axis_mm2s_tkeep">
+        <PORT DIR="I" LEFT="1" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="axis_xyz_tlast_0_m_axis_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tkeep"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="m_axis_tkeep"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -5758,6 +5873,7 @@
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
             <CONNECTION INSTANCE="axi_smc_1" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_clock_converter_0" PORT="m_axis_aresetn"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst"/>
@@ -5780,7 +5896,7 @@
       <PORTS>
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axis_mm2s_tready"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="m_axis_tready"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
@@ -5798,10 +5914,10 @@
         <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_QSPI" RANGE="0x20000000" USAGE="memory"/>
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_QSPI" RANGE="0x20000000" USAGE="memory"/>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
       </ADDRESSBLOCKS>
       <PARAMETERS>
         <PARAMETER NAME="C_DP_USE_AUDIO" VALUE="0"/>
@@ -7750,6 +7866,7 @@
             <CONNECTION INSTANCE="axis_clock_converter_0" PORT="m_axis_aclk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_mm2s_aclk"/>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
+            <CONNECTION INSTANCE="axis_xyz_tlast_0" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="pl_ps_irq0" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_dma_0_s2mm_introut">

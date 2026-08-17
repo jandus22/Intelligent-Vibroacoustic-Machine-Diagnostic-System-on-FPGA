@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Fri Aug  7 08:48:48 2026
+| Date             : Thu Aug 13 10:02:00 2026
 | Host             : Magisterka running 64-bit Ubuntu 26.04 LTS
 | Command          : report_power -file iis3dwbg1_kr260_hw_top_power_routed.rpt -pb iis3dwbg1_kr260_hw_top_power_summary_routed.pb -rpx iis3dwbg1_kr260_hw_top_power_routed.rpx
 | Design           : iis3dwbg1_kr260_hw_top
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.018 |        5 |       --- |             --- |
-| CLB Logic                |     0.020 |    28219 |       --- |             --- |
+| Clocks                   |     0.017 |        5 |       --- |             --- |
+| CLB Logic                |     0.020 |    28223 |       --- |             --- |
 |   LUT as Distributed RAM |     0.013 |      692 |     57600 |            1.20 |
-|   LUT as Logic           |     0.006 |     7226 |    117120 |            6.17 |
+|   LUT as Logic           |     0.006 |     7229 |    117120 |            6.17 |
 |   LUT as Shift Register  |    <0.001 |      962 |     57600 |            1.67 |
-|   Register               |    <0.001 |    14046 |    234240 |            6.00 |
+|   Register               |    <0.001 |    14049 |    234240 |            6.00 |
 |   CARRY8                 |    <0.001 |      185 |     14640 |            1.26 |
 |   Others                 |     0.000 |     1495 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |      147 |    117120 |            0.13 |
-| Signals                  |     0.008 |    19807 |       --- |             --- |
+| Signals                  |     0.008 |    19793 |       --- |             --- |
 | Block RAM                |     0.004 |     28.5 |       144 |           19.79 |
 | I/O                      |     0.002 |        5 |       189 |            2.65 |
 | PS8                      |     2.512 |        1 |       --- |             --- |
@@ -78,7 +78,7 @@ Table of Contents
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source           | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +------------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint           |       0.720 |     0.156 |       0.068 |      0.088 |       NA    | Unspecified | NA         |
+| Vccint           |       0.720 |     0.155 |       0.067 |      0.088 |       NA    | Unspecified | NA         |
 | Vccint_io        |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
 | Vccbram          |       0.850 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux           |       1.800 |     0.075 |       0.000 |      0.075 |       NA    | Unspecified | NA         |

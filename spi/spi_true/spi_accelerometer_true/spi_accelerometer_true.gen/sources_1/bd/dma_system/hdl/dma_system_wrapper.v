@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Fri Aug  7 08:40:51 2026
+//Date        : Wed Aug 12 10:37:43 2026
 //Host        : Magisterka running 64-bit Ubuntu 26.04 LTS
 //Command     : generate_target dma_system_wrapper.bd
 //Design      : dma_system_wrapper

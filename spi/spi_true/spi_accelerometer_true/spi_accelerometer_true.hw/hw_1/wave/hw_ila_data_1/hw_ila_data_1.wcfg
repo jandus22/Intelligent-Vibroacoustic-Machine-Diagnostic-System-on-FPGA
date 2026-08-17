@@ -9,44 +9,44 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="4,097"></ZoomEndTime>
-      <Cursor1Time time="0"></Cursor1Time>
+      <ZoomStartTime time="2,032"></ZoomStartTime>
+      <ZoomEndTime time="2,097"></ZoomEndTime>
+      <Cursor1Time time="2,084"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="288"></NameColumnWidth>
-      <ValueColumnWidth column_width="349"></ValueColumnWidth>
+      <NameColumnWidth column_width="352"></NameColumnWidth>
+      <ValueColumnWidth column_width="67"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="array" fp_name="dma_system_inst/axi_dma_0_m_axis_mm2s_tdata">
+   <wvobject type="array" fp_name="dma_system_inst/axis_xyz_tlast_0_m_axis_tdata">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dma_system_inst/axi_dma_0_m_axis_mm2s_tdata[15:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_m_axis_mm2s_tdata[15:0]</obj_property>
+      <obj_property name="ElementShortName">dma_system_inst/axis_xyz_tlast_0_m_axis_tdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">axis_xyz_tlast_0_m_axis_tdata[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="dma_system_inst/axi_dma_0_m_axis_mm2s_tkeep">
+   <wvobject type="array" fp_name="dma_system_inst/axis_xyz_tlast_0_m_axis_tkeep">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dma_system_inst/axi_dma_0_m_axis_mm2s_tkeep[1:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_m_axis_mm2s_tkeep[1:0]</obj_property>
+      <obj_property name="ElementShortName">dma_system_inst/axis_xyz_tlast_0_m_axis_tkeep[1:0]</obj_property>
+      <obj_property name="ObjectShortName">axis_xyz_tlast_0_m_axis_tkeep[1:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="dma_system_inst/axi_dma_0_m_axis_mm2s_tlast">
+   <wvobject type="logic" fp_name="dma_system_inst/axis_xyz_tlast_0_m_axis_tlast">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dma_system_inst/axi_dma_0_m_axis_mm2s_tlast</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_m_axis_mm2s_tlast</obj_property>
+      <obj_property name="ElementShortName">dma_system_inst/axis_xyz_tlast_0_m_axis_tlast</obj_property>
+      <obj_property name="ObjectShortName">axis_xyz_tlast_0_m_axis_tlast</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="dma_system_inst/axi_dma_0_m_axis_mm2s_tvalid">
+   <wvobject type="logic" fp_name="dma_system_inst/axis_xyz_tlast_0_m_axis_tvalid">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">dma_system_inst/axi_dma_0_m_axis_mm2s_tvalid</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_m_axis_mm2s_tvalid</obj_property>
+      <obj_property name="ElementShortName">dma_system_inst/axis_xyz_tlast_0_m_axis_tvalid</obj_property>
+      <obj_property name="ObjectShortName">axis_xyz_tlast_0_m_axis_tvalid</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

@@ -1,6 +1,6 @@
-set(CMAKE_HOST_SYSTEM "Linux-7.0.0-28-generic")
+set(CMAKE_HOST_SYSTEM "Linux-7.0.0-29-generic")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "7.0.0-28-generic")
+set(CMAKE_HOST_SYSTEM_VERSION "7.0.0-29-generic")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
 include("/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/vitis/spi_dma_platform/zynqmp_fsbl/zynqmp_fsbl_bsp/cortexa53_toolchain.cmake")

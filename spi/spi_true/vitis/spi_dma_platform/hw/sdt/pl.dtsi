@@ -4,7 +4,7 @@
 		compatible = "simple-bus";
 		#address-cells = <2>;
 		#size-cells = <2>;
-		firmware-name = "iis3dwbg1_dma.bit.bin";
+		firmware-name = "iis3dwbg1_kr260_hw_top.bit.bin";
 		clocking0: clocking0 {
 			compatible = "xlnx,fclk";
 			status = "okay";

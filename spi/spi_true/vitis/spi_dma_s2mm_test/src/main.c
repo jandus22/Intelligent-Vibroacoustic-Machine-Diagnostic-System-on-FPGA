@@ -40,7 +40,10 @@
 /* ================================================================
  * BUFFERS
  * ================================================================ */
+#define MM2S_TEST_WORDS 48
 
+static u16 mm2s_test_buffer[MM2S_TEST_WORDS]
+    __attribute__((aligned(64)));
 /*
  * Pierwszy transfer S2MM:
  * tylko synchronizacja do najbliższego TLAST.
@@ -262,7 +265,52 @@ int main(void)
         g_test_result = -1;
         goto test_finished;
     }
+    xil_printf("\r\n=== MM2S TLAST TEST START ===\r\n");
 
+    /* Przygotowanie znanych danych: 1, 2, 3, ... 48 */
+    for (int i = 0; i < MM2S_TEST_WORDS; i++) {
+        mm2s_test_buffer[i] = (u16)(i + 1);
+    }
+
+    /*
+    * Dane zostały zapisane przez CPU do cache.
+    * DMA musi zobaczyć je w DDR.
+    */
+    Xil_DCacheFlushRange(
+        (UINTPTR)mm2s_test_buffer,
+        sizeof(mm2s_test_buffer)
+    );
+
+    xil_printf("MM2S buffer addr: 0x%lx\r\n",
+            (unsigned long)mm2s_test_buffer);
+
+    xil_printf("MM2S length: %d bytes\r\n",
+            (int)sizeof(mm2s_test_buffer));
+
+    /*
+    * DDR -> DMA MM2S -> AXI4-Stream
+    */
+    status = XAxiDma_SimpleTransfer(
+        &AxiDma,
+        (UINTPTR)mm2s_test_buffer,
+        sizeof(mm2s_test_buffer),
+        XAXIDMA_DMA_TO_DEVICE
+    );
+
+    if (status != XST_SUCCESS) {
+        xil_printf("ERROR: MM2S SimpleTransfer failed\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("MM2S started\r\n");
+
+    /* Czekamy na zakończenie MM2S */
+    while (XAxiDma_Busy(&AxiDma, XAXIDMA_DMA_TO_DEVICE)) {
+        /* wait */
+    }
+
+    xil_printf("MM2S COMPLETE\r\n");
+xil_printf("=== MM2S TLAST TEST END ===\r\n");    
     /*
      * Projekt ma pracować w Simple Mode.
      */

@@ -3,8 +3,8 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/export/iis3dwbg1_dma.xsa",
-    "xsaPathInPlatform": "spi_dma_platform/hw/iis3dwbg1_dma.xsa",
+    "xsa": "/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/iis3dwbg1_kr260_hw_top.xsa",
+    "xsaPathInPlatform": "spi_dma_platform/hw/iis3dwbg1_kr260_hw_top.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",
     "isCustomFSBL": false,

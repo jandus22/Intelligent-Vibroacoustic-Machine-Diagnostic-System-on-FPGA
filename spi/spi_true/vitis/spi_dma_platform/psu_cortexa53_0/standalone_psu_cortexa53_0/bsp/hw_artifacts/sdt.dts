@@ -4220,7 +4220,7 @@
                 compatible = "simple-bus";
                 #address-cells = <0x2>;
                 #size-cells = <0x2>;
-                firmware-name = "iis3dwbg1_dma.bit.bin";
+                firmware-name = "iis3dwbg1_kr260_hw_top.bit.bin";
 
                 clocking0: clocking0 {
                         phandle = <0x10d>;

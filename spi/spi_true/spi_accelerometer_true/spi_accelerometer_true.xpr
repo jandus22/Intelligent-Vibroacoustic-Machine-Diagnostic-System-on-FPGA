@@ -46,7 +46,6 @@
     <Option Name="BoardPart" Val="xilinx.com:kr260_som:part0:1.1"/>
     <Option Name="BoardConnections" Val="som240_1_connector xilinx.com:kd240_carrier:som240_1_connector:1.0"/>
     <Option Name="BoardConnections" Val="som240_2_connector xilinx.com:kd240_carrier:som40_2_connector:1.0"/>
-    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
@@ -93,6 +92,53 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PGENDIR/sources_1/bd/dma_system/dma_system_sv.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/axis_xyz_tlast.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/dma_system/dma_system.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0.xci">
+          <Proxy FileSetName="dma_system_axi_dma_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0.xci">
+          <Proxy FileSetName="dma_system_axis_clock_converter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_axis_xyz_tlast_0_0/dma_system_axis_xyz_tlast_0_0.xci">
+          <Proxy FileSetName="dma_system_axis_xyz_tlast_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_ila_0_0/dma_system_ila_0_0.xci">
+          <Proxy FileSetName="dma_system_ila_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_rst_ps8_0_99M_1/dma_system_rst_ps8_0_99M_1.xci">
+          <Proxy FileSetName="dma_system_rst_ps8_0_99M_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0.xci">
+          <Proxy FileSetName="dma_system_zynq_ultra_ps_e_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/axis_xyz_frame_4096.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../../../Downloads/iis3dwbg1_spi_step6_kr260_hw/axis_xyz_tdm16.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -129,45 +175,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../../../../Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/axis_xyz_frame_4096.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/dma_system/dma_system.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_axi_dma_0_0/dma_system_axi_dma_0_0.xci">
-          <Proxy FileSetName="dma_system_axi_dma_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_axi_smc_1_0/dma_system_axi_smc_1_0.xci">
-          <Proxy FileSetName="dma_system_axi_smc_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_axis_clock_converter_0_0/dma_system_axis_clock_converter_0_0.xci">
-          <Proxy FileSetName="dma_system_axis_clock_converter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_ila_0_0/dma_system_ila_0_0.xci">
-          <Proxy FileSetName="dma_system_ila_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_rst_ps8_0_99M_1/dma_system_rst_ps8_0_99M_1.xci">
-          <Proxy FileSetName="dma_system_rst_ps8_0_99M_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="dma_system.bd" FileRelPathName="ip/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0.xci">
-          <Proxy FileSetName="dma_system_zynq_ultra_ps_e_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PGENDIR/sources_1/bd/dma_system/dma_system_sv.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -280,12 +287,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="dma_system_axi_smc_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dma_system_axi_smc_1_0" RelGenDir="$PGENDIR/dma_system_axi_smc_1_0">
-      <Config>
-        <Option Name="TopModule" Val="dma_system_axi_smc_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="dma_system_axis_clock_converter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dma_system_axis_clock_converter_0_0" RelGenDir="$PGENDIR/dma_system_axis_clock_converter_0_0">
       <Config>
         <Option Name="TopModule" Val="dma_system_axis_clock_converter_0_0"/>
@@ -295,6 +296,12 @@
     <FileSet Name="dma_system_ila_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dma_system_ila_0_0" RelGenDir="$PGENDIR/dma_system_ila_0_0">
       <Config>
         <Option Name="TopModule" Val="dma_system_ila_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="dma_system_axis_xyz_tlast_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dma_system_axis_xyz_tlast_0_0" RelGenDir="$PGENDIR/dma_system_axis_xyz_tlast_0_0">
+      <Config>
+        <Option Name="TopModule" Val="dma_system_axis_xyz_tlast_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -371,16 +378,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="dma_system_axi_smc_1_0_synth_1" Type="Ft3:Synth" SrcSet="dma_system_axi_smc_1_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="dma_system_axi_smc_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dma_system_axi_smc_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dma_system_axi_smc_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dma_system_axi_smc_1_0_synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="dma_system_axis_clock_converter_0_0_synth_1" Type="Ft3:Synth" SrcSet="dma_system_axis_clock_converter_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="dma_system_axis_clock_converter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dma_system_axis_clock_converter_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dma_system_axis_clock_converter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dma_system_axis_clock_converter_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
@@ -393,9 +390,17 @@
     </Run>
     <Run Id="dma_system_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="dma_system_ila_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="dma_system_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dma_system_ila_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dma_system_ila_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dma_system_ila_0_0_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="dma_system_axis_xyz_tlast_0_0_synth_1" Type="Ft3:Synth" SrcSet="dma_system_axis_xyz_tlast_0_0" Part="xck26-sfvc784-2LV-c" ConstrsSet="dma_system_axis_xyz_tlast_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/dma_system_axis_xyz_tlast_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dma_system_axis_xyz_tlast_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dma_system_axis_xyz_tlast_0_0_synth_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -489,23 +494,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="dma_system_axi_smc_1_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="dma_system_axi_smc_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dma_system_axi_smc_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dma_system_axi_smc_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dma_system_axi_smc_1_0_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="dma_system_axis_clock_converter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="dma_system_axis_clock_converter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dma_system_axis_clock_converter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dma_system_axis_clock_converter_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dma_system_axis_clock_converter_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
@@ -525,9 +513,24 @@
     </Run>
     <Run Id="dma_system_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="dma_system_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dma_system_ila_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dma_system_ila_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dma_system_ila_0_0_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="dma_system_axis_xyz_tlast_0_0_impl_1" Type="Ft2:EntireDesign" Part="xck26-sfvc784-2LV-c" ConstrsSet="dma_system_axis_xyz_tlast_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="dma_system_axis_xyz_tlast_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/dma_system_axis_xyz_tlast_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/dma_system_axis_xyz_tlast_0_0_impl_1" ParallelReportGen="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

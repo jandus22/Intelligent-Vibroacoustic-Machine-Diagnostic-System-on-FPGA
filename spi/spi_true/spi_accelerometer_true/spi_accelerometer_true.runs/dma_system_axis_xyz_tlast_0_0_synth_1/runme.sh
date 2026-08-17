@@ -21,7 +21,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_axi_smc_1_0_synth_1'
+HD_PWD='/home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/dma_system_axis_xyz_tlast_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log dma_system_axi_smc_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_system_axi_smc_1_0.tcl
+EAStep vivado -log dma_system_axis_xyz_tlast_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_system_axis_xyz_tlast_0_0.tcl

@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Fri Aug  7 08:43:02 2026
-# Process ID         : 183406
+# Start of session at: Thu Aug 13 09:57:12 2026
+# Process ID         : 38938
 # Current directory  : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1
 # Command line       : vivado -log iis3dwbg1_kr260_hw_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source iis3dwbg1_kr260_hw_top.tcl
 # Log file           : /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.runs/synth_1/iis3dwbg1_kr260_hw_top.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04 LTS
 # Processor Detail   : AMD Ryzen 7 PRO 4750G with Radeon Graphics
-# CPU Frequency      : 4400.188 MHz
+# CPU Frequency      : 2376.700 MHz
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 15479 MB
 # Swap memory        : 38654 MB
 # Total Virtual      : 54134 MB
-# Available Virtual  : 43898 MB
+# Available Virtual  : 43493 MB
 #-----------------------------------------------------------
 source iis3dwbg1_kr260_hw_top.tcl -notrace

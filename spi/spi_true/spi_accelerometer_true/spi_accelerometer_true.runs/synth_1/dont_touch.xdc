@@ -30,4 +30,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_system_
 # IP: bd/dma_system/ip/dma_system_ila_0_0/dma_system_ila_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_system_ila_0_0 || ORIG_REF_NAME==dma_system_ila_0_0} -quiet] -quiet
 
+# IP: bd/dma_system/ip/dma_system_axis_xyz_tlast_0_0/dma_system_axis_xyz_tlast_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==dma_system_axis_xyz_tlast_0_0 || ORIG_REF_NAME==dma_system_axis_xyz_tlast_0_0} -quiet] -quiet
+
 # XDC: /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/dma_system_ooc.xdc

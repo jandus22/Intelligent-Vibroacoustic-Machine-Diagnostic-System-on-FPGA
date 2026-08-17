@@ -1,41 +1,47 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.945119",
-   "Default View_TopLeft":"-144,-147",
+   "Default View_TopLeft":"-104,-181",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port sensor_axis -pg 1 -lvl 0 -x -30 -y 290 -defaultsOSRD
-preplace port port-id_sensor_axis_aclk -pg 1 -lvl 0 -x -30 -y 350 -defaultsOSRD
-preplace port port-id_sensor_axis_aresetn -pg 1 -lvl 0 -x -30 -y 320 -defaultsOSRD
-preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 840 -y 110 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 1 -x 240 -y 170 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 4 -x 1700 -y 110 -defaultsOSRD
-preplace inst rst_ps8_0_99M -pg 1 -lvl 3 -x 1350 -y 310 -defaultsOSRD
-preplace inst axi_smc_1 -pg 1 -lvl 4 -x 1700 -y 260 -defaultsOSRD
-preplace inst axis_clock_converter_0 -pg 1 -lvl 2 -x 840 -y 330 -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 2 -x 840 -y 620 -defaultsOSRD
-preplace inst ila_0 -pg 1 -lvl 1 -x 240 -y 540 -defaultsOSRD
-preplace netloc axi_dma_0_s2mm_introut 1 1 1 480 140n
-preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 4 50 380 530J 460 NJ 460 1560
-preplace netloc s_axis_aclk_0_1 1 0 2 NJ 350 NJ
-preplace netloc s_axis_aresetn_0_1 1 0 2 -10J 360 520J
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 40 370 500 210 1150 130 1550
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 2 1 1140 110n
-preplace netloc xlconstant_0_dout 1 0 3 20 670 470J 680 1140
-preplace netloc axi_dma_0_m_axis_mm2s_tdata 1 0 2 60 650 450
-preplace netloc axi_dma_0_m_axis_mm2s_tkeep 1 0 2 40 660 440
-preplace netloc axi_dma_0_m_axis_mm2s_tlast 1 0 2 30 410 430
-preplace netloc axi_dma_0_m_axis_mm2s_tvalid 1 0 2 50 420 420
-preplace netloc S_AXIS_0_1 1 0 2 0J 340 510J
-preplace netloc axi_dma_0_M_AXI_S2MM 1 1 3 490J 20 NJ 20 1530
-preplace netloc axi_smc_1_M00_AXI 1 1 4 540 450 NJ 450 NJ 450 1840
-preplace netloc axi_smc_M00_AXI 1 0 5 20 430 460J 440 NJ 440 NJ 440 1850
-preplace netloc axis_clock_converter_0_M_AXIS 1 0 3 30 400 500J 430 1140
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 2 2 NJ 90 N
-preplace netloc axi_dma_0_M_AXI_MM2S 1 1 3 420J 10 NJ 10 1540
-levelinfo -pg 1 -30 240 840 1350 1700 1870
-pagesize -pg 1 -db -bbox -sgen -450 0 1890 980
+preplace port sensor_axis -pg 1 -lvl 0 -x -70 -y 290 -defaultsOSRD
+preplace port port-id_sensor_axis_aclk -pg 1 -lvl 0 -x -70 -y 350 -defaultsOSRD
+preplace port port-id_sensor_axis_aresetn -pg 1 -lvl 0 -x -70 -y 320 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 3 -x 1260 -y 110 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 2 -x 690 -y 210 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 2120 -y 110 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 4 -x 1770 -y 310 -defaultsOSRD
+preplace inst axi_smc_1 -pg 1 -lvl 5 -x 2120 -y 260 -defaultsOSRD
+preplace inst axis_clock_converter_0 -pg 1 -lvl 3 -x 1260 -y 330 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 1260 -y 530 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 2 -x 690 -y 620 -defaultsOSRD
+preplace inst axis_xyz_tlast_0 -pg 1 -lvl 1 -x 200 -y 50 -defaultsOSRD
+preplace netloc axi_dma_0_s2mm_introut 1 2 1 900 140n
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 5 -20 210 450 430 960J 430 NJ 430 1980
+preplace netloc s_axis_aclk_0_1 1 0 3 NJ 350 430 390 950J
+preplace netloc s_axis_aresetn_0_1 1 0 3 NJ 320 440 400 940J
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 5 -10 200 490 20 930 10 1580 110 1970
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 3 1 1570 110n
+preplace netloc axis_xyz_tlast_0_m_axis_tdata 1 1 1 480 20n
+preplace netloc axis_xyz_tlast_0_m_axis_tvalid 1 1 1 410 80n
+preplace netloc axi_dma_0_m_axis_mm2s_tdata 1 0 3 0 190 470J 40 870
+preplace netloc axis_xyz_tlast_0_m_axis_tkeep 1 1 1 420 40n
+preplace netloc axis_xyz_tlast_0_m_axis_tlast 1 1 1 460 60n
+preplace netloc axi_dma_0_m_axis_mm2s_tkeep 1 0 3 10 180 430J 30 890
+preplace netloc axi_dma_0_m_axis_mm2s_tlast 1 0 3 -30 410 NJ 410 890
+preplace netloc axi_dma_0_m_axis_mm2s_tvalid 1 0 3 -50 420 NJ 420 870
+preplace netloc axis_xyz_tlast_0_s_axis_tready 1 0 3 -40 440 NJ 440 880
+preplace netloc xlconstant_0_dout 1 1 3 400J 470 NJ 470 1560
+preplace netloc S_AXIS_0_1 1 0 3 NJ 290 470 380 910J
+preplace netloc axi_dma_0_M_AXI_MM2S 1 2 3 900J -30 NJ -30 1960
+preplace netloc axi_dma_0_M_AXI_S2MM 1 2 3 910J -20 NJ -20 1950
+preplace netloc axi_smc_1_M00_AXI 1 2 4 960 20 NJ 20 NJ 20 2260
+preplace netloc axi_smc_M00_AXI 1 1 5 500 -10 NJ -10 NJ -10 NJ -10 2270
+preplace netloc axis_clock_converter_0_M_AXIS 1 1 3 510 0 NJ 0 1560
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 3 2 NJ 90 N
+levelinfo -pg 1 -70 200 690 1260 1770 2120 2290
+pagesize -pg 1 -db -bbox -sgen -450 -80 2290 980
 "
 }
 {

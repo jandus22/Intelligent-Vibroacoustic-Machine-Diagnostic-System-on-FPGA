@@ -2510,7 +2510,7 @@
                 compatible = "simple-bus";
                 #address-cells = <0x2>;
                 #size-cells = <0x2>;
-                firmware-name = "iis3dwbg1_dma.bit.bin";
+                firmware-name = "iis3dwbg1_kr260_hw_top.bit.bin";
 
                 axi_dma_0: dma@a0000000 {
                         phandle = <0xb>;

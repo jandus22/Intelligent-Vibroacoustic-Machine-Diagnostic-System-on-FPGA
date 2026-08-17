@@ -56,10 +56,11 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 set_param general.maxThreads 2
+set_param tcl.collectionResultDisplayLimit 0
 set_param general.usePosixSpawnForFork 1
-set_param bd.open.in_stealth_mode 1
+set_param bd.open.in_stealth_mode 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xck26-sfvc784-2LV-c
 
@@ -78,15 +79,14 @@ set_property ip_output_repo /home/kuszman/Magisterka/Intelligent-Vibroacoustic-M
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/dma_system_sv.sv
 read_verilog -library xil_defaultlib {
+  /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/axis_xyz_tdm16.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_tdm16.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_xyz.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_master_byte_mode0.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/spi_register_access_mode0.v
   /home/kuszman/Downloads/iis3dwbg1_spi_step6_kr260_hw/iis3dwbg1_kr260_hw_top.v
-  /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/new/axis_xyz_frame_4096.v
 }
 add_files /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.srcs/sources_1/bd/dma_system/dma_system.bd
 set_property used_in_implementation false [get_files -all /home/kuszman/Magisterka/Intelligent-Vibroacoustic-Machine-Diagnostic-System-on-FPGA/spi/spi_true/spi_accelerometer_true/spi_accelerometer_true.gen/sources_1/bd/dma_system/ip/dma_system_zynq_ultra_ps_e_0_0/dma_system_zynq_ultra_ps_e_0_0_ooc.xdc]
